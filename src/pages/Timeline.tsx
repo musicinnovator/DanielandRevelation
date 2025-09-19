@@ -137,8 +137,8 @@ const Timeline = () => {
             Prophetic Timeline Explorer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Journey through history and see how Bible prophecy has been fulfilled 
-            according to Seventh-day Adventist understanding
+            Journey through history and see how Bible prophecy has been fulfilled, is fulfilling, and will be fulfilled. 
+            See how God reveals "His secret unto His servants the prophets" and that "the wise will understand" in the time of the end. 
           </p>
         </div>
 
