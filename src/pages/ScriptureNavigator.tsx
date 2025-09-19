@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Book, Eye, ArrowLeft, ArrowRight, ExternalLink, Layers } from 'lucide-react';
+import { getScriptureChapter, formatScriptureContent } from '../data/scriptureData';
 
 const ScriptureNavigator = () => {
   const [selectedBook, setSelectedBook] = useState('daniel');
   const [selectedChapter, setSelectedChapter] = useState(1);
   const [showModels, setShowModels] = useState(false);
+
+  // Get current chapter data
+  const currentChapterData = getScriptureChapter(selectedBook, selectedChapter);
 
   const books = {
     daniel: { name: 'Daniel', chapters: 12, color: 'blue' },
@@ -52,15 +56,17 @@ const ScriptureNavigator = () => {
   };
 
   const getCurrentTitle = () => {
-    const titles = selectedBook === 'daniel' ? danielChapterTitles : revelationChapterTitles;
-    return titles[selectedChapter] || '';
+    return currentChapterData?.title || '';
   };
 
-  const sampleVerse = selectedBook === 'daniel' && selectedChapter === 2 
-    ? "Da:2:31: Thou, O king, sawest, and behold a great image. This great image, whose brightness was excellent, stood before thee; and the form thereof was terrible."
-    : selectedBook === 'revelation' && selectedChapter === 1
-    ? "Re:1:12: And I turned to see the voice that spake with me. And being turned, I saw seven golden candlesticks;"
-    : "Select a chapter to view scripture text with interactive models and commentary.";
+  const getScriptureContent = () => {
+    if (currentChapterData) {
+      return formatScriptureContent(currentChapterData.content);
+    }
+    return selectedBook === 'revelation' 
+      ? "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+      : "Select a chapter to view scripture text with interactive models and commentary.";
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
@@ -183,7 +189,15 @@ const ScriptureNavigator = () => {
             </div>
 
             <div className="scripture-verse text-gray-800 text-lg leading-relaxed">
-              {sampleVerse}
+              <div 
+                dangerouslySetInnerHTML={{ 
+                  __html: getScriptureContent() 
+                }}
+                style={{
+                  fontFamily: "'Crimson Text', serif",
+                  lineHeight: '1.8'
+                }}
+              />
             </div>
 
             {/* Interactive Elements */}
@@ -239,8 +253,18 @@ const ScriptureNavigator = () => {
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {selectedBook === 'daniel' && selectedChapter === 2
                     ? "The great image represents the succession of world empires from Babylon to the end times, culminating in Christ's eternal kingdom."
+                    : selectedBook === 'daniel' && selectedChapter === 1
+                    ? "Daniel's commitment to God's health principles demonstrates that faithfulness in small matters prepares us for greater tests and responsibilities."
+                    : selectedBook === 'daniel' && selectedChapter === 3
+                    ? "The fiery furnace test parallels the end-time worship crisis, showing God's power to deliver those who remain faithful to His commandments."
+                    : selectedBook === 'daniel' && selectedChapter === 7
+                    ? "The four beasts represent the same kingdoms as Daniel 2's image, but with additional details about the little horn power and the investigative judgment."
+                    : selectedBook === 'daniel' && selectedChapter === 9
+                    ? "The 70-week prophecy is the most precise messianic prophecy in Scripture, pinpointing the exact time of Christ's ministry and crucifixion."
                     : selectedBook === 'revelation' && selectedChapter === 1
                     ? "The seven golden candlesticks represent the seven churches, showing Christ's presence among His people throughout history."
+                    : currentChapterData
+                    ? "This chapter contains important prophetic insights that connect to the overall theme of God's sovereignty and the ultimate triumph of His kingdom."
                     : "Select a chapter to view detailed SDA commentary and theological insights."
                   }
                 </p>
@@ -263,7 +287,12 @@ const ScriptureNavigator = () => {
               <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Prophetic Timeline</h4>
                 <p className="text-gray-700 text-sm">
-                  This chapter connects to the prophetic timeline at 605 BC - 1844 AD period.
+                  {selectedBook === 'daniel' && selectedChapter <= 6
+                    ? "This chapter occurs during the Babylonian/Persian period (605-331 BC)."
+                    : selectedBook === 'daniel' && selectedChapter >= 7
+                    ? "This prophetic vision spans from Babylon to the end times and Christ's eternal kingdom."
+                    : "This chapter connects to the prophetic timeline spanning from ancient times to eternity."
+                  }
                 </p>
                 <button className="mt-2 text-green-600 hover:text-green-800 text-sm font-medium flex items-center gap-1">
                   View on Timeline <ArrowRight className="w-3 h-3" />
