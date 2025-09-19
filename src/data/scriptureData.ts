@@ -2661,43 +2661,719 @@ export const revelationChapters: ScriptureChapter[] = [
     book: "Revelation",
     chapter: 3,
     title: "Messages to Sardis, Philadelphia, Laodicea",
-    content: ``
+    content: `**And unto the angel of the church in Sardis write;**
+    These things saith he
+        that hath the seven Spirits of God,
+            and the seven stars;
+    I know thy works,
+        that thou hast a name that thou livest,
+            and art dead.
+
+**Be watchful,**
+    and strengthen the things which remain,
+        that are ready to die:
+    for I have not found thy works
+        perfect before God.
+
+**Remember therefore how thou hast received and heard,**
+    and hold fast, and repent.
+        If therefore thou shalt not watch,
+            I will come on thee as a thief,
+                and thou shalt not know what hour
+                    I will come upon thee.
+
+**Thou hast a few names even in Sardis**
+    which have not defiled their garments;
+        and they shall walk with me in white:
+            for they are worthy.
+
+**He that overcometh,**
+    the same shall be clothed in white raiment;
+        and I will not blot out his name
+            out of the book of life,
+        but I will confess his name
+            before my Father,
+                and before his angels.
+
+**He that hath an ear,**
+    let him hear what the Spirit saith unto the churches.
+
+**And to the angel of the church in Philadelphia write;**
+    These things saith he that is holy,
+        he that is true,
+            he that hath the key of David,
+        he that openeth, and no man shutteth;
+            and shutteth, and no man openeth;
+
+**I know thy works:**
+    behold, I have set before thee an open door,
+        and no man can shut it:
+    for thou hast a little strength,
+        and hast kept my word,
+            and hast not denied my name.
+
+**Behold, I will make them of the synagogue of Satan,**
+    which say they are Jews, and are not,
+        but do lie;
+    behold, I will make them to come
+        and worship before thy feet,
+            and to know that I have loved thee.
+
+**Because thou hast kept the word of my patience,**
+    I also will keep thee
+        from the hour of temptation,
+            which shall come upon all the world,
+                to try them that dwell upon the earth.
+
+**Behold, I come quickly:**
+    hold that fast which thou hast,
+        that no man take thy crown.
+
+**Him that overcometh**
+    will I make a pillar in the temple of my God,
+        and he shall go no more out:
+    and I will write upon him
+        the name of my God,
+            and the name of the city of my God,
+                which is new Jerusalem,
+                    which cometh down out of heaven
+                        from my God:
+        and I will write upon him my new name.
+
+**He that hath an ear,**
+    let him hear what the Spirit saith unto the churches.
+
+**And unto the angel of the church of the Laodiceans write;**
+    These things saith the Amen,
+        the faithful and true witness,
+            the beginning of the creation of God;
+
+**I know thy works,**
+    that thou art neither cold nor hot:
+        I would thou wert cold or hot.
+
+**So then because thou art lukewarm,**
+    and neither cold nor hot,
+        I will spue thee out of my mouth.
+
+**Because thou sayest, I am rich,**
+    and increased with goods,
+        and have need of nothing;
+    and knowest not that thou art wretched,
+        and miserable, and poor,
+            and blind, and naked:
+
+**I counsel thee to buy of me**
+    gold tried in the fire,
+        that thou mayest be rich;
+    and white raiment,
+        that thou mayest be clothed,
+            and that the shame of thy nakedness
+                do not appear;
+    and anoint thine eyes with eyesalve,
+        that thou mayest see.
+
+**As many as I love,**
+    I rebuke and chasten:
+        be zealous therefore, and repent.
+
+**Behold, I stand at the door, and knock:**
+    if any man hear my voice,
+        and open the door,
+            I will come in to him,
+                and will sup with him,
+                    and he with me.
+
+**To him that overcometh**
+    will I grant to sit with me in my throne,
+        even as I also overcame,
+            and am set down with my Father
+                in his throne.
+
+**He that hath an ear,**
+    let him hear what the Spirit saith unto the churches.
+
+`
   },
   {
     book: "Revelation",
     chapter: 4,
     title: "The Throne Room of Heaven",
-    content: ``
+    content: `**After this I looked,**
+    and, behold, a door was opened in heaven:
+        and the first voice which I heard
+            was as it were of a trumpet
+                talking with me;
+        which said, Come up hither,
+            and I will shew thee things
+                which must be hereafter.
+
+**And immediately I was in the spirit:**
+    and, behold, a throne was set in heaven,
+        and one sat on the throne.
+
+**And he that sat was to look upon**
+    like a jasper and a sardine stone:
+        and there was a rainbow
+            round about the throne,
+                in sight like unto an emerald.
+
+**And round about the throne**
+    were four and twenty seats:
+        and upon the seats I saw
+            four and twenty elders sitting,
+                clothed in white raiment;
+        and they had on their heads
+            crowns of gold.
+
+**And out of the throne proceeded**
+    lightnings and thunderings and voices:
+        and there were seven lamps of fire
+            burning before the throne,
+                which are the seven Spirits of God.
+
+**And before the throne**
+    there was a sea of glass
+        like unto crystal:
+    and in the midst of the throne,
+        and round about the throne,
+            were four beasts full of eyes
+                before and behind.
+
+**And the first beast was like a lion,**
+    and the second beast like a calf,
+        and the third beast had a face as a man,
+            and the fourth beast was like a flying eagle.
+
+**And the four beasts**
+    had each of them six wings about him;
+        and they were full of eyes within:
+    and they rest not day and night, saying,
+        Holy, holy, holy, Lord God Almighty,
+            which was, and is, and is to come.
+
+**And when those beasts give glory**
+    and honour and thanks
+        to him that sat on the throne,
+            who liveth for ever and ever,
+
+**The four and twenty elders**
+    fall down before him that sat on the throne,
+        and worship him that liveth for ever and ever,
+            and cast their crowns before the throne,
+                saying,
+
+**Thou art worthy, O Lord,**
+    to receive glory and honour and power:
+        for thou hast created all things,
+            and for thy pleasure they are
+                and were created.
+
+`
   },
   {
     book: "Revelation",
     chapter: 5,
     title: "The Lamb and the Seven Seals",
-    content: ``
+    content: `**And I saw in the right hand**
+    of him that sat on the throne
+        a book written within and on the backside,
+            sealed with seven seals.
+
+**And I saw a strong angel**
+    proclaiming with a loud voice,
+        Who is worthy to open the book,
+            and to loose the seals thereof?
+
+**And no man in heaven,**
+    nor in earth, neither under the earth,
+        was able to open the book,
+            neither to look thereon.
+
+**And I wept much,**
+    because no man was found worthy
+        to open and to read the book,
+            neither to look thereon.
+
+**And one of the elders saith unto me,**
+    Weep not:
+        behold, the Lion of the tribe of Juda,
+            the Root of David,
+                hath prevailed to open the book,
+                    and to loose the seven seals thereof.
+
+**And I beheld, and, lo,**
+    in the midst of the throne
+        and of the four beasts,
+            and in the midst of the elders,
+        stood a Lamb as it had been slain,
+            having seven horns and seven eyes,
+                which are the seven Spirits of God
+                    sent forth into all the earth.
+
+**And he came and took the book**
+    out of the right hand of him
+        that sat upon the throne.
+
+**And when he had taken the book,**
+    the four beasts and four and twenty elders
+        fell down before the Lamb,
+            having every one of them harps,
+                and golden vials full of odours,
+                    which are the prayers of saints.
+
+**And they sung a new song, saying,**
+    Thou art worthy to take the book,
+        and to open the seals thereof:
+    for thou wast slain,
+        and hast redeemed us to God by thy blood
+            out of every kindred, and tongue,
+                and people, and nation;
+
+**And hast made us unto our God**
+    kings and priests:
+        and we shall reign on the earth.
+
+**And I beheld, and I heard the voice**
+    of many angels round about the throne
+        and the beasts and the elders:
+    and the number of them was
+        ten thousand times ten thousand,
+            and thousands of thousands;
+
+**Saying with a loud voice,**
+    Worthy is the Lamb that was slain
+        to receive power, and riches,
+            and wisdom, and strength,
+                and honour, and glory, and blessing.
+
+**And every creature which is in heaven,**
+    and on the earth, and under the earth,
+        and such as are in the sea,
+            and all that are in them,
+        heard I saying,
+            Blessing, and honour, and glory, and power,
+                be unto him that sitteth upon the throne,
+                    and unto the Lamb for ever and ever.
+
+**And the four beasts said, Amen.**
+    And the four and twenty elders
+        fell down and worshipped him
+            that liveth for ever and ever.
+
+`
   },
   {
     book: "Revelation",
     chapter: 6,
     title: "The First Six Seals",
-    content: ``
+    content: `**And I saw when the Lamb opened one of the seals,**
+    and I heard, as it were the noise of thunder,
+        one of the four beasts saying,
+            Come and see.
+
+**And I saw, and behold a white horse:**
+    and he that sat on him had a bow;
+        and a crown was given unto him:
+            and he went forth conquering,
+                and to conquer.
+
+**And when he had opened the second seal,**
+    I heard the second beast say,
+        Come and see.
+
+**And there went out another horse that was red:**
+    and power was given to him that sat thereon
+        to take peace from the earth,
+            and that they should kill one another:
+        and there was given unto him a great sword.
+
+**And when he had opened the third seal,**
+    I heard the third beast say,
+        Come and see.
+    And I beheld, and lo a black horse;
+        and he that sat on him
+            had a pair of balances in his hand.
+
+**And I heard a voice**
+    in the midst of the four beasts say,
+        A measure of wheat for a penny,
+            and three measures of barley for a penny;
+        and see thou hurt not
+            the oil and the wine.
+
+**And when he had opened the fourth seal,**
+    I heard the voice of the fourth beast say,
+        Come and see.
+
+**And I looked, and behold a pale horse:**
+    and his name that sat on him was Death,
+        and Hell followed with him.
+    And power was given unto them
+        over the fourth part of the earth,
+            to kill with sword, and with hunger,
+                and with death,
+                    and with the beasts of the earth.
+
+**And when he had opened the fifth seal,**
+    I saw under the altar
+        the souls of them that were slain
+            for the word of God,
+                and for the testimony which they held:
+
+**And they cried with a loud voice, saying,**
+    How long, O Lord, holy and true,
+        dost thou not judge and avenge our blood
+            on them that dwell on the earth?
+
+**And white robes were given unto every one of them;**
+    and it was said unto them,
+        that they should rest yet for a little season,
+            until their fellowservants also
+                and their brethren,
+                    that should be killed as they were,
+                        should be fulfilled.
+
+**And I beheld when he had opened the sixth seal,**
+    and, lo, there was a great earthquake;
+        and the sun became black
+            as sackcloth of hair,
+                and the moon became as blood;
+
+**And the stars of heaven**
+    fell unto the earth,
+        even as a fig tree casteth her untimely figs,
+            when she is shaken of a mighty wind.
+
+**And the heaven departed**
+    as a scroll when it is rolled together;
+        and every mountain and island
+            were moved out of their places.
+
+**And the kings of the earth,**
+    and the great men, and the rich men,
+        and the chief captains, and the mighty men,
+            and every bondman, and every free man,
+        hid themselves in the dens
+            and in the rocks of the mountains;
+
+**And said to the mountains and rocks,**
+    Fall on us, and hide us
+        from the face of him that sitteth on the throne,
+            and from the wrath of the Lamb:
+
+**For the great day of his wrath is come;**
+    and who shall be able to stand?
+
+`
   },
   {
     book: "Revelation",
     chapter: 7,
     title: "The 144,000 and Great Multitude",
-    content: ``
+    content: `**And after these things**
+    I saw four angels standing
+        on the four corners of the earth,
+            holding the four winds of the earth,
+        that the wind should not blow
+            on the earth, nor on the sea,
+                nor on any tree.
+
+**And I saw another angel**
+    ascending from the east,
+        having the seal of the living God:
+    and he cried with a loud voice
+        to the four angels,
+            to whom it was given
+                to hurt the earth and the sea,
+
+**Saying, Hurt not the earth,**
+    neither the sea, nor the trees,
+        till we have sealed the servants of our God
+            in their foreheads.
+
+**And I heard the number of them which were sealed:**
+    and there were sealed
+        an hundred and forty and four thousand
+            of all the tribes of the children of Israel.
+
+**Of the tribe of Juda were sealed twelve thousand.**
+    Of the tribe of Reuben were sealed twelve thousand.
+        Of the tribe of Gad were sealed twelve thousand.
+
+**Of the tribe of Aser were sealed twelve thousand.**
+    Of the tribe of Nepthalim were sealed twelve thousand.
+        Of the tribe of Manasses were sealed twelve thousand.
+
+**Of the tribe of Simeon were sealed twelve thousand.**
+    Of the tribe of Levi were sealed twelve thousand.
+        Of the tribe of Issachar were sealed twelve thousand.
+
+**Of the tribe of Zabulon were sealed twelve thousand.**
+    Of the tribe of Joseph were sealed twelve thousand.
+        Of the tribe of Benjamin were sealed twelve thousand.
+
+**After this I beheld, and, lo,**
+    a great multitude,
+        which no man could number,
+            of all nations, and kindreds,
+                and people, and tongues,
+        stood before the throne,
+            and before the Lamb,
+                clothed with white robes,
+                    and palms in their hands;
+
+**And cried with a loud voice, saying,**
+    Salvation to our God
+        which sitteth upon the throne,
+            and unto the Lamb.
+
+**And all the angels stood**
+    round about the throne,
+        and about the elders and the four beasts,
+            and fell before the throne on their faces,
+                and worshipped God,
+
+**Saying, Amen:**
+    Blessing, and glory, and wisdom,
+        and thanksgiving, and honour,
+            and power, and might,
+                be unto our God for ever and ever.
+                    Amen.
+
+**And one of the elders answered,**
+    saying unto me,
+        What are these which are arrayed in white robes?
+            and whence came they?
+
+**And I said unto him,**
+    Sir, thou knowest.
+        And he said to me,
+            These are they which came out
+                of great tribulation,
+            and have washed their robes,
+                and made them white
+                    in the blood of the Lamb.
+
+**Therefore are they before the throne of God,**
+    and serve him day and night in his temple:
+        and he that sitteth on the throne
+            shall dwell among them.
+
+**They shall hunger no more,**
+    neither thirst any more;
+        neither shall the sun light on them,
+            nor any heat.
+
+**For the Lamb which is in the midst of the throne**
+    shall feed them,
+        and shall lead them unto living fountains of waters:
+            and God shall wipe away all tears
+                from their eyes.
+
+`
   },
   {
     book: "Revelation",
     chapter: 8,
     title: "The Seventh Seal and First Four Trumpets",
-    content: ``
+    content: `**And when he had opened the seventh seal,**
+    there was silence in heaven
+        about the space of half an hour.
+
+**And I saw the seven angels**
+    which stood before God;
+        and to them were given seven trumpets.
+
+**And another angel came**
+    and stood at the altar,
+        having a golden censer;
+    and there was given unto him much incense,
+        that he should offer it
+            with the prayers of all saints
+                upon the golden altar
+                    which was before the throne.
+
+**And the smoke of the incense,**
+    which came with the prayers of the saints,
+        ascended up before God
+            out of the angel's hand.
+
+**And the angel took the censer,**
+    and filled it with fire of the altar,
+        and cast it into the earth:
+    and there were voices, and thunderings,
+        and lightnings, and an earthquake.
+
+**And the seven angels**
+    which had the seven trumpets
+        prepared themselves to sound.
+
+**The first angel sounded,**
+    and there followed hail and fire
+        mingled with blood,
+            and they were cast upon the earth:
+    and the third part of trees was burnt up,
+        and all green grass was burnt up.
+
+**And the second angel sounded,**
+    and as it were a great mountain
+        burning with fire
+            was cast into the sea:
+    and the third part of the sea became blood;
+
+**And the third part of the creatures**
+    which were in the sea, and had life, died;
+        and the third part of the ships
+            were destroyed.
+
+**And the third angel sounded,**
+    and there fell a great star from heaven,
+        burning as it were a lamp,
+            and it fell upon the third part of the rivers,
+                and upon the fountains of waters;
+
+**And the name of the star is called Wormwood:**
+    and the third part of the waters became wormwood;
+        and many men died of the waters,
+            because they were made bitter.
+
+**And the fourth angel sounded,**
+    and the third part of the sun was smitten,
+        and the third part of the moon,
+            and the third part of the stars;
+    so as the third part of them was darkened,
+        and the day shone not for a third part of it,
+            and the night likewise.
+
+**And I beheld, and heard an angel**
+    flying through the midst of heaven,
+        saying with a loud voice,
+            Woe, woe, woe,
+                to the inhabiters of the earth
+                    by reason of the other voices
+                        of the trumpet of the three angels,
+                            which are yet to sound!
+
+`
   },
   {
     book: "Revelation",
     chapter: 9,
     title: "The Fifth and Sixth Trumpets",
-    content: ``
+    content: `**And the fifth angel sounded,**
+    and I saw a star fall from heaven unto the earth:
+        and to him was given the key
+            of the bottomless pit.
+
+**And he opened the bottomless pit;**
+    and there arose a smoke out of the pit,
+        as the smoke of a great furnace;
+    and the sun and the air were darkened
+        by reason of the smoke of the pit.
+
+**And there came out of the smoke**
+    locusts upon the earth:
+        and unto them was given power,
+            as the scorpions of the earth have power.
+
+**And it was commanded them**
+    that they should not hurt
+        the grass of the earth,
+            neither any green thing,
+                neither any tree;
+        but only those men
+            which have not the seal of God
+                in their foreheads.
+
+**And to them it was given**
+    that they should not kill them,
+        but that they should be tormented five months:
+    and their torment was as the torment of a scorpion,
+        when he striketh a man.
+
+**And in those days shall men seek death,**
+    and shall not find it;
+        and shall desire to die,
+            and death shall flee from them.
+
+**And the shapes of the locusts**
+    were like unto horses prepared unto battle;
+        and on their heads were as it were crowns like gold,
+            and their faces were as the faces of men.
+
+**And they had hair as the hair of women,**
+    and their teeth were as the teeth of lions.
+
+**And they had breastplates,**
+    as it were breastplates of iron;
+        and the sound of their wings
+            was as the sound of chariots
+                of many horses running to battle.
+
+**And they had tails like unto scorpions,**
+    and there were stings in their tails:
+        and their power was to hurt men five months.
+
+**And they had a king over them,**
+    which is the angel of the bottomless pit,
+        whose name in the Hebrew tongue is Abaddon,
+            but in the Greek tongue hath his name Apollyon.
+
+**One woe is past;**
+    and, behold, there come two woes more hereafter.
+
+**And the sixth angel sounded,**
+    and I heard a voice from the four horns
+        of the golden altar which is before God,
+
+**Saying to the sixth angel which had the trumpet,**
+    Loose the four angels
+        which are bound in the great river Euphrates.
+
+**And the four angels were loosed,**
+    which were prepared for an hour,
+        and a day, and a month, and a year,
+            for to slay the third part of men.
+
+**And the number of the army of the horsemen**
+    were two hundred thousand thousand:
+        and I heard the number of them.
+
+**And thus I saw the horses in the vision,**
+    and them that sat on them,
+        having breastplates of fire,
+            and of jacinth, and brimstone:
+    and the heads of the horses
+        were as the heads of lions;
+            and out of their mouths issued
+                fire and smoke and brimstone.
+
+**By these three was the third part of men killed,**
+    by the fire, and by the smoke,
+        and by the brimstone,
+            which issued out of their mouths.
+
+**For their power is in their mouth,**
+    and in their tails:
+        for their tails were like unto serpents,
+            and had heads,
+                and with them they do hurt.
+
+**And the rest of the men**
+    which were not killed by these plagues
+        yet repented not of the works of their hands,
+            that they should not worship devils,
+                and idols of gold, and silver,
+                    and brass, and stone, and of wood:
+                which neither can see, nor hear, nor walk:
+
+**Neither repented they of their murders,**
+    nor of their sorceries,
+        nor of their fornication,
+            nor of their thefts.
+
+`
   },
   {
     book: "Revelation",
