@@ -2361,8 +2361,11 @@ export const danielChapters: ScriptureChapter[] = [
             at the end of the days.`
   }
   ],
-  revelation: {
-    1: {
+
+  export const revelationChapters: ScriptureChapter[] = [
+  {
+      book: "Revelation",
+      chapter: "1",
       title: "Vision of Christ",
       content: `**The Revelation of Jesus Christ,**
     which God gave unto him,
@@ -2485,7 +2488,9 @@ export const danielChapters: ScriptureChapter[] = [
     and the seven candlesticks which thou sawest
         are the seven churches.`
     },
-    2: {
+     {
+      book: "Revelation",
+      chapter: "2",
       title: "Letters to Ephesus, Smyrna, Pergamos, Thyatira",
       content: `**Unto the angel of the church of Ephesus write;**
     These things saith he
@@ -2645,7 +2650,9 @@ export const danielChapters: ScriptureChapter[] = [
 **He that hath an ear,**
     let him hear what the Spirit saith unto the churches.`
     },
-    3: {
+      {
+      book: "Revelation",
+      chapter: "3",
       title: "Letters to Sardis, Philadelphia, Laodicea",
       content: `**And unto the angel of the church in Sardis write;**
     These things saith he
@@ -2779,7 +2786,9 @@ export const danielChapters: ScriptureChapter[] = [
 **He that hath an ear,**
     let him hear what the Spirit saith unto the churches.`
     },
-    4: {
+      {
+      book: "Revelation",
+      chapter: "4",
       title: "The Throne in Heaven",
       content: `**After this I looked,**
     and, behold, a door was opened in heaven:
@@ -2851,7 +2860,9 @@ export const danielChapters: ScriptureChapter[] = [
             and for thy pleasure they are
                 and were created.`
     },
-    5: {
+      {
+      book: "Revelation",
+      chapter: "5",
       title: "The Scroll and the Lamb",
       content: `**And I saw in the right hand**
     of him that sat on the throne
@@ -2939,7 +2950,9 @@ export const danielChapters: ScriptureChapter[] = [
         fell down and worshipped him
             that liveth for ever and ever.`
     },
-    6: {
+      {
+      book: "Revelation",
+      chapter: "6",
       title: "The Six Seals",
       content: `**And I saw when the Lamb opened one of the seals,**
     and I heard, as it were the noise of thunder,
@@ -3039,7 +3052,9 @@ export const danielChapters: ScriptureChapter[] = [
 **For the great day of his wrath is come;**
     and who shall be able to stand?`
     },
-    7: {
+      {
+      book: "Revelation",
+      chapter: "7",
       title: "The 144,000 and Great Multitude",
       content: `**And after these things**
     I saw four angels standing
@@ -3141,7 +3156,9 @@ export const danielChapters: ScriptureChapter[] = [
             and God shall wipe away all tears
                 from their eyes.`
     },
-    8: {
+     {
+      book: "Revelation",
+      chapter: "8",
       title: "The Seventh Seal and Four Trumpets",
       content: `**And when he had opened the seventh seal,**
     there was silence in heaven
@@ -3221,7 +3238,9 @@ export const danielChapters: ScriptureChapter[] = [
                         of the trumpet of the three angels,
                             which are yet to sound!`
     },
-    9: {
+      {
+      book: "Revelation",
+      chapter: "9",
       title: "The Fifth and Sixth Trumpets",
       content: `**And the fifth angel sounded,**
     and I saw a star fall from heaven unto the earth:
@@ -3335,7 +3354,9 @@ export const danielChapters: ScriptureChapter[] = [
         nor of their fornication,
             nor of their thefts.`
     },
-    10: {
+      {
+      book: "Revelation",
+      chapter: "10",
       title: "The Angel and the Little Scroll",
       content: `**And I saw another mighty angel**
     come down from heaven,
@@ -3411,7 +3432,9 @@ export const danielChapters: ScriptureChapter[] = [
         before many peoples, and nations,
             and tongues, and kings.`
     },
-    11: {
+      {
+      book: "Revelation",
+      chapter: "11",
       title: "The Two Witnesses",
       content: `**And there was given me**
     a reed like unto a rod:
@@ -3535,7 +3558,9 @@ export const danielChapters: ScriptureChapter[] = [
         and thunderings, and an earthquake,
             and great hail.`
     },
-    12: {
+      {
+      book: "Revelation",
+      chapter: "12",
       title: "The Woman and the Dragon",
       content: `**And there appeared a great wonder in heaven;**
     a woman clothed with the sun,
@@ -3638,7 +3663,9 @@ export const danielChapters: ScriptureChapter[] = [
             which keep the commandments of God,
                 and have the testimony of Jesus Christ.`
     },
-    13: {
+     {
+      book: "Revelation",
+      chapter: "13",
       title: "The Beast from the Sea and Earth",
       content: `**And I stood upon the sand of the sea,**
     and saw a beast rise up out of the sea,
@@ -3747,7 +3774,9 @@ export const danielChapters: ScriptureChapter[] = [
     for it is the number of a man;
         and his number is Six hundred threescore and six.`
     },
-    14: {
+      {
+      book: "Revelation",
+      chapter: "14",
       title: "The Lamb and the 144,000",
       content: `**And I looked, and, lo,**
     a Lamb stood on the mount Sion,
@@ -3878,7 +3907,9 @@ export const danielChapters: ScriptureChapter[] = [
                 by the space of a thousand
                     and six hundred furlongs.`
     },
-    15: {
+      {
+      book: "Revelation",
+      chapter: "15",
       title: "The Seven Angels with Seven Plagues",
       content: `**And I saw another sign in heaven,**
     great and marvellous,
@@ -3933,7 +3964,9 @@ export const danielChapters: ScriptureChapter[] = [
         till the seven plagues of the seven angels
             were fulfilled.`
     },
-    16: {
+      {
+      book: "Revelation",
+      chapter: "16",
       title: "The Seven Bowls of Wrath",
       content: `**And I heard a great voice out of the temple**
     saying to the seven angels,
@@ -4051,7 +4084,9 @@ export const danielChapters: ScriptureChapter[] = [
         because of the plague of the hail;
             for the plague thereof was exceeding great.`
     },
-    17: {
+      {
+      book: "Revelation",
+      chapter: "17",
       title: "The Great Prostitute",
       content: `**And there came one of the seven angels**
     which had the seven vials,
@@ -4181,7 +4216,9 @@ export const danielChapters: ScriptureChapter[] = [
         which reigneth
             over the kings of the earth.`
     },
-    18: {
+      {
+      book: "Revelation",
+      chapter: "18",
       title: "The Fall of Babylon",
       content: `**And after these things**
     I saw another angel
@@ -4353,7 +4390,9 @@ export const danielChapters: ScriptureChapter[] = [
         and of all that were slain
             upon the earth.`
     },
-    19: {
+      {
+      book: "Revelation",
+      chapter: "19",
       title: "Hallelujah and the Wedding Supper",
       content: `**And after these things**
     I heard a great voice
@@ -4513,7 +4552,9 @@ export const danielChapters: ScriptureChapter[] = [
                     and all the fowls were filled
                         with their flesh.`
     },
-    20: {
+      {
+      book: "Revelation",
+      chapter: "20",
       title: "The Thousand Years",
       content: `**And I saw an angel**
     come down from heaven,
@@ -4633,7 +4674,9 @@ export const danielChapters: ScriptureChapter[] = [
         was cast
             into the lake of fire.`
     },
-    21: {
+     {
+      book: "Revelation",
+      chapter: "21",
       title: "The New Heaven and New Earth",
       content: `**And I saw a new heaven and a new earth:**
     for the first heaven and the first earth
@@ -4825,7 +4868,9 @@ export const danielChapters: ScriptureChapter[] = [
                 but they which are written
                     in the Lamb's book of life.`
     },
-    22: {
+     {
+      book: "Revelation",
+      chapter: "22",
       title: "The River of Life",
       content: `**And he shewed me**
     a pure river of water of life,
