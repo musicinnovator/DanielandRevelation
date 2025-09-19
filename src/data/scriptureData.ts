@@ -3587,19 +3587,356 @@ export const revelationChapters: ScriptureChapter[] = [
     book: "Revelation",
     chapter: 12,
     title: "The Woman and the Dragon",
-    content: ``
+    content: `**And there appeared a great wonder in heaven;**
+    a woman clothed with the sun,
+        and the moon under her feet,
+            and upon her head a crown of twelve stars:
+
+**And she being with child cried,**
+    travailing in birth,
+        and pained to be delivered.
+
+**And there appeared another wonder in heaven;**
+    and behold a great red dragon,
+        having seven heads and ten horns,
+            and seven crowns upon his heads.
+
+**And his tail drew the third part**
+    of the stars of heaven,
+        and did cast them to the earth:
+    and the dragon stood before the woman
+        which was ready to be delivered,
+            for to devour her child
+                as soon as it was born.
+
+**And she brought forth a man child,**
+    who was to rule all nations
+        with a rod of iron:
+    and her child was caught up unto God,
+        and to his throne.
+
+**And the woman fled into the wilderness,**
+    where she hath a place prepared of God,
+        that they should feed her there
+            a thousand two hundred and threescore days.
+
+**And there was war in heaven:**
+    Michael and his angels
+        fought against the dragon;
+    and the dragon fought and his angels,
+
+**And prevailed not;**
+    neither was their place found
+        any more in heaven.
+
+**And the great dragon was cast out,**
+    that old serpent,
+        called the Devil, and Satan,
+            which deceiveth the whole world:
+    he was cast out into the earth,
+        and his angels were cast out with him.
+
+**And I heard a loud voice saying in heaven,**
+    Now is come salvation, and strength,
+        and the kingdom of our God,
+            and the power of his Christ:
+    for the accuser of our brethren is cast down,
+        which accused them before our God
+            day and night.
+
+**And they overcame him**
+    by the blood of the Lamb,
+        and by the word of their testimony;
+    and they loved not their lives
+        unto the death.
+
+**Therefore rejoice, ye heavens,**
+    and ye that dwell in them.
+        Woe to the inhabiters of the earth
+            and of the sea!
+    for the devil is come down unto you,
+        having great wrath,
+            because he knoweth that he hath
+                but a short time.
+
+**And when the dragon saw**
+    that he was cast unto the earth,
+        he persecuted the woman
+            which brought forth the man child.
+
+**And to the woman were given**
+    two wings of a great eagle,
+        that she might fly into the wilderness,
+            into her place,
+                where she is nourished
+                    for a time, and times, and half a time,
+                        from the face of the serpent.
+
+**And the serpent cast out of his mouth**
+    water as a flood after the woman,
+        that he might cause her
+            to be carried away of the flood.
+
+**And the earth helped the woman,**
+    and the earth opened her mouth,
+        and swallowed up the flood
+            which the dragon cast out of his mouth.
+
+**And the dragon was wroth with the woman,**
+    and went to make war
+        with the remnant of her seed,
+            which keep the commandments of God,
+                and have the testimony of Jesus Christ.
+
+`
   },
   {
     book: "Revelation",
     chapter: 13,
     title: "The Beast from Sea and Earth",
-    content: ``
+    content: `**And I stood upon the sand of the sea,**
+    and saw a beast rise up out of the sea,
+        having seven heads and ten horns,
+            and upon his horns ten crowns,
+                and upon his heads the name of blasphemy.
+
+**And the beast which I saw**
+    was like unto a leopard,
+        and his feet were as the feet of a bear,
+            and his mouth as the mouth of a lion:
+    and the dragon gave him his power,
+        and his seat, and great authority.
+
+**And I saw one of his heads**
+    as it were wounded to death;
+        and his deadly wound was healed:
+    and all the world wondered after the beast.
+
+**And they worshipped the dragon**
+    which gave power unto the beast:
+        and they worshipped the beast, saying,
+            Who is like unto the beast?
+                who is able to make war with him?
+
+**And there was given unto him**
+    a mouth speaking great things and blasphemies;
+        and power was given unto him
+            to continue forty and two months.
+
+**And he opened his mouth in blasphemy against God,**
+    to blaspheme his name,
+        and his tabernacle,
+            and them that dwell in heaven.
+
+**And it was given unto him**
+    to make war with the saints,
+        and to overcome them:
+    and power was given him
+        over all kindreds, and tongues, and nations.
+
+**And all that dwell upon the earth**
+    shall worship him,
+        whose names are not written
+            in the book of life of the Lamb
+                slain from the foundation of the world.
+
+**If any man have an ear,**
+    let him hear.
+
+**He that leadeth into captivity**
+    shall go into captivity:
+        he that killeth with the sword
+            must be killed with the sword.
+    Here is the patience and the faith of the saints.
+
+**And I beheld another beast**
+    coming up out of the earth;
+        and he had two horns like a lamb,
+            and he spake as a dragon.
+
+**And he exerciseth all the power**
+    of the first beast before him,
+        and causeth the earth
+            and them which dwell therein
+                to worship the first beast,
+                    whose deadly wound was healed.
+
+**And he doeth great wonders,**
+    so that he maketh fire
+        come down from heaven on the earth
+            in the sight of men,
+
+**And deceiveth them that dwell on the earth**
+    by the means of those miracles
+        which he had power to do
+            in the sight of the beast;
+    saying to them that dwell on the earth,
+        that they should make an image to the beast,
+            which had the wound by a sword,
+                and did live.
+
+**And he had power to give life**
+    unto the image of the beast,
+        that the image of the beast
+            should both speak,
+        and cause that as many as would not worship
+            the image of the beast
+                should be killed.
+
+**And he causeth all,**
+    both small and great,
+        rich and poor, free and bond,
+            to receive a mark
+                in their right hand,
+                    or in their foreheads:
+
+**And that no man might buy or sell,**
+    save he that had the mark,
+        or the name of the beast,
+            or the number of his name.
+
+**Here is wisdom.**
+    Let him that hath understanding
+        count the number of the beast:
+    for it is the number of a man;
+        and his number is Six hundred threescore and six.
+
+`
   },
   {
     book: "Revelation",
     chapter: 14,
     title: "The 144,000 and Three Angels",
-    content: ``
+    content: `**And I looked, and, lo,**
+    a Lamb stood on the mount Sion,
+        and with him an hundred forty and four thousand,
+            having his Father's name written
+                in their foreheads.
+
+**And I heard a voice from heaven,**
+    as the voice of many waters,
+        and as the voice of a great thunder:
+    and I heard the voice of harpers
+        harping with their harps:
+
+**And they sung as it were a new song**
+    before the throne,
+        and before the four beasts, and the elders:
+    and no man could learn that song
+        but the hundred and forty and four thousand,
+            which were redeemed from the earth.
+
+**These are they which were not defiled with women;**
+    for they are virgins.
+        These are they which follow the Lamb
+            whithersoever he goeth.
+    These were redeemed from among men,
+        being the firstfruits unto God
+            and to the Lamb.
+
+**And in their mouth was found no guile:**
+    for they are without fault
+        before the throne of God.
+
+**And I saw another angel**
+    fly in the midst of heaven,
+        having the everlasting gospel
+            to preach unto them that dwell on the earth,
+                and to every nation, and kindred,
+                    and tongue, and people,
+
+**Saying with a loud voice,**
+    Fear God, and give glory to him;
+        for the hour of his judgment is come:
+    and worship him that made heaven,
+        and earth, and the sea,
+            and the fountains of waters.
+
+**And there followed another angel, saying,**
+    Babylon is fallen, is fallen,
+        that great city,
+            because she made all nations drink
+                of the wine of the wrath
+                    of her fornication.
+
+**And the third angel followed them,**
+    saying with a loud voice,
+        If any man worship the beast and his image,
+            and receive his mark
+                in his forehead, or in his hand,
+
+**The same shall drink of the wine**
+    of the wrath of God,
+        which is poured out without mixture
+            into the cup of his indignation;
+    and he shall be tormented
+        with fire and brimstone
+            in the presence of the holy angels,
+                and in the presence of the Lamb:
+
+**And the smoke of their torment**
+    ascendeth up for ever and ever:
+        and they have no rest day nor night,
+            who worship the beast and his image,
+                and whosoever receiveth the mark
+                    of his name.
+
+**Here is the patience of the saints:**
+    here are they that keep
+        the commandments of God,
+            and the faith of Jesus.
+
+**And I heard a voice from heaven**
+    saying unto me,
+        Write, Blessed are the dead
+            which die in the Lord from henceforth:
+        Yea, saith the Spirit,
+            that they may rest from their labours;
+                and their works do follow them.
+
+**And I looked, and behold a white cloud,**
+    and upon the cloud one sat
+        like unto the Son of man,
+            having on his head a golden crown,
+                and in his hand a sharp sickle.
+
+**And another angel came out of the temple,**
+    crying with a loud voice
+        to him that sat on the cloud,
+            Thrust in thy sickle, and reap:
+        for the time is come for thee to reap;
+            for the harvest of the earth is ripe.
+
+**And he that sat on the cloud**
+    thrust in his sickle on the earth;
+        and the earth was reaped.
+
+**And another angel came out of the temple**
+    which is in heaven,
+        he also having a sharp sickle.
+
+**And another angel came out from the altar,**
+    which had power over fire;
+        and cried with a loud cry
+            to him that had the sharp sickle, saying,
+        Thrust in thy sharp sickle,
+            and gather the clusters of the vine of the earth;
+                for her grapes are fully ripe.
+
+**And the angel thrust in his sickle**
+    into the earth,
+        and gathered the vine of the earth,
+            and cast it into the great winepress
+                of the wrath of God.
+
+**And the winepress was trodden**
+    without the city,
+        and blood came out of the winepress,
+            even unto the horse bridles,
+                by the space of a thousand
+                    and six hundred furlongs.
+
+`
   },
   {
     book: "Revelation",
