@@ -12,13 +12,13 @@ const ScriptureNavigator = () => {
   };
 
   const danielChapterTitles = {
-    1: "Daniel's Faithfulness in Diet leads to God Blessing him with the visions of the Book of Daniel",
-    2: "Nebuchadnezzar's Dream - The Great Image",
-    3: "The Fiery Furnace Test",
+    1: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test",
+    2: "Nebuchadnezzar's Dream (The 4 Great Kingdoms of World History)- The Great Image and its interpretation by God given through Daniel",
+    3: "The Fiery Furnace Test - the Second Test",
     4: "Nebuchadnezzar's Tree Dream and Its Fulfillment by his own testimony",
-    5: "Belshazzar's Feast - The Handwriting",
-    6: "Daniel in the Lion's Den",
-    7: "The Four Beasts Vision",
+    5: "Belshazzar's Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
+    6: "Daniel in the Lion's Den - the Third Test",
+    7: "The Four Beasts Vision (Lion, Bear, Leopard, Terrible Beast) - ",
     8: "The Ram and Goat Vision",
     9: "The 70 Week Prophecy",
     10: "Daniel's Final Vision Begins",
