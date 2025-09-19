@@ -3379,13 +3379,209 @@ export const revelationChapters: ScriptureChapter[] = [
     book: "Revelation",
     chapter: 10,
     title: "The Mighty Angel and Little Book",
-    content: ``
+    content: `**And I saw another mighty angel**
+    come down from heaven,
+        clothed with a cloud:
+    and a rainbow was upon his head,
+        and his face was as it were the sun,
+            and his feet as pillars of fire:
+
+**And he had in his hand**
+    a little book open:
+        and he set his right foot upon the sea,
+            and his left foot on the earth,
+
+**And cried with a loud voice,**
+    as when a lion roareth:
+        and when he had cried,
+            seven thunders uttered their voices.
+
+**And when the seven thunders**
+    had uttered their voices,
+        I was about to write:
+    and I heard a voice from heaven
+        saying unto me,
+            Seal up those things
+                which the seven thunders uttered,
+                    and write them not.
+
+**And the angel which I saw**
+    stand upon the sea and upon the earth
+        lifted up his hand to heaven,
+
+**And sware by him that liveth for ever and ever,**
+    who created heaven,
+        and the things that therein are,
+    and the earth,
+        and the things that therein are,
+    and the sea,
+        and the things which are therein,
+            that there should be time no longer:
+
+**But in the days of the voice**
+    of the seventh angel,
+        when he shall begin to sound,
+            the mystery of God should be finished,
+                as he hath declared to his servants
+                    the prophets.
+
+**And the voice which I heard from heaven**
+    spake unto me again, and said,
+        Go and take the little book
+            which is open in the hand of the angel
+                which standeth upon the sea
+                    and upon the earth.
+
+**And I went unto the angel,**
+    and said unto him,
+        Give me the little book.
+    And he said unto me,
+        Take it, and eat it up;
+            and it shall make thy belly bitter,
+                but it shall be in thy mouth
+                    sweet as honey.
+
+**And I took the little book**
+    out of the angel's hand,
+        and ate it up;
+    and it was in my mouth sweet as honey:
+        and as soon as I had eaten it,
+            my belly was bitter.
+
+**And he said unto me,**
+    Thou must prophesy again
+        before many peoples, and nations,
+            and tongues, and kings.
+
+`
   },
   {
     book: "Revelation",
     chapter: 11,
     title: "The Two Witnesses",
-    content: ``
+    content: `**And there was given me**
+    a reed like unto a rod:
+        and the angel stood, saying,
+            Rise, and measure the temple of God,
+                and the altar,
+                    and them that worship therein.
+
+**But the court which is without the temple**
+    leave out, and measure it not;
+        for it is given unto the Gentiles:
+    and the holy city shall they tread under foot
+        forty and two months.
+
+**And I will give power unto my two witnesses,**
+    and they shall prophesy
+        a thousand two hundred and threescore days,
+            clothed in sackcloth.
+
+**These are the two olive trees,**
+    and the two candlesticks
+        standing before the God of the earth.
+
+**And if any man will hurt them,**
+    fire proceedeth out of their mouth,
+        and devoureth their enemies:
+    and if any man will hurt them,
+        he must in this manner be killed.
+
+**These have power to shut heaven,**
+    that it rain not in the days of their prophecy:
+        and have power over waters
+            to turn them to blood,
+        and to smite the earth with all plagues,
+            as often as they will.
+
+**And when they shall have finished their testimony,**
+    the beast that ascendeth
+        out of the bottomless pit
+            shall make war against them,
+                and shall overcome them,
+                    and kill them.
+
+**And their dead bodies shall lie**
+    in the street of the great city,
+        which spiritually is called Sodom and Egypt,
+            where also our Lord was crucified.
+
+**And they of the people**
+    and kindreds and tongues and nations
+        shall see their dead bodies
+            three days and an half,
+        and shall not suffer their dead bodies
+            to be put in graves.
+
+**And they that dwell upon the earth**
+    shall rejoice over them,
+        and make merry,
+            and shall send gifts one to another;
+        because these two prophets
+            tormented them that dwelt on the earth.
+
+**And after three days and an half**
+    the Spirit of life from God
+        entered into them,
+            and they stood upon their feet;
+        and great fear fell upon them
+            which saw them.
+
+**And they heard a great voice from heaven**
+    saying unto them,
+        Come up hither.
+    And they ascended up to heaven in a cloud;
+        and their enemies beheld them.
+
+**And the same hour was there a great earthquake,**
+    and the tenth part of the city fell,
+        and in the earthquake were slain of men
+            seven thousand:
+    and the remnant were affrighted,
+        and gave glory to the God of heaven.
+
+**The second woe is past;**
+    and, behold, the third woe cometh quickly.
+
+**And the seventh angel sounded;**
+    and there were great voices in heaven, saying,
+        The kingdoms of this world
+            are become the kingdoms of our Lord,
+                and of his Christ;
+        and he shall reign for ever and ever.
+
+**And the four and twenty elders,**
+    which sat before God on their seats,
+        fell upon their faces,
+            and worshipped God,
+
+**Saying, We give thee thanks,**
+    O Lord God Almighty,
+        which art, and wast, and art to come;
+    because thou hast taken to thee
+        thy great power,
+            and hast reigned.
+
+**And the nations were angry,**
+    and thy wrath is come,
+        and the time of the dead,
+            that they should be judged,
+        and that thou shouldest give reward
+            unto thy servants the prophets,
+                and to the saints,
+                    and them that fear thy name,
+                        small and great;
+        and shouldest destroy them
+            which destroy the earth.
+
+**And the temple of God was opened in heaven,**
+    and there was seen in his temple
+        the ark of his testament:
+    and there were lightnings, and voices,
+        and thunderings, and an earthquake,
+            and great hail.
+
+`
   },
   {
     book: "Revelation",
