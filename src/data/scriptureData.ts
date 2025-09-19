@@ -1059,12 +1059,12 @@ export const danielChapters: ScriptureChapter[] = [
 
 **And Darius the Median took the kingdom,**
     being about threescore and two years old.`
-  }
+  },
    {
     book: "Daniel",
     chapter: 6,
     title: "Daniel and the Lion's Den",
-    content: " **It pleased Darius to set over the kingdom
+    content: `" **It pleased Darius to set over the kingdom
     an hundred and twenty princes,
         which should be over the whole kingdom;
 
@@ -1240,38 +1240,38 @@ And over these three presidents;**
 
 **So this Daniel prospered**
     in the reign of Darius,
-        and in the reign of Cyrus the Persian.",
-   }
+        and in the reign of Cyrus the Persian.`
+   },
    {
     book: "Daniel",
     chapter: 7,
     title: "",
     content: "",
-   }
+   },
    {
     book: "Daniel",
     chapter: 8,
     title: "",
     content: "",
-   }
+   },
    {
     book: "Daniel",
     chapter: 9,
     title: "",
     content: "",
-   }
+   },
    {
     book: "Daniel",
     chapter: 10,
     title: "",
     content: "",
-   }
+   },
    {
     book: "Daniel",
     chapter: 11,
     title: "",
     content: "",
-   }
+   },
    {
     book: "Daniel",
     chapter: 12,
