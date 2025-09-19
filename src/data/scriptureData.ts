@@ -1197,7 +1197,7 @@ export function getScriptureChapter(book: string, chapter: number): ScriptureCha
   }
 ];
 
-export function getScriptureChapter(book: string, chapter: number): ScriptureChapter | undefined {
+const revelationChapters: ScriptureChapter[] = [
   if (book.toLowerCase() === 'daniel') {
     return danielChapters.find(ch => ch.chapter === chapter);
   } else if (book.toLowerCase() === 'revelation') {
