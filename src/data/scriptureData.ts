@@ -1,6 +1,6 @@
 export interface ScriptureChapter {
   book: string;
-  chapter: number;
+  chapter: string | number;
   title: string;
   content: string;
 }
@@ -5017,7 +5017,7 @@ export const getScriptureChapter = (book: string, chapter: number): ScriptureCha
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
   if (book === "Revelation") {
-    return revelationChapters.find(ch => ch.chapter === chapter) || null;
+    return revelationChapters.find(ch => ch.chapter === chapter.toString()) || null;
   }
   return null;
 };
