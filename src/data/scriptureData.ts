@@ -5008,7 +5008,6 @@ export const danielChapters: ScriptureChapter[] = [
 **The grace of our Lord Jesus Christ**
     be with you all.
         Amen.`
-    }
 
 export const revelationChapters: ScriptureChapter[] = [
   if (book === "Daniel") {
