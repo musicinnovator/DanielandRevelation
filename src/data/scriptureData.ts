@@ -1048,7 +1048,9 @@ export const danielChapters: ScriptureChapter[] = [
     and they clothed Daniel with scarlet,
         and put a chain of gold about his neck,
             and made a proclamation concerning him,
-                that he should be the third ruler in the kingdom.
+                that he should be the third ruler in the kingdom
+  }
+].
 
 **In that night was Belshazzar the king of the Chaldeans slain.**
 
