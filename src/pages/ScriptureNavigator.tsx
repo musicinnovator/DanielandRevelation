@@ -12,7 +12,7 @@ const ScriptureNavigator = () => {
   };
 
   const danielChapterTitles = {
-    1: "Daniel's Faithfulness in Diet",
+    1: "Daniel's Faithfulness in Diet leads to God Blessing him with the visions of the Book of Daniel",
     2: "Nebuchadnezzar's Dream - The Great Image",
     3: "The Fiery Furnace Test",
     4: "Nebuchadnezzar's Tree Dream",
