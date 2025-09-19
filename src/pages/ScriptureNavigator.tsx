@@ -297,6 +297,35 @@ const ScriptureNavigator = () => {
             </button>
           </div>
         </div>
+
+        {/* Support Section */}
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Support This Ministry</h2>
+          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            Help us continue providing free biblical study tools with your generous support
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* PayPal Donation Button */}
+            <a
+              href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via PayPal
+            </a>
+
+            {/* Stripe Payment Link Button */}
+            <a
+              href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via Stripe
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

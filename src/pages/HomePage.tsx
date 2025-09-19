@@ -382,6 +382,43 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Support Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Support This Ministry
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Help us continue developing this free educational platform for the Seventh-day Adventist community. 
+            Your donations support ongoing development, hosting, and new features.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* PayPal Donation Button */}
+            <a
+              href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Donate via PayPal
+            </a>
+
+            {/* Stripe Payment Link Button */}
+            <a
+              href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Donate via Stripe
+            </a>
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            All donations go directly to platform development and maintenance
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
