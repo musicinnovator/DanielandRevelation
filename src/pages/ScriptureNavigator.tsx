@@ -17,7 +17,7 @@ const ScriptureNavigator = () => {
     3: "The Fiery Furnace Test - the Second Test (Worship God alone)",
     4: "Nebuchadnezzar's Tree Dream and Its Fulfillment as given in his own testimony",
     5: "Belshazzar's Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
-    6: "Daniel in the Lion's Den - the Third Test(Duty to God)",
+    6: "Daniel in the Lion's Den - the Third Test(Thou shalt have no other gods before Me)",
     7: "The Four Beasts Vision (Lion, Bear, Leopard, Terrible Beast) - ",
     8: "The Ram and Goat Vision",
     9: "The 70 Week Prophecy",
