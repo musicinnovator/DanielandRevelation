@@ -19,7 +19,7 @@ const ScriptureNavigator = () => {
     5: "Belshazzar's abominable Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
     6: "Daniel in the Lion's Den - the Third Test(Thou shalt have no other gods before Me)",
     7: "The Four Beasts Vision (Lion, Bear, Leopard, Dreadful/Terrible Beast = Babylon, Medo-Persia, Greece, Rome(Pagan/Papal), respectively) - The 4 Great Kingdoms of World History with more detail added about the Fourth beast's actions",
-    8: "The Ram and Goat Vision",
+    8: "The Ram (with 2 unequal horns) and Goat (with a notable horn) Vision",
     9: "The 70 Week Prophecy",
     10: "Daniel's Final Vision Begins",
     11: "Kings of North and South",
