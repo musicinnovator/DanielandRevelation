@@ -18,7 +18,7 @@ const Timeline = () => {
       id: 1,
       date: "605 BC",
       title: "Babylon Conquers Judah",
-      description: " Beginning of Jewish captivity - Jerusalem destroyed 1st time - Daniel, his friends and other Princes well-favoured taken",
+      description: " Prophecies of Isaiah, Jeremiah, and other prophets come true - Beginning of Jewish captivity - Jerusalem destroyed 1st time - Daniel, his friends and other Princes well-favoured taken",
       book: "Daniel",
       chapter: 1,
       category: "ancient",
