@@ -16,7 +16,7 @@ const ScriptureNavigator = () => {
     2: "Nebuchadnezzar's 1st Dream (The 4 Great Kingdoms of World History)- The Great Image and its interpretation by God given through Daniel",
     3: "The Golden Image of Nebuchadnezzar -The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
     4: "Nebuchadnezzar's 2nd Dream and Its Fulfillment as given in his own testimony",
-    5: "Belshazzar's Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
+    5: "Belshazzar's abominable Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
     6: "Daniel in the Lion's Den - the Third Test(Thou shalt have no other gods before Me)",
     7: "The Four Beasts Vision (Lion, Bear, Leopard, Terrible Beast) - ",
     8: "The Ram and Goat Vision",
