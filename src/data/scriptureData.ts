@@ -5007,9 +5007,8 @@ export const revelationChapters: ScriptureChapter[] = [
         Amen.`
     }
 ];
-];
 
-export const revelationChapters: ScriptureChapter[] = [
+export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
   if (book === "Daniel") {
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
