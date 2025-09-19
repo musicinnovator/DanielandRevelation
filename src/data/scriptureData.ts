@@ -1062,6 +1062,150 @@ export const danielChapters: ScriptureChapter[] = [
   }
 ]
 
+export const revelationChapters: ScriptureChapter[] = [
+  {
+    book: "Revelation",
+    chapter: 1,
+    title: "Christ Among the Candlesticks",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 2,
+    title: "Messages to Ephesus, Smyrna, Pergamos, Thyatira",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 3,
+    title: "Messages to Sardis, Philadelphia, Laodicea",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 4,
+    title: "The Throne Room of Heaven",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 5,
+    title: "The Lamb and the Seven Seals",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 6,
+    title: "The First Six Seals",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 7,
+    title: "The 144,000 and Great Multitude",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 8,
+    title: "The Seventh Seal and First Four Trumpets",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 9,
+    title: "The Fifth and Sixth Trumpets",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 10,
+    title: "The Mighty Angel and Little Book",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 11,
+    title: "The Two Witnesses",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 12,
+    title: "The Woman and the Dragon",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 13,
+    title: "The Beast from Sea and Earth",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 14,
+    title: "The 144,000 and Three Angels",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 15,
+    title: "The Seven Last Plagues",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 16,
+    title: "The Seven Vials of Wrath",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 17,
+    title: "The Great Whore",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 18,
+    title: "Babylon's Fall",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 19,
+    title: "Christ's Second Coming",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 20,
+    title: "The Millennium and Final Judgment",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 21,
+    title: "New Heaven and New Earth",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  },
+  {
+    book: "Revelation",
+    chapter: 22,
+    title: "The River of Life and Final Words",
+    content: "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+  }
+];
+
+export function getScriptureChapter(book: string, chapter: number): ScriptureChapter | undefined {
+  if (book.toLowerCase() === 'daniel') {
+    return danielChapters.find(ch => ch.chapter === chapter);
+  } else if (book.toLowerCase() === 'revelation') {
+    return revelationChapters.find(ch => ch.chapter === chapter);
+  }
+  return undefined;
+}
+
 export function formatScriptureContent(content: string): string {
   return content
     // Convert **text** to <strong>text</strong>
