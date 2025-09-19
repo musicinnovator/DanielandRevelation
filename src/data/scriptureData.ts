@@ -462,8 +462,6 @@ export const danielChapters: ScriptureChapter[] = [
             that Nebuchadnezzar had set up.
 
 **Then an herald cried aloud,**
-  }
-]
     To you it is commanded,
         O people, nations, and languages,
 
@@ -1961,9 +1959,7 @@ export const danielChapters: ScriptureChapter[] = [
 
 **And when he shall stand up,**
     his kingdom shall be broken,
-        and shall be divide
-  }
-]d
+        and shall be divided
             toward the four winds of heaven;
     and not to his posterity,
         nor according to his dominion which he ruled:
@@ -2364,9 +2360,9 @@ export const danielChapters: ScriptureChapter[] = [
         and stand in thy lot
             at the end of the days.`
   }
-  ],
+];
 
-  export const revelationChapters: ScriptureChapter[] = [
+export const revelationChapters: ScriptureChapter[] = [
   {
       book: "Revelation",
       chapter: "1",
@@ -3984,7 +3980,7 @@ export const danielChapters: ScriptureChapter[] = [
             upon the men which had the mark of the beast,
                 and upon them which worshipped his image.
 
-**And the second angel*
+**And the second angel**
     poured out his vial upon the sea;
         and it became as the blood of a dead man:
             and every living soul died in the sea.
@@ -5010,10 +5006,10 @@ export const danielChapters: ScriptureChapter[] = [
     be with you all.
         Amen.`
     }
-  }
-};
-export const revelationChapters: ScriptureChapter[] = [
-export const revelationChapters: ScriptureChapter[] = [
+];
+
+export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
+  if (book === "Daniel") {
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
   // Revelation chapters would be added here in the future
