@@ -3942,19 +3942,312 @@ export const revelationChapters: ScriptureChapter[] = [
     book: "Revelation",
     chapter: 15,
     title: "The Seven Last Plagues",
-    content: ``
+    content: `**And I saw another sign in heaven,**
+    great and marvellous,
+        seven angels having the seven last plagues;
+            for in them is filled up
+                the wrath of God.
+
+**And I saw as it were**
+    a sea of glass mingled with fire:
+        and them that had gotten the victory
+            over the beast, and over his image,
+                and over his mark,
+                    and over the number of his name,
+        stand on the sea of glass,
+            having the harps of God.
+
+**And they sing the song of Moses**
+    the servant of God,
+        and the song of the Lamb, saying,
+            Great and marvellous are thy works,
+                Lord God Almighty;
+            just and true are thy ways,
+                thou King of saints.
+
+**Who shall not fear thee, O Lord,**
+    and glorify thy name?
+        for thou only art holy:
+    for all nations shall come
+        and worship before thee;
+            for thy judgments are made manifest.
+
+**And after that I looked,**
+    and, behold, the temple of the tabernacle
+        of the testimony in heaven was opened:
+
+**And the seven angels came out of the temple,**
+    having the seven plagues,
+        clothed in pure and white linen,
+            and having their breasts girded
+                with golden girdles.
+
+**And one of the four beasts**
+    gave unto the seven angels
+        seven golden vials
+            full of the wrath of God,
+                who liveth for ever and ever.
+
+**And the temple was filled with smoke**
+    from the glory of God,
+        and from his power;
+    and no man was able to enter into the temple,
+        till the seven plagues of the seven angels
+            were fulfilled.
+
+`
   },
   {
     book: "Revelation",
     chapter: 16,
     title: "The Seven Vials of Wrath",
-    content: ``
+    content: `**And I heard a great voice out of the temple**
+    saying to the seven angels,
+        Go your ways,
+            and pour out the vials of the wrath of God
+                upon the earth.
+
+**And the first went,**
+    and poured out his vial upon the earth;
+        and there fell a noisome and grievous sore
+            upon the men which had the mark of the beast,
+                and upon them which worshipped his image.
+
+**And the second angel**
+    poured out his vial upon the sea;
+        and it became as the blood of a dead man:
+            and every living soul died in the sea.
+
+**And the third angel**
+    poured out his vial
+        upon the rivers and fountains of waters;
+            and they became blood.
+
+**And I heard the angel of the waters say,**
+    Thou art righteous, O Lord,
+        which art, and wast, and shalt be,
+            because thou hast judged thus.
+
+**For they have shed the blood**
+    of saints and prophets,
+        and thou hast given them blood to drink;
+            for they are worthy.
+
+**And I heard another out of the altar say,**
+    Even so, Lord God Almighty,
+        true and righteous are thy judgments.
+
+**And the fourth angel**
+    poured out his vial upon the sun;
+        and power was given unto him
+            to scorch men with fire.
+
+**And men were scorched with great heat,**
+    and blasphemed the name of God,
+        which hath power over these plagues:
+            and they repented not to give him glory.
+
+**And the fifth angel**
+    poured out his vial upon the seat of the beast;
+        and his kingdom was full of darkness;
+            and they gnawed their tongues for pain,
+
+**And blasphemed the God of heaven**
+    because of their pains and their sores,
+        and repented not of their deeds.
+
+**And the sixth angel**
+    poured out his vial
+        upon the great river Euphrates;
+            and the water thereof was dried up,
+                that the way of the kings of the east
+                    might be prepared.
+
+**And I saw three unclean spirits**
+    like frogs come out of the mouth of the dragon,
+        and out of the mouth of the beast,
+            and out of the mouth of the false prophet.
+
+**For they are the spirits of devils,**
+    working miracles,
+        which go forth unto the kings of the earth
+            and of the whole world,
+        to gather them to the battle
+            of that great day of God Almighty.
+
+**Behold, I come as a thief.**
+    Blessed is he that watcheth,
+        and keepeth his garments,
+            lest he walk naked,
+                and they see his shame.
+
+**And he gathered them together**
+    into a place called in the Hebrew tongue
+        Armageddon.
+
+**And the seventh angel**
+    poured out his vial into the air;
+        and there came a great voice
+            out of the temple of heaven,
+                from the throne, saying,
+                    It is done.
+
+**And there were voices, and thunders, and lightnings;**
+    and there was a great earthquake,
+        such as was not since men were upon the earth,
+            so mighty an earthquake, and so great.
+
+**And the great city was divided into three parts,**
+    and the cities of the nations fell:
+        and great Babylon came in remembrance before God,
+            to give unto her the cup of the wine
+                of the fierceness of his wrath.
+
+**And every island fled away,**
+    and the mountains were not found.
+
+**And there fell upon men a great hail**
+    out of heaven,
+        every stone about the weight of a talent:
+    and men blasphemed God
+        because of the plague of the hail;
+            for the plague thereof was exceeding great.
+
+`
   },
   {
     book: "Revelation",
     chapter: 17,
     title: "The Great Whore",
-    content: ``
+    content: `**And there came one of the seven angels**
+    which had the seven vials,
+**and talked with me,**
+    saying unto me,
+        **Come hither;**
+            **I will shew unto thee**
+                the judgment of the great whore
+                    that sitteth upon many waters:
+
+**With whom the kings of the earth**
+    **have committed fornication,**
+**and the inhabitants of the earth**
+    **have been made drunk**
+        with the wine of her fornication.
+
+**So he carried me away**
+    in the spirit
+        into the wilderness:
+**and I saw a woman**
+    **sit upon a scarlet coloured beast,**
+        full of names of blasphemy,
+            having seven heads and ten horns.
+
+**And the woman was arrayed**
+    in purple and scarlet colour,
+**and decked**
+    with gold and precious stones and pearls,
+        **having a golden cup in her hand**
+            full of abominations
+                and filthiness of her fornication:
+
+**And upon her forehead**
+    **was a name written,**
+        **MYSTERY, BABYLON THE GREAT,**
+            **THE MOTHER OF HARLOTS**
+                **AND ABOMINATIONS OF THE EARTH.**
+
+**And I saw the woman**
+    **drunken**
+        with the blood of the saints,
+            and with the blood of the martyrs of Jesus:
+**and when I saw her,**
+    **I wondered**
+        with great admiration.
+
+**And the angel said unto me,**
+    **Wherefore didst thou marvel?**
+        **I will tell thee**
+            the mystery of the woman,
+                and of the beast that carrieth her,
+                    which hath the seven heads and ten horns.
+
+**The beast that thou sawest**
+    **was, and is not;**
+        **and shall ascend**
+            out of the bottomless pit,
+                **and go into perdition:**
+**and they that dwell on the earth**
+    **shall wonder,**
+        whose names were not written
+            in the book of life
+                from the foundation of the world,
+        **when they behold the beast**
+            that was, and is not,
+                and yet is.
+
+**And here is the mind**
+    which hath wisdom.
+        **The seven heads are seven mountains,**
+            on which the woman sitteth.
+
+**And there are seven kings:**
+    **five are fallen,**
+        **and one is,**
+            **and the other is not yet come;**
+                **and when he cometh,**
+                    **he must continue**
+                        a short space.
+
+**And the beast that was, and is not,**
+    **even he is the eighth,**
+        **and is of the seven,**
+            **and goeth into perdition.**
+
+**And the ten horns which thou sawest**
+    **are ten kings,**
+        which have received no kingdom as yet;
+            **but receive power as kings**
+                one hour with the beast.
+
+**These have one mind,**
+    **and shall give**
+        their power and strength
+            unto the beast.
+
+**These shall make war**
+    with the Lamb,
+        **and the Lamb shall overcome them:**
+            **for he is Lord of lords,**
+                **and King of kings:**
+                    **and they that are with him**
+                        **are called, and chosen, and faithful.**
+
+**And he saith unto me,**
+    **The waters which thou sawest,**
+        where the whore sitteth,
+            **are peoples, and multitudes,**
+                **and nations, and tongues.**
+
+**And the ten horns which thou sawest**
+    upon the beast,
+        **these shall hate the whore,**
+            **and shall make her desolate and naked,**
+                **and shall eat her flesh,**
+                    **and burn her with fire.**
+
+**For God hath put in their hearts**
+    **to fulfil his will,**
+        **and to agree,**
+            **and give their kingdom unto the beast,**
+                until the words of God
+                    shall be fulfilled.
+
+**And the woman which thou sawest**
+    **is that great city,**
+        which reigneth
+            over the kings of the earth.
+
+`
   },
   {
     book: "Revelation",
