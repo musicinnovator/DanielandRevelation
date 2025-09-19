@@ -1945,13 +1945,425 @@ And over these three presidents;**
     book: "Daniel",
     chapter: 11,
     title: "King of South and King of North, The Time of the End Explained",
-    content: ``,
+    content: `**Also I in the first year of Darius the Mede,**
+    even I, stood to confirm
+        and to strengthen him.
+
+**And now will I shew thee the truth.**
+    Behold, there shall stand up yet three kings
+        in Persia;
+    and the fourth shall be far richer
+        than they all:
+    and by his strength through his riches
+        he shall stir up all
+            against the realm of Grecia.
+
+**And a mighty king shall stand up,**
+    that shall rule with great dominion,
+        and do according to his will.
+
+**And when he shall stand up,**
+    his kingdom shall be broken,
+        and shall be divided
+            toward the four winds of heaven;
+    and not to his posterity,
+        nor according to his dominion which he ruled:
+    for his kingdom shall be plucked up,
+        even for others beside those.
+
+**And the king of the south shall be strong,**
+    and one of his princes;
+        and he shall be strong above him,
+            and have dominion;
+        his dominion shall be a great dominion.
+
+**And in the end of years**
+    they shall join themselves together;
+        for the king's daughter of the south
+            shall come to the king of the north
+                to make an agreement:
+        but she shall not retain the power of the arm;
+            neither shall he stand, nor his arm:
+        but she shall be given up,
+            and they that brought her,
+                and he that begat her,
+                    and he that strengthened her in these times.
+
+**But out of a branch of her roots**
+    shall one stand up in his estate,
+        which shall come with an army,
+            and shall enter into the fortress
+                of the king of the north,
+        and shall deal against them,
+            and shall prevail:
+
+**And shall also carry captives into Egypt**
+    their gods, with their princes,
+        and with their precious vessels
+            of silver and of gold;
+    and he shall continue more years
+        than the king of the north.
+
+**So the king of the south**
+    shall come into his kingdom,
+        and shall return into his own land.
+
+**But his sons shall be stirred up,**
+    and shall assemble a multitude
+        of great forces:
+    and one shall certainly come,
+        and overflow, and pass through:
+    then shall he return,
+        and be stirred up,
+            even to his fortress.
+
+**And the king of the south**
+    shall be moved with choler,
+        and shall come forth
+            and fight with him,
+                even with the king of the north:
+        and he shall set forth a great multitude;
+            but the multitude shall be given
+                into his hand.
+
+**And when he hath taken away the multitude,**
+    his heart shall be lifted up;
+        and he shall cast down many ten thousands:
+            but he shall not be strengthened by it.
+
+**For the king of the north**
+    shall return, and shall set forth
+        a multitude greater than the former,
+    and shall certainly come
+        after certain years
+            with a great army
+                and with much riches.
+
+**And in those times**
+    there shall many stand up
+        against the king of the south:
+    also the robbers of thy people
+        shall exalt themselves
+            to establish the vision;
+                but they shall fall.
+
+**So the king of the north shall come,**
+    and cast up a mount,
+        and take the most fenced cities:
+    and the arms of the south
+        shall not withstand,
+            neither his chosen people,
+                neither shall there be any strength
+                    to withstand.
+
+**But he that cometh against him**
+    shall do according to his own will,
+        and none shall stand before him:
+    and he shall stand in the glorious land,
+        which by his hand shall be consumed.
+
+**He shall also set his face**
+    to enter with the strength
+        of his whole kingdom,
+            and upright ones with him;
+        thus shall he do:
+    and he shall give him
+        the daughter of women,
+            corrupting her:
+        but she shall not stand on his side,
+            neither be for him.
+
+**After this shall he turn his face**
+    unto the isles,
+        and shall take many:
+    but a prince for his own behalf
+        shall cause the reproach offered by him
+            to cease;
+        without his own reproach
+            he shall cause it to turn upon him.
+
+**Then he shall turn his face**
+    toward the fort of his own land:
+        but he shall stumble and fall,
+            and not be found.
+
+**Then shall stand up in his estate**
+    a raiser of taxes
+        in the glory of the kingdom:
+    but within few days
+        he shall be destroyed,
+            neither in anger, nor in battle.
+
+**And in his estate**
+    shall stand up a vile person,
+        to whom they shall not give
+            the honour of the kingdom:
+        but he shall come in peaceably,
+            and obtain the kingdom by flatteries.
+
+**And with the arms of a flood**
+    shall they be overflown from before him,
+        and shall be broken;
+            yea, also the prince of the covenant.
+
+**And after the league made with him**
+    he shall work deceitfully:
+        for he shall come up,
+            and shall become strong
+                with a small people.
+
+**He shall enter peaceably**
+    even upon the fattest places
+        of the province;
+    and he shall do that
+        which his fathers have not done,
+            nor his fathers' fathers;
+        he shall scatter among them
+            the prey, and spoil, and riches:
+        yea, and he shall forecast his devices
+            against the strong holds,
+                even for a time.
+
+**And he shall stir up his power**
+    and his courage
+        against the king of the south
+            with a great army;
+    and the king of the south
+        shall be stirred up to battle
+            with a very great and mighty army;
+        but he shall not stand:
+            for they shall forecast devices against him.
+
+**Yea, they that feed of the portion**
+    of his meat shall destroy him,
+        and his army shall overflow:
+            and many shall fall down slain.
+
+**And both these kings' hearts**
+    shall be to do mischief,
+        and they shall speak lies
+            at one table;
+        but it shall not prosper:
+            for yet the end shall be
+                at the time appointed.
+
+**Then shall he return into his land**
+    with great riches;
+        and his heart shall be
+            against the holy covenant;
+        and he shall do exploits,
+            and return to his own land.
+
+**At the time appointed**
+    he shall return,
+        and come toward the south;
+    but it shall not be
+        as the former, or as the latter.
+
+**For the ships of Chittim**
+    shall come against him:
+        therefore he shall be grieved,
+            and return,
+                and have indignation
+                    against the holy covenant:
+        so shall he do;
+            he shall even return,
+                and have intelligence
+                    with them that forsake
+                        the holy covenant.
+
+**And arms shall stand on his part,**
+    and they shall pollute
+        the sanctuary of strength,
+            and shall take away
+                the daily sacrifice,
+        and they shall place
+            the abomination that maketh desolate.
+
+**And such as do wickedly**
+    against the covenant
+        shall he corrupt by flatteries:
+    but the people that do know their God
+        shall be strong, and do exploits.
+
+**And they that understand**
+    among the people
+        shall instruct many:
+    yet they shall fall
+        by the sword, and by flame,
+            by captivity, and by spoil,
+                many days.
+
+**Now when they shall fall,**
+    they shall be holpen
+        with a little help:
+    but many shall cleave to them
+        with flatteries.
+
+**And some of them of understanding**
+    shall fall,
+        to try them, and to purge,
+            and to make them white,
+                even to the time of the end:
+        because it is yet for a time appointed.
+
+**And the king shall do according to his will;**
+    and he shall exalt himself,
+        and magnify himself above every god,
+            and shall speak marvellous things
+                against the God of gods,
+        and shall prosper
+            till the indignation be accomplished:
+                for that that is determined
+                    shall be done.
+
+**Neither shall he regard**
+    the God of his fathers,
+        nor the desire of women,
+            nor regard any god:
+        for he shall magnify himself above all.
+
+**But in his estate**
+    shall he honour the God of forces:
+        and a god whom his fathers knew not
+            shall he honour
+                with gold, and silver,
+                    and with precious stones,
+                        and pleasant things.
+
+**Thus shall he do**
+    in the most strong holds
+        with a strange god,
+            whom he shall acknowledge
+                and increase with glory:
+        and he shall cause them to rule
+            over many,
+                and shall divide the land for gain.
+
+**And at the time of the end**
+    shall the king of the south
+        push at him:
+    and the king of the north
+        shall come against him
+            like a whirlwind,
+                with chariots, and with horsemen,
+                    and with many ships;
+        and he shall enter into the countries,
+            and shall overflow and pass over.
+
+**He shall enter also**
+    into the glorious land,
+        and many countries shall be overthrown:
+    but these shall escape out of his hand,
+        even Edom, and Moab,
+            and the chief of the children of Ammon.
+
+**He shall stretch forth his hand**
+    also upon the countries:
+        and the land of Egypt
+            shall not escape.
+
+**But he shall have power**
+    over the treasures of gold and of silver,
+        and over all the precious things of Egypt:
+    and the Libyans and the Ethiopians
+        shall be at his steps.
+
+**But tidings out of the east**
+    and out of the north
+        shall trouble him:
+    therefore he shall go forth
+        with great fury
+            to destroy, and utterly to make away many.
+
+**And he shall plant the tabernacles**
+    of his palace
+        between the seas
+            in the glorious holy mountain;
+    yet he shall come to his end,
+        and none shall help him.`,
    },
    {
     book: "Daniel",
     chapter: 12,
-    title: "",
-    content: ``,
+    title: "The Time of the end continued",
+    content: `**And at that time shall Michael stand up,**
+    the great prince
+        which standeth for the children of thy people:
+    and there shall be a time of trouble,
+        such as never was
+            since there was a nation
+                even to that same time:
+    and at that time thy people shall be delivered,
+        every one that shall be found written
+            in the book.
+
+**And many of them that sleep**
+    in the dust of the earth shall awake,
+        some to everlasting life,
+            and some to shame and everlasting contempt.
+
+**And they that be wise**
+    shall shine as the brightness of the firmament;
+        and they that turn many to righteousness
+            as the stars for ever and ever.
+
+**But thou, O Daniel,**
+    shut up the words,
+        and seal the book,
+            even to the time of the end:
+    many shall run to and fro,
+        and knowledge shall be increased.
+
+**Then I Daniel looked,**
+    and, behold, there stood other two,
+        the one on this side of the bank of the river,
+            and the other on that side of the bank of the river.
+
+**And one said to the man clothed in linen,**
+    which was upon the waters of the river,
+        How long shall it be
+            to the end of these wonders?
+
+**And I heard the man clothed in linen,**
+    which was upon the waters of the river,
+        when he held up his right hand
+            and his left hand unto heaven,
+        and sware by him that liveth for ever
+            that it shall be for a time, times, and an half;
+    and when he shall have accomplished
+        to scatter the power of the holy people,
+            all these things shall be finished.
+
+**And I heard, but I understood not:**
+    then said I, O my Lord,
+        what shall be the end of these things?
+
+**And he said,**
+    Go thy way, Daniel:
+        for the words are closed up
+            and sealed till the time of the end.
+
+**Many shall be purified,**
+    and made white, and tried;
+        but the wicked shall do wickedly:
+    and none of the wicked shall understand;
+        but the wise shall understand.
+
+**And from the time**
+    that the daily sacrifice shall be taken away,
+        and the abomination that maketh desolate set up,
+            there shall be a thousand two hundred
+                and ninety days.
+
+**Blessed is he that waiteth,**
+    and cometh to the thousand three hundred
+        and five and thirty days.
+
+**But go thou thy way till the end be:**
+    for thou shalt rest,
+        and stand in thy lot
+            at the end of the days.`,
    }
 ];
 
