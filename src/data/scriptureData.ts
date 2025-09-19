@@ -1062,7 +1062,7 @@ export const danielChapters: ScriptureChapter[] = [
   }
 ];
 
-const revelationChapters: ScriptureChapter[] = [
+export const revelationChapters: ScriptureChapter[] = [
   {
     book: "Revelation",
     chapter: 1,
