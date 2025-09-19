@@ -5010,7 +5010,7 @@ export const danielChapters: ScriptureChapter[] = [
     }
   }
 };
-
+export const revelationChapters: ScriptureChapter[] = [
 export const revelationChapters: ScriptureChapter[] = [
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
