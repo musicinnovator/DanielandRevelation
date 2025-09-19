@@ -12,7 +12,7 @@ const ScriptureNavigator = () => {
   };
 
   const danielChapterTitles = {
-    1: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test",
+    1: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test(Thou shalt not kill)",
     2: "Nebuchadnezzar's Dream (The 4 Great Kingdoms of World History)- The Great Image and its interpretation by God given through Daniel",
     3: "The Fiery Furnace Test - the Second Test (Worship God alone)",
     4: "Nebuchadnezzar's Tree Dream and Its Fulfillment as given in his own testimony",
