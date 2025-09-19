@@ -7,8 +7,8 @@ const Timeline = () => {
 
   const timelinePeriods = [
     { id: 'all', name: 'Complete Timeline', range: '605 BC - Future' },
-    { id: 'ancient', name: 'Ancient Kingdoms', range: '605 BC - 476 AD' },
-    { id: 'medieval', name: 'Medieval Period', range: '476 AD - 1798 AD' },
+    { id: 'ancient', name: 'Pagan Kingdoms', range: '605 BC - 476 AD' },
+    { id: 'dark_ages', name: 'Papal Kingdom and Dark Ages (Spiritual Darkness, Intellectual Darkness)', range: '476 AD - 1798 AD' },
     { id: 'modern', name: 'Modern Era', range: '1798 AD - Present' },
     { id: 'future', name: 'Future Events', range: 'Present - Eternity' }
   ];
