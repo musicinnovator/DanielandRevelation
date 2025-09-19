@@ -1959,7 +1959,9 @@ export const danielChapters: ScriptureChapter[] = [
 
 **And when he shall stand up,**
     his kingdom shall be broken,
-        and shall be divided
+        and shall be divide
+  }
+]d
             toward the four winds of heaven;
     and not to his posterity,
         nor according to his dominion which he ruled:
