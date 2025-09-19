@@ -15,7 +15,7 @@ const ScriptureNavigator = () => {
     1: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test",
     2: "Nebuchadnezzar's Dream (The 4 Great Kingdoms of World History)- The Great Image and its interpretation by God given through Daniel",
     3: "The Fiery Furnace Test - the Second Test",
-    4: "Nebuchadnezzar's Tree Dream and Its Fulfillment as given his own testimony",
+    4: "Nebuchadnezzar's Tree Dream and Its Fulfillment as given in his own testimony",
     5: "Belshazzar's Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
     6: "Daniel in the Lion's Den - the Third Test",
     7: "The Four Beasts Vision (Lion, Bear, Leopard, Terrible Beast) - ",
