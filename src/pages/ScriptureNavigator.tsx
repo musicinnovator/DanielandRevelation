@@ -15,7 +15,7 @@ const ScriptureNavigator = () => {
     1: "Daniel's Faithfulness in Diet leads to God Blessing him with the visions of the Book of Daniel",
     2: "Nebuchadnezzar's Dream - The Great Image",
     3: "The Fiery Furnace Test",
-    4: "Nebuchadnezzar's Tree Dream",
+    4: "Nebuchadnezzar's Tree Dream and Its Fulfillment by his own testimony",
     5: "Belshazzar's Feast - The Handwriting",
     6: "Daniel in the Lion's Den",
     7: "The Four Beasts Vision",
