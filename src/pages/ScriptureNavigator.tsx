@@ -307,7 +307,7 @@ const ScriptureNavigator = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* PayPal Donation Button */}
             <a
-              href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
+              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
@@ -317,7 +317,7 @@ const ScriptureNavigator = () => {
 
             {/* Stripe Payment Link Button */}
             <a
-              href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
+              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg transition-all duration-300"
