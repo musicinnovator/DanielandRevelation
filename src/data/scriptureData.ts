@@ -2192,7 +2192,9 @@ export const danielChapters: ScriptureChapter[] = [
 **Now when they shall fall,**
     they shall be holpen
         with a little help:
-    but many shall cleave to them
+    but many shall cle
+  }
+]ave to them
         with flatteries.
 
 **And some of them of understanding**
@@ -5007,8 +5009,9 @@ export const revelationChapters: ScriptureChapter[] = [
         Amen.`
     }
 ];
+];
 
-export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
+export const revelationChapters: ScriptureChapter[] = [
   if (book === "Daniel") {
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
