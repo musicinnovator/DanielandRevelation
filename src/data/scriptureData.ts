@@ -1927,7 +1927,9 @@ export const danielChapters: ScriptureChapter[] = [
         and now will I return
             to fight with the prince of Persia:
         and when I am gone forth,
-            lo, the prince of Grecia shall come.
+            lo, the prince of Gr
+  }
+]ecia shall come.
 
 **But I will shew thee**
     that which is noted
@@ -5007,8 +5009,9 @@ export const revelationChapters: ScriptureChapter[] = [
         Amen.`
     }
 ];
+];
 
-export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
+export const revelationChapters: ScriptureChapter[] = [
   if (book === "Daniel") {
     return danielChapters.find(ch => ch.chapter === chapter) || null;
   }
