@@ -22,7 +22,7 @@ const Timeline = () => {
       book: "Daniel",
       chapter: 1,
       category: "ancient",
-      prophecy: "Head of Gold begins",
+      prophecy: "1st Kingom of Daniel 2: Head of Gold begins/ Lion Kingdom of Daniel 7",
       significance: "Start of prophetic timeline",
       color: "bg-yellow-500"
     },
@@ -34,20 +34,20 @@ const Timeline = () => {
       book: "Daniel",
       chapter: 5,
       category: "ancient",
-      prophecy: "Daniel 2 Image progression",
+      prophecy: "Second Kingdom of Daniel 1: Chest of Silver/ Bear Kingdon of Daniel 7",
       significance: "Second kingdom rises",
       color: "bg-gray-400"
     },
     {
       id: 3,
       date: "331 BC",
-      title: "Greece Conquers Persia",
-      description: "Alexander the Great fulfills the belly of bronze",
+      title: "Greece Conquers Medo-Persia",
+      description: "Alexander the Great and Grecian Empire fulfills the belly of bronze",
       book: "Daniel",
       chapter: 8,
       category: "ancient",
       prophecy: "Ram and Goat vision",
-      significance: "Third kingdom established",
+      significance: "Third Kingdom:Thighs of brass/ Leopard Kingdom of Daniel 7",
       color: "bg-amber-600"
     },
     {
