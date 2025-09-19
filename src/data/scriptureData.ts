@@ -1061,3 +1061,13 @@ export const danielChapters: ScriptureChapter[] = [
     being about threescore and two years old.`
   }
 ]
+
+export function formatScriptureContent(content: string): string {
+  return content
+    // Convert **text** to <strong>text</strong>
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    // Convert leading spaces to non-breaking spaces for indentation
+    .replace(/^( +)/gm, (match) => '&nbsp;'.repeat(match.length))
+    // Convert newlines to HTML line breaks
+    .replace(/\n/g, '<br />');
+}
