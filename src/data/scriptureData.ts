@@ -1245,38 +1245,713 @@ And over these three presidents;**
    {
     book: "Daniel",
     chapter: 7,
-    title: "",
-    content: "",
+    title: "Vision of Four Beasts",
+    content: `**In the first year of Belshazzar king of Babylon**
+    Daniel had a dream
+        and visions of his head upon his bed:
+    then he wrote the dream,
+        and told the sum of the matters.
+
+**Daniel spake and said,**
+    I saw in my vision by night,
+        and, behold, the four winds of the heaven
+            strove upon the great sea.
+
+**And four great beasts came up from the sea,**
+    diverse one from another.
+
+**The first was like a lion,**
+    and had eagle's wings:
+        I beheld till the wings thereof were plucked,
+            and it was lifted up from the earth,
+                and made stand upon the feet as a man,
+                    and a man's heart was given to it.
+
+**And behold another beast, a second,**
+    like to a bear,
+        and it raised up itself on one side,
+            and it had three ribs in the mouth of it
+                between the teeth of it:
+        and they said thus unto it,
+            Arise, devour much flesh.
+
+**After this I beheld,**
+    and lo another, like a leopard,
+        which had upon the back of it
+            four wings of a fowl;
+        the beast had also four heads;
+            and dominion was given to it.
+
+**After this I saw in the night visions,**
+    and behold a fourth beast,
+        dreadful and terrible, and strong exceedingly;
+            and it had great iron teeth:
+        it devoured and brake in pieces,
+            and stamped the residue with the feet of it:
+        and it was diverse from all the beasts
+            that were before it;
+                and it had ten horns.
+
+**I considered the horns,**
+    and, behold, there came up among them
+        another little horn,
+            before whom there were three
+                of the first horns plucked up by the roots:
+        and, behold, in this horn were eyes
+            like the eyes of man,
+                and a mouth speaking great things.
+
+**I beheld till the thrones were cast down,**
+    and the Ancient of days did sit,
+        whose garment was white as snow,
+            and the hair of his head like the pure wool:
+        his throne was like the fiery flame,
+            and his wheels as burning fire.
+
+**A fiery stream issued**
+    and came forth from before him:
+        thousand thousands ministered unto him,
+            and ten thousand times ten thousand
+                stood before him:
+        the judgment was set,
+            and the books were opened.
+
+**I beheld then because of the voice**
+    of the great words which the horn spake:
+        I beheld even till the beast was slain,
+            and his body destroyed,
+                and given to the burning flame.
+
+**As concerning the rest of the beasts,**
+    they had their dominion taken away:
+        yet their lives were prolonged
+            for a season and time.
+
+**I saw in the night visions,**
+    and, behold, one like the Son of man
+        came with the clouds of heaven,
+            and came to the Ancient of days,
+                and they brought him near before him.
+
+**And there was given him dominion,**
+    and glory, and a kingdom,
+        that all people, nations, and languages,
+            should serve him:
+        his dominion is an everlasting dominion,
+            which shall not pass away,
+                and his kingdom that which shall not be destroyed.
+
+**I Daniel was grieved in my spirit**
+    in the midst of my body,
+        and the visions of my head troubled me.
+
+**I came near unto one of them that stood by,**
+    and asked him the truth of all this.
+        So he told me,
+            and made me know the interpretation
+                of the things.
+
+**These great beasts, which are four,**
+    are four kings,
+        which shall arise out of the earth.
+
+**But the saints of the most High**
+    shall take the kingdom,
+        and possess the kingdom for ever,
+            even for ever and ever.
+
+**Then I would know the truth**
+    of the fourth beast,
+        which was diverse from all the others,
+            exceeding dreadful,
+                whose teeth were of iron,
+                    and his nails of brass;
+                which devoured, brake in pieces,
+                    and stamped the residue with his feet;
+
+**And of the ten horns that were in his head,**
+    and of the other which came up,
+        and before whom three fell;
+    even of that horn that had eyes,
+        and a mouth that spake very great things,
+            whose look was more stout than his fellows.
+
+**I beheld,**
+    and the same horn made war with the saints,
+        and prevailed against them;
+
+**Until the Ancient of days came,**
+    and judgment was given to the saints
+        of the most High;
+            and the time came that the saints
+                possessed the kingdom.
+
+**Thus he said,**
+    The fourth beast shall be the fourth kingdom
+        upon earth,
+            which shall be diverse from all kingdoms,
+                and shall devour the whole earth,
+                    and shall tread it down,
+                        and break it in pieces.
+
+**And the ten horns out of this kingdom**
+    are ten kings that shall arise:
+        and another shall rise after them;
+            and he shall be diverse from the first,
+                and he shall subdue three kings.
+
+**And he shall speak great words**
+    against the most High,
+        and shall wear out the saints
+            of the most High,
+        and think to change times and laws:
+            and they shall be given into his hand
+                until a time and times
+                    and the dividing of time.
+
+**But the judgment shall sit,**
+    and they shall take away his dominion,
+        to consume and to destroy it
+            unto the end.
+
+**And the kingdom and dominion,**
+    and the greatness of the kingdom
+        under the whole heaven,
+            shall be given to the people
+                of the saints of the most High,
+        whose kingdom is an everlasting kingdom,
+            and all dominions shall serve
+                and obey him.
+
+**Hitherto is the end of the matter.**
+    As for me Daniel,
+        my cogitations much troubled me,
+            and my countenance changed in me:
+        but I kept the matter in my heart.`,
    },
    {
     book: "Daniel",
     chapter: 8,
-    title: "",
-    content: "",
+    title: "Vision of the Rams (with two horns that are unequal) and the Goat (with a horn between his eyes)",
+    content: `**In the third year of the reign of king Belshazzar**
+    a vision appeared unto me,
+        even unto me Daniel,
+            after that which appeared unto me at the first.
+
+**And I saw in a vision;**
+    and it came to pass, when I saw,
+        that I was at Shushan in the palace,
+            which is in the province of Elam;
+        and I saw in a vision,
+            and I was by the river of Ulai.
+
+**Then I lifted up mine eyes, and saw,**
+    and, behold, there stood before the river
+        a ram which had two horns:
+            and the two horns were high;
+                but one was higher than the other,
+                    and the higher came up last.
+
+**I saw the ram pushing westward,**
+    and northward, and southward;
+        so that no beasts might stand before him,
+            neither was there any that could deliver
+                out of his hand;
+        but he did according to his will,
+            and became great.
+
+**And as I was considering,**
+    behold, an he goat came from the west
+        on the face of the whole earth,
+            and touched not the ground:
+        and the goat had a notable horn
+            between his eyes.
+
+**And he came to the ram that had two horns,**
+    which I had seen standing before the river,
+        and ran unto him in the fury of his power.
+
+**And I saw him come close unto the ram,**
+    and he was moved with choler against him,
+        and smote the ram,
+            and brake his two horns:
+        and there was no power in the ram
+            to stand before him,
+        but he cast him down to the ground,
+            and stamped upon him:
+                and there was none that could deliver
+                    the ram out of his hand.
+
+**Therefore the he goat waxed very great:**
+    and when he was strong,
+        the great horn was broken;
+            and for it came up four notable ones
+                toward the four winds of heaven.
+
+**And out of one of them came forth**
+    a little horn,
+        which waxed exceeding great,
+            toward the south, and toward the east,
+                and toward the pleasant land.
+
+**And it waxed great,**
+    even to the host of heaven;
+        and it cast down some of the host
+            and of the stars to the ground,
+                and stamped upon them.
+
+**Yea, he magnified himself**
+    even to the prince of the host,
+        and by him the daily sacrifice was taken away,
+            and the place of his sanctuary was cast down.
+
+**And an host was given him**
+    against the daily sacrifice by reason of transgression,
+        and it cast down the truth to the ground;
+            and it practised, and prospered.
+
+**Then I heard one saint speaking,**
+    and another saint said unto that certain saint
+        which spake,
+            How long shall be the vision
+                concerning the daily sacrifice,
+                    and the transgression of desolation,
+                to give both the sanctuary and the host
+                    to be trodden under foot?
+
+**And he said unto me,**
+    Unto two thousand and three hundred days;
+        then shall the sanctuary be cleansed.
+
+**And it came to pass,**
+    when I, even I Daniel, had seen the vision,
+        and sought for the meaning,
+    then, behold, there stood before me
+        as the appearance of a man.
+
+**And I heard a man's voice**
+    between the banks of Ulai,
+        which called, and said,
+            Gabriel, make this man to understand the vision.
+
+**So he came near where I stood:**
+    and when he came,
+        I was afraid, and fell upon my face:
+    but he said unto me,
+        Understand, O son of man:
+            for at the time of the end
+                shall be the vision.
+
+**Now as he was speaking with me,**
+    I was in a deep sleep on my face
+        toward the ground:
+    but he touched me,
+        and set me upright.
+
+**And he said,**
+    Behold, I will make thee know
+        what shall be in the last end of the indignation:
+            for at the time appointed
+                the end shall be.
+
+**The ram which thou sawest**
+    having two horns
+        are the kings of Media and Persia.
+
+**And the rough goat is the king of Grecia:**
+    and the great horn that is between his eyes
+        is the first king.
+
+**Now that being broken,**
+    whereas four stood up for it,
+        four kingdoms shall stand up out of the nation,
+            but not in his power.
+
+**And in the latter time of their kingdom,**
+    when the transgressors are come to the full,
+        a king of fierce countenance,
+            and understanding dark sentences,
+                shall stand up.
+
+**And his power shall be mighty,**
+    but not by his own power:
+        and he shall destroy wonderfully,
+            and shall prosper, and practise,
+                and shall destroy the mighty
+                    and the holy people.
+
+**And through his policy also**
+    he shall cause craft to prosper in his hand;
+        and he shall magnify himself in his heart,
+            and by peace shall destroy many:
+        he shall also stand up
+            against the Prince of princes;
+                but he shall be broken without hand.
+
+**And the vision of the evening and the morning**
+    which was told is true:
+        wherefore shut thou up the vision;
+            for it shall be for many days.
+
+**And I Daniel fainted,**
+    and was sick certain days;
+        afterward I rose up,
+            and did the king's business;
+        and I was astonished at the vision,
+            but none understood it.`,
    },
    {
     book: "Daniel",
     chapter: 9,
-    title: "",
-    content: "",
+    title: "Daniel's Prayer and the Prophecy of the Seventy Weeks",
+    content: `**In the first year of Darius**
+    the son of Ahasuerus,
+        of the seed of the Medes,
+            which was made king over the realm
+                of the Chaldeans;
+
+**In the first year of his reign**
+    I Daniel understood by books
+        the number of the years,
+            whereof the word of the LORD came
+                to Jeremiah the prophet,
+        that he would accomplish seventy years
+            in the desolations of Jerusalem.
+
+**And I set my face unto the Lord GOD,**
+    to seek by prayer and supplications,
+        with fasting, and sackcloth, and ashes:
+
+**And I prayed unto the LORD my God,**
+    and made my confession, and said,
+        O Lord, the great and dreadful God,
+            keeping the covenant and mercy
+                to them that love him,
+                    and to them that keep his commandments;
+
+**We have sinned,**
+    and have committed iniquity,
+        and have done wickedly,
+            and have rebelled,
+                even by departing from thy precepts
+                    and from thy judgments:
+
+**Neither have we hearkened**
+    unto thy servants the prophets,
+        which spake in thy name
+            to our kings, our princes, and our fathers,
+                and to all the people of the land.
+
+**O Lord, righteousness belongeth unto thee,**
+    but unto us confusion of faces,
+        as at this day;
+    to the men of Judah,
+        and to the inhabitants of Jerusalem,
+            and unto all Israel,
+                that are near, and that are far off,
+                    through all the countries
+                        whither thou hast driven them,
+                because of their trespass
+                    that they have trespassed against thee.
+
+**O Lord, to us belongeth confusion of face,**
+    to our kings, to our princes,
+        and to our fathers,
+            because we have sinned against thee.
+
+**To the Lord our God belong mercies and forgivenesses,**
+    though we have rebelled against him;
+
+**Neither have we obeyed the voice**
+    of the LORD our God,
+        to walk in his laws,
+            which he set before us
+                by his servants the prophets.
+
+**Yea, all Israel have transgressed thy law,**
+    even by departing,
+        that they might not obey thy voice;
+    therefore the curse is poured upon us,
+        and the oath that is written
+            in the law of Moses the servant of God,
+                because we have sinned against him.
+
+**And he hath confirmed his words,**
+    which he spake against us,
+        and against our judges that judged us,
+            by bringing upon us a great evil:
+        for under the whole heaven
+            hath not been done
+                as hath been done upon Jerusalem.
+
+**As it is written in the law of Moses,**
+    all this evil is come upon us:
+        yet made we not our prayer
+            before the LORD our God,
+        that we might turn from our iniquities,
+            and understand thy truth.
+
+**Therefore hath the LORD watched upon the evil,**
+    and brought it upon us:
+        for the LORD our God is righteous
+            in all his works which he doeth:
+        for we obeyed not his voice.
+
+**And now, O Lord our God,**
+    that hast brought thy people forth
+        out of the land of Egypt
+            with a mighty hand,
+        and hast gotten thee renown,
+            as at this day;
+    we have sinned,
+        we have done wickedly.
+
+**O Lord, according to all thy righteousness,**
+    I beseech thee,
+        let thine anger and thy fury
+            be turned away from thy city Jerusalem,
+                thy holy mountain:
+        because for our sins,
+            and for the iniquities of our fathers,
+                Jerusalem and thy people
+                    are become a reproach
+                        to all that are about us.
+
+**Now therefore, O our God,**
+    hear the prayer of thy servant,
+        and his supplications,
+            and cause thy face to shine
+                upon thy sanctuary that is desolate,
+                    for the Lord's sake.
+
+**O my God, incline thine ear, and hear;**
+    open thine eyes,
+        and behold our desolations,
+            and the city which is called by thy name:
+        for we do not present our supplications
+            before thee for our righteousnesses,
+                but for thy great mercies.
+
+**O Lord, hear;**
+    O Lord, forgive;
+        O Lord, hearken and do;
+            defer not,
+                for thine own sake, O my God:
+        for thy city and thy people
+            are called by thy name.
+
+**And whiles I was speaking, and praying,**
+    and confessing my sin
+        and the sin of my people Israel,
+            and presenting my supplication
+                before the LORD my God
+                    for the holy mountain of my God;
+
+**Yea, whiles I was speaking in prayer,**
+    even the man Gabriel,
+        whom I had seen in the vision at the beginning,
+            being caused to fly swiftly,
+                touched me about the time
+                    of the evening oblation.
+
+**And he informed me, and talked with me,**
+    and said, O Daniel,
+        I am now come forth
+            to give thee skill and understanding.
+
+**At the beginning of thy supplications**
+    the commandment came forth,
+        and I am come to shew thee;
+            for thou art greatly beloved:
+        therefore understand the matter,
+            and consider the vision.
+
+**Seventy weeks are determined**
+    upon thy people
+        and upon thy holy city,
+            to finish the transgression,
+                and to make an end of sins,
+                    and to make reconciliation for iniquity,
+                and to bring in everlasting righteousness,
+                    and to seal up the vision and prophecy,
+                        and to anoint the most Holy.
+
+**Know therefore and understand,**
+    that from the going forth of the commandment
+        to restore and to build Jerusalem
+            unto the Messiah the Prince
+                shall be seven weeks,
+                    and threescore and two weeks:
+        the street shall be built again,
+            and the wall,
+                even in troublous times.
+
+**And after threescore and two weeks**
+    shall Messiah be cut off,
+        but not for himself:
+    and the people of the prince that shall come
+        shall destroy the city and the sanctuary;
+            and the end thereof shall be with a flood,
+                and unto the end of the war
+                    desolations are determined.
+
+**And he shall confirm the covenant**
+    with many for one week:
+        and in the midst of the week
+            he shall cause the sacrifice
+                and the oblation to cease,
+        and for the overspreading of abominations
+            he shall make it desolate,
+                even until the consummation,
+                    and that determined
+                        shall be poured upon the desolate.`,
    },
    {
     book: "Daniel",
     chapter: 10,
-    title: "",
-    content: "",
+    title: "Gabriel explains to Daniel the spiritual battles behind the scenes of current events. He also lets Daniel know that he will begin to show him what's going to happen to his people at the end of days (time) .",
+    content: `**In the third year of Cyrus king of Persia**
+    a thing was revealed unto Daniel,
+        whose name was called Belteshazzar;
+    and the thing was true,
+        but the time appointed was long:
+            and he understood the thing,
+                and had understanding of the vision.
+
+**In those days I Daniel was mourning**
+    three full weeks.
+
+**I ate no pleasant bread,**
+    neither came flesh nor wine in my mouth,
+        neither did I anoint myself at all,
+            till three whole weeks were fulfilled.
+
+**And in the four and twentieth day of the first month,**
+    as I was by the side of the great river,
+        which is Hiddekel;
+
+**Then I lifted up mine eyes, and looked,**
+    and behold a certain man clothed in linen,
+        whose loins were girded
+            with fine gold of Uphaz:
+
+**His body also was like the beryl,**
+    and his face as the appearance of lightning,
+        and his eyes as lamps of fire,
+    and his arms and his feet
+        like in colour to polished brass,
+            and the voice of his words
+                like the voice of a multitude.
+
+**And I Daniel alone saw the vision:**
+    for the men that were with me
+        saw not the vision;
+    but a great quaking fell upon them,
+        so that they fled to hide themselves.
+
+**Therefore I was left alone,**
+    and saw this great vision,
+        and there remained no strength in me:
+    for my comeliness was turned in me
+        into corruption,
+            and I retained no strength.
+
+**Yet heard I the voice of his words:**
+    and when I heard the voice of his words,
+        then was I in a deep sleep
+            on my face,
+                and my face toward the ground.
+
+**And, behold, an hand touched me,**
+    which set me upon my knees
+        and upon the palms of my hands.
+
+**And he said unto me,**
+    O Daniel, a man greatly beloved,
+        understand the words that I speak unto thee,
+            and stand upright:
+        for unto thee am I now sent.
+    And when he had spoken this word unto me,
+        I stood trembling.
+
+**Then said he unto me,**
+    Fear not, Daniel:
+        for from the first day
+            that thou didst set thine heart
+                to understand,
+                    and to chasten thyself before thy God,
+        thy words were heard,
+            and I am come for thy words.
+
+**But the prince of the kingdom of Persia**
+    withstood me one and twenty days:
+        but, lo, Michael, one of the chief princes,
+            came to help me;
+        and I remained there
+            with the kings of Persia.
+
+**Now I am come to make thee understand**
+    what shall befall thy people
+        in the latter days:
+            for yet the vision is for many days.
+
+**And when he had spoken such words unto me,**
+    I set my face toward the ground,
+        and I became dumb.
+
+**And, behold, one like the similitude**
+    of the sons of men
+        touched my lips:
+    then I opened my mouth, and spake,
+        and said unto him that stood before me,
+            O my lord, by the vision
+                my sorrows are turned upon me,
+                    and I have retained no strength.
+
+**For how can the servant of this my lord**
+    talk with this my lord?
+        for as for me,
+            straightway there remained no strength in me,
+                neither is there breath left in me.
+
+**Then there came again and touched me**
+    one like the appearance of a man,
+        and he strengthened me,
+
+**And said, O man greatly beloved,**
+    fear not:
+        peace be unto thee,
+            be strong, yea, be strong.
+    And when he had spoken unto me,
+        I was strengthened,
+            and said, Let my lord speak;
+                for thou hast strengthened me.
+
+**Then said he,**
+    Knowest thou wherefore I come unto thee?
+        and now will I return
+            to fight with the prince of Persia:
+        and when I am gone forth,
+            lo, the prince of Grecia shall come.
+
+**But I will shew thee**
+    that which is noted
+        in the scripture of truth:
+    and there is none that holdeth with me
+        in these things,
+            but Michael your prince.`,
    },
    {
     book: "Daniel",
     chapter: 11,
-    title: "",
-    content: "",
+    title: "King of South and King of North, The Time of the End Explained",
+    content: ``,
    },
    {
     book: "Daniel",
     chapter: 12,
     title: "",
-    content: "",
+    content: ``,
    }
 ];
 
