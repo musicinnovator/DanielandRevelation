@@ -18,7 +18,7 @@ const ScriptureNavigator = () => {
     4: "Nebuchadnezzar's 2nd Dream and Its Fulfillment as given in his own testimony",
     5: "Belshazzar's abominable Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
     6: "Daniel in the Lion's Den - the Third Test(Thou shalt have no other gods before Me)",
-    7: "The Four Beasts Vision (Lion, Bear, Leopard, Dreadful/Terrible Beast = Babylon, Medo-Persia, Greece, Rome(Pagan/Papal)) - ",
+    7: "The Four Beasts Vision (Lion, Bear, Leopard, Dreadful/Terrible Beast = Babylon, Medo-Persia, Greece, Rome(Pagan/Papal), respectively) - ",
     8: "The Ram and Goat Vision",
     9: "The 70 Week Prophecy",
     10: "Daniel's Final Vision Begins",
