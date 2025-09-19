@@ -63,7 +63,9 @@ const ScriptureNavigator = () => {
     if (currentChapterData) {
       return formatScriptureContent(currentChapterData.content);
     }
-    return "Select a chapter to view scripture text with interactive models and commentary.";
+    return selectedBook === 'revelation' 
+      ? "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
+      : "Select a chapter to view scripture text with interactive models and commentary.";
   };
 
   return (
