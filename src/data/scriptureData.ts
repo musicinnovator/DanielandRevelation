@@ -1059,3 +1059,5 @@ export const danielChapters: ScriptureChapter[] = [
 
 **And Darius the Median took the kingdom,**
     being about threescore and two years old.`
+  }
+]
