@@ -8,7 +8,6 @@ export interface ScriptureChapter {
 export interface BookData {
   name: string;
   chapters: number;
-  color: string;
 }
 
 export const danielChapters: ScriptureChapter[] = [
