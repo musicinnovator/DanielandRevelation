@@ -1064,7 +1064,7 @@ export const danielChapters: ScriptureChapter[] = [
     book: "Daniel",
     chapter: 6,
     title: "Daniel and the Lion's Den",
-    content: `" **It pleased Darius to set over the kingdom
+    content: `**It pleased Darius to set over the kingdom
     an hundred and twenty princes,
         which should be over the whole kingdom;
 
