@@ -1060,9 +1060,9 @@ export const danielChapters: ScriptureChapter[] = [
 **And Darius the Median took the kingdom,**
     being about threescore and two years old.`
   }
-]
+];
 
-export function getScriptureChapter(book: string, chapter: number): ScriptureChapter | undefined {
+const revelationChapters: ScriptureChapter[] = [
   {
     book: "Revelation",
     chapter: 1,
@@ -1197,7 +1197,7 @@ export function getScriptureChapter(book: string, chapter: number): ScriptureCha
   }
 ];
 
-const revelationChapters: ScriptureChapter[] = [
+export function getScriptureChapter(book: string, chapter: number): ScriptureChapter | undefined {
   if (book.toLowerCase() === 'daniel') {
     return danielChapters.find(ch => ch.chapter === chapter);
   } else if (book.toLowerCase() === 'revelation') {
