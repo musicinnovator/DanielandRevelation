@@ -2360,7 +2360,7 @@ export const danielChapters: ScriptureChapter[] = [
         and stand in thy lot
             at the end of the days.`
   }
-  },
+  ],
   revelation: {
     1: {
       title: "Vision of Christ",
