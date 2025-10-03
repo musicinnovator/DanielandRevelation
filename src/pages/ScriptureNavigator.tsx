@@ -4,6 +4,16 @@ import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-rea
 const Activities = () => {
   const [selectedActivity, setSelectedActivity] = useState(null);
 
+  const getDifficultyColor = (difficulty) => {
+    switch (difficulty) {
+      case 'Easy': return 'bg-green-100 text-green-800';
+      case 'Medium': return 'bg-yellow-100 text-yellow-800';
+      case 'Hard': return 'bg-red-100 text-red-800';
+      case 'Expert': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
   const activityCategories = [
     {
       id: 'quiz',
@@ -122,9 +132,13 @@ const Activities = () => {
           difficulty: 'Medium',
           duration: '8-10 min',
           players: 'Single'
-        },
-      case 'Easy': return 'bg-green-100 text-green-800';
-                rel="noopener noreferrer"
+        }
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
