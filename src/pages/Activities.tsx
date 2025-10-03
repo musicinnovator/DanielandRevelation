@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
-import { useErrorHandler } from '../hooks/useErrorHandler';
-import ErrorMessage from '../components/ErrorMessage';
-import LoadingSpinner from '../components/LoadingSpinner';
 
 const Activities = () => {
   const [selectedActivity, setSelectedActivity] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const { error, isError, clearError, handleError } = useErrorHandler();
 
   const activityCategories = [
     {
@@ -150,34 +145,6 @@ const Activities = () => {
     }
   };
 
-  const handleActivityStart = async (activity: any) => {
-    try {
-      setIsLoading(true);
-      clearError();
-      
-      // Simulate activity loading
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSelectedActivity(activity);
-      
-      // For now, show a coming soon message
-      handleError(new Error(`${activity.title} is coming soon! Stay tuned for this exciting feature.`));
-    } catch (err) {
-      handleError(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleDonationClick = (platform: string) => {
-    try {
-      // Track donation click (analytics would go here)
-      console.log(`Donation clicked: ${platform}`);
-    } catch (err) {
-      handleError(err);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
       {/* Support Ministry CTA */}
@@ -202,7 +169,6 @@ const Activities = () => {
               href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleDonationClick('PayPal')}
               className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300 text-sm"
             >
               PayPal
@@ -211,7 +177,6 @@ const Activities = () => {
               href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleDonationClick('Stripe')}
               className="px-4 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300 text-sm"
             >
               Stripe
@@ -225,22 +190,6 @@ const Activities = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Error Message */}
-        {isError && (
-          <ErrorMessage 
-            error={error!} 
-            onDismiss={clearError}
-            className="mb-6"
-          />
-        )}
-
-        {/* Loading Spinner */}
-        {isLoading && (
-          <div className="mb-6">
-            <LoadingSpinner size="lg" className="py-8" />
-          </div>
-        )}
-
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -298,7 +247,7 @@ const Activities = () => {
                     <div 
                       key={activity.id} 
                       className="activity-card p-6 rounded-xl cursor-pointer group"
-                      onClick={() => handleActivityStart(activity)}
+                      onClick={() => setSelectedActivity(activity)}
                     >
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
@@ -326,7 +275,7 @@ const Activities = () => {
 
                       <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
                         <Play className="w-4 h-4" />
-                        {isLoading ? 'Loading...' : 'Start Activity'}
+                        Start Activity
                       </button>
                     </div>
                   ))}
@@ -361,7 +310,7 @@ const Activities = () => {
           </div>
 
           <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
-            {isLoading ? 'Loading...' : "Accept Today's Challenge"}
+            Accept Today's Challenge
           </button>
         </div>
 
