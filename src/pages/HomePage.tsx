@@ -84,6 +84,48 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold mb-3">Support This Ministry</h2>
+          <p className="text-lg text-blue-100 mb-4">
+            Help us keep this sanctuary study resource free and accessible worldwide
+          </p>
+          
+          <div className="mb-4">
+            <p className="text-blue-100 mb-2">Your support helps us:</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm text-blue-100">
+              <span>• Maintain servers</span>
+              <span>• Add new content</span>
+              <span>• Keep it free</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+            <a
+              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
+            >
+              PayPal
+            </a>
+            <a
+              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300"
+            >
+              Stripe
+            </a>
+          </div>
+          
+          <p className="text-sm text-blue-200">
+            "Freely ye have received, freely give" - Matthew 10:8 • God bless you for your generosity! 🙏
+          </p>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-blue-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -380,43 +422,6 @@ const HomePage = () => {
               Explore Timeline
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Support This Ministry
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Help us continue developing this free educational platform for the Seventh-day Adventist community. 
-            Your donations support ongoing development, hosting, and new features.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* PayPal Donation Button */}
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Donate via PayPal
-            </a>
-
-            {/* Stripe Payment Link Button */}
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Donate via Stripe
-            </a>
-          </div>
-          <p className="text-sm text-gray-500 mt-4">
-            All donations go directly to platform development and maintenance
-          </p>
         </div>
       </section>
     </div>
