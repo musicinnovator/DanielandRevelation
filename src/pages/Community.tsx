@@ -1,292 +1,338 @@
 import React, { useState } from 'react';
-import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
+import { Users, MessageSquare, BookOpen, Trophy, User, Calendar, ThumbsUp, Reply, Star, Award } from 'lucide-react';
 
-const Activities = () => {
-  const [selectedActivity, setSelectedActivity] = useState(null);
+const Community = () => {
+  const [activeTab, setActiveTab] = useState('discussions');
 
-  const activityCategories = [
+  const discussions = [
     {
-      id: 'quiz',
-      name: 'Quiz Games',
-      icon: Trophy,
-      color: 'from-yellow-500 to-orange-500',
-      activities: [
-        {
-          id: 'bible-bees',
-          title: 'Bible Bees',
-          description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
-          difficulty: 'Medium',
-          duration: '10-15 min',
-          players: 'Single/Multi'
-        },
-        {
-          id: 'multiple-choice',
-          title: 'Multiple Choice Masters',
-          description: 'Test knowledge of prophecies, symbols, characters, and places',
-          difficulty: 'Easy',
-          duration: '5-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'true-false',
-          title: 'True or False Challenge',
-          description: 'Quick-fire true/false questions about biblical facts',
-          difficulty: 'Easy',
-          duration: '5 min',
-          players: 'Single/Multi'
-        }
-      ]
+      id: 1,
+      title: "Understanding the 2300 Day Prophecy",
+      author: "Sarah Johnson",
+      category: "Daniel 8",
+      replies: 23,
+      likes: 45,
+      lastActivity: "2 hours ago",
+      preview: "I've been studying the connection between Daniel 8:14 and the investigative judgment. The mathematical precision is fascinating...",
+      isSticky: true
     },
     {
-      id: 'location',
-      name: 'Location & Discovery',
-      icon: Target,
-      color: 'from-blue-500 to-purple-500',
-      activities: [
-        {
-          id: 'wheres-that-found',
-          title: "Where's That Found",
-          description: 'Identify which chapter contains specific events or prophecies',
-          difficulty: 'Medium',
-          duration: '8-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'where-did-it-happen',
-          title: 'Where Did It Happen',
-          description: 'Match events with their specific locations in Daniel and Revelation',
-          difficulty: 'Hard',
-          duration: '10-15 min',
-          players: 'Single'
-        },
-        {
-          id: 'who-did-what',
-          title: 'Who Did What',
-          description: 'Match characters with their actions and roles in prophecy',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        }
-      ]
+      id: 2,
+      title: "Daniel 3 and Revelation 13 Connections",
+      author: "Michael Chen",
+      category: "Comparative Study",
+      replies: 18,
+      likes: 32,
+      lastActivity: "4 hours ago",
+      preview: "The parallels between the golden image and the mark of the beast are striking. Both involve worship...",
+      isSticky: false
     },
     {
-      id: 'construction',
-      name: 'Text Construction',
-      icon: Users,
-      color: 'from-green-500 to-teal-500',
-      activities: [
-        {
-          id: 'build-chapter',
-          title: 'Build the Chapter',
-          description: 'Arrange verses from a chapter in correct biblical order',
-          difficulty: 'Hard',
-          duration: '15-20 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-book',
-          title: 'Build the Book',
-          description: 'Arrange chapters in correct order with explanations',
-          difficulty: 'Expert',
-          duration: '20-30 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-verse',
-          title: 'Build the Verse',
-          description: 'Reconstruct individual verses in proper KJV order',
-          difficulty: 'Medium',
-          duration: '5-8 min',
-          players: 'Single'
-        }
-      ]
+      id: 3,
+      title: "Seven Churches Historical Timeline",
+      author: "Ruth Martinez",
+      category: "Revelation 2-3",
+      replies: 41,
+      likes: 78,
+      lastActivity: "6 hours ago",
+      preview: "Each church period seems to have distinct characteristics that match historical church eras...",
+      isSticky: false
     },
     {
-      id: 'memory',
-      name: 'Memory & Matching',
-      icon: Star,
-      color: 'from-red-500 to-pink-500',
-      activities: [
-        {
-          id: 'mix-match',
-          title: 'Mix and Match',
-          description: 'Connect related items: people, places, things, and times',
-          difficulty: 'Medium',
-          duration: '10-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'missing-words',
-          title: 'Missing Words',
-          description: 'Find missing words or phrases in scripture passages',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'when-did-happen',
-          title: 'When Did That Happen',
-          description: 'Match events with their chronological timing',
-          difficulty: 'Hard',
-          duration: '12-15 min',
-          players: 'Single'
-        }
-      ]
+      id: 4,
+      title: "Sanctuary Service and Revelation",
+      author: "David Thompson",
+      category: "Sanctuary Doctrine",
+      replies: 29,
+      likes: 56,
+      lastActivity: "1 day ago",
+      preview: "The heavenly sanctuary scenes in Revelation mirror the earthly sanctuary services perfectly...",
+      isSticky: false
     }
   ];
 
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
-      case 'Easy': return 'bg-green-100 text-green-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
-      case 'Hard': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
+  const leaderboard = [
+    { rank: 1, name: "Sarah Johnson", points: 2847, badge: "Scripture Scholar", avatar: "SJ", color: "bg-yellow-500" },
+    { rank: 2, name: "Michael Chen", points: 2341, badge: "Prophecy Expert", avatar: "MC", color: "bg-gray-400" },
+    { rank: 3, name: "Ruth Martinez", points: 2156, badge: "Timeline Master", avatar: "RM", color: "bg-orange-600" },
+    { rank: 4, name: "David Thompson", points: 1987, badge: "Symbol Sage", avatar: "DT", color: "bg-blue-500" },
+    { rank: 5, name: "Lisa Anderson", points: 1823, badge: "Activity Champion", avatar: "LA", color: "bg-purple-500" }
+  ];
+
+  const recentActivity = [
+    { user: "John Doe", action: "completed", target: "Bible Bees Challenge", time: "30 min ago", icon: Trophy },
+    { user: "Emma Wilson", action: "started", target: "70 Week Prophecy Study", time: "1 hour ago", icon: BookOpen },
+    { user: "Alex Johnson", action: "posted in", target: "Daniel 7 Discussion", time: "2 hours ago", icon: MessageSquare },
+    { user: "Maria Garcia", action: "earned", target: "Prophecy Master Badge", time: "3 hours ago", icon: Award }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        </div>
-      </section>
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        </div>
-      </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Interactive Learning Activities
+            Community Study Hub
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Test and strengthen your knowledge of Daniel and Revelation through 
-            engaging activities and challenges designed for all skill levels
+            Connect with fellow students, share insights, and grow together in 
+            understanding Daniel and Revelation prophecies
           </p>
         </div>
 
-        {/* Stats Bar */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600">15+</div>
-              <div className="text-sm text-gray-600">Different Activities</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-green-600">1000+</div>
-              <div className="text-sm text-gray-600">Questions Available</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-600">5</div>
-              <div className="text-sm text-gray-600">Difficulty Levels</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-600">∞</div>
-              <div className="text-sm text-gray-600">Learning Opportunities</div>
-            </div>
+        {/* Tab Navigation */}
+        <div className="bg-white rounded-2xl shadow-lg p-2 mb-8">
+          <div className="flex flex-wrap gap-2">
+            {[
+              { id: 'discussions', name: 'Discussions', icon: MessageSquare },
+              { id: 'leaderboard', name: 'Leaderboard', icon: Trophy },
+              { id: 'activity', name: 'Recent Activity', icon: Calendar }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
+                  activeTab === tab.id
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'text-gray-600 hover:bg-blue-50 hover:text-blue-700'
+                }`}
+              >
+                <tab.icon className="w-5 h-5" />
+                {tab.name}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Activity Categories */}
-        <div className="space-y-12">
-          {activityCategories.map((category) => (
-            <div key={category.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              {/* Category Header */}
-              <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                <div className="flex items-center gap-4">
-                  <category.icon className="w-8 h-8" />
-                  <div>
-                    <h2 className="text-2xl font-bold">{category.name}</h2>
-                    <p className="text-white text-opacity-90">
-                      {category.activities.length} activities available
-                    </p>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-3">
+            {activeTab === 'discussions' && (
+              <div className="space-y-6">
+                <div className="bg-white rounded-2xl shadow-lg p-6">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-2xl font-bold text-gray-900">Study Discussions</h2>
+                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      New Discussion
+                    </button>
+                  </div>
+
+                  <div className="space-y-4">
+                    {discussions.map((discussion) => (
+                      <div key={discussion.id} className={`p-6 rounded-xl border-2 transition-all duration-300 hover:shadow-lg cursor-pointer ${
+                        discussion.isSticky 
+                          ? 'border-yellow-200 bg-yellow-50' 
+                          : 'border-gray-200 bg-white hover:border-blue-200'
+                      }`}>
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              {discussion.isSticky && (
+                                <span className="bg-yellow-500 text-white px-2 py-1 rounded text-xs font-medium">
+                                  Pinned
+                                </span>
+                              )}
+                              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                {discussion.category}
+                              </span>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                              {discussion.title}
+                            </h3>
+                            <p className="text-gray-600 mt-2 leading-relaxed">
+                              {discussion.preview}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4 text-sm text-gray-500">
+                            <span className="flex items-center gap-1">
+                              <User className="w-4 h-4" />
+                              {discussion.author}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Reply className="w-4 h-4" />
+                              {discussion.replies} replies
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <ThumbsUp className="w-4 h-4" />
+                              {discussion.likes} likes
+                            </span>
+                          </div>
+                          <span className="text-sm text-gray-500">{discussion.lastActivity}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
+            )}
 
-              {/* Activities Grid */}
-              <div className="p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.activities.map((activity) => (
-                    <div 
-                      key={activity.id} 
-                      className="activity-card p-6 rounded-xl cursor-pointer group"
-                      onClick={() => setSelectedActivity(activity)}
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {activity.title}
-                        </h3>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(activity.difficulty)}`}>
-                          {activity.difficulty}
-                        </span>
+            {activeTab === 'leaderboard' && (
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Trophy className="w-8 h-8 text-yellow-500" />
+                  Community Leaderboard
+                </h2>
+                <div className="space-y-4">
+                  {leaderboard.map((user, index) => (
+                    <div key={user.rank} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold ${
+                        index === 0 ? 'bg-yellow-500' :
+                        index === 1 ? 'bg-gray-400' :
+                        index === 2 ? 'bg-orange-600' :
+                        'bg-blue-500'
+                      }`}>
+                        #{user.rank}
                       </div>
-
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {activity.description}
-                      </p>
-
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {activity.duration}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {activity.players}
-                        </div>
+                      <div className={`w-12 h-12 ${user.color} rounded-full flex items-center justify-center text-white font-bold`}>
+                        {user.avatar}
                       </div>
-
-                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
-                        <Play className="w-4 h-4" />
-                        Start Activity
-                      </button>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-gray-900">{user.name}</h3>
+                        <p className="text-sm text-gray-600">{user.badge}</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-blue-600">{user.points.toLocaleString()}</div>
+                        <div className="text-sm text-gray-500">points</div>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            )}
 
-        {/* Challenge of the Day */}
-        <div className="mt-16 bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Challenge of the Day</h2>
-          <p className="text-xl text-purple-100 mb-6">
-            Daily challenges to keep your prophetic knowledge sharp
-          </p>
-          
-          <div className="bg-white bg-opacity-10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-3 text-yellow-400">
-              Today's Challenge: Symbolic Numbers
-            </h3>
-            <p className="text-purple-100 mb-4">
-              "How many times does the number 7 appear in the book of Revelation and what does it symbolize?"
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                Difficulty: Medium
-              </span>
-              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                Estimated Time: 8 minutes
-              </span>
-            </div>
+            {activeTab === 'activity' && (
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <Calendar className="w-8 h-8 text-blue-500" />
+                  Recent Community Activity
+                </h2>
+                <div className="space-y-4">
+                  {recentActivity.map((activity, index) => (
+                    <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
+                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <activity.icon className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700">
+                          <span className="font-semibold">{activity.user}</span> {activity.action}{' '}
+                          <span className="font-medium text-blue-600">{activity.target}</span>
+                        </p>
+                        <p className="text-sm text-gray-500">{activity.time}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
-          <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
-            Accept Today's Challenge
-          </button>
+          {/* Sidebar */}
+          <div className="space-y-8">
+            {/* Community Stats */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <Users className="w-5 h-5 text-blue-600" />
+                Community Stats
+              </h3>
+              <div className="space-y-4">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-600">1,247</div>
+                  <div className="text-sm text-gray-600">Active Members</div>
+                </div>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <div className="text-2xl font-bold text-green-600">89</div>
+                  <div className="text-sm text-gray-600">Discussions Today</div>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <div className="text-2xl font-bold text-purple-600">456</div>
+                  <div className="text-sm text-gray-600">Questions Answered</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Popular Topics */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Trending Topics</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <span className="font-medium text-gray-700">Investigative Judgment</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">42 posts</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <span className="font-medium text-gray-700">Mark of the Beast</span>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">38 posts</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <span className="font-medium text-gray-700">Second Coming</span>
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">29 posts</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <span className="font-medium text-gray-700">70 Week Prophecy</span>
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">24 posts</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Study Groups */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Active Study Groups</h3>
+              <div className="space-y-3">
+                <div className="p-3 border border-blue-200 rounded-lg">
+                  <div className="font-medium text-gray-900">Daniel 2 Deep Dive</div>
+                  <div className="text-sm text-gray-600">15 members • Meeting Weekly</div>
+                </div>
+                <div className="p-3 border border-purple-200 rounded-lg">
+                  <div className="font-medium text-gray-900">Revelation Symbols</div>
+                  <div className="text-sm text-gray-600">23 members • Daily discussions</div>
+                </div>
+                <div className="p-3 border border-green-200 rounded-lg">
+                  <div className="font-medium text-gray-900">Prophecy Timeline</div>
+                  <div className="text-sm text-gray-600">31 members • Bi-weekly</div>
+                </div>
+              </div>
+              <button className="w-full mt-4 bg-gray-100 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                Browse All Groups
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Community Guidelines */}
+        <div className="mt-16 bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 text-white">
+          <h2 className="text-3xl font-bold mb-6 text-center">Community Guidelines</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Scripture-Centered</h3>
+              <p className="text-blue-100">All discussions should be grounded in biblical text and SDA theological understanding</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Respectful Dialog</h3>
+              <p className="text-blue-100">Maintain Christian love and respect in all interactions and disagreements</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Quality Content</h3>
+              <p className="text-blue-100">Share thoughtful insights and questions that contribute to collective learning</p>
+            </div>
+          </div>
         </div>
 
         {/* Support Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Support Learning Activities</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Support Community Features</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Developing engaging educational activities and games takes time and creativity. Help us create more interactive learning experiences.
+            Maintaining discussion forums, leaderboards, and community features requires ongoing server costs and moderation. Your support keeps our community thriving.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* PayPal Donation Button */}
@@ -315,4 +361,4 @@ const Activities = () => {
   );
 };
 
-export default Activities;
+export default Community;
