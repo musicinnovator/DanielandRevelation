@@ -1,92 +1,178 @@
-import React, { useState, useEffect } from 'react';
-import { Book, Eye, ArrowLeft, ArrowRight, ExternalLink, Layers } from 'lucide-react';
+import React, { useState } from 'react';
+import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
 
-const ScriptureNavigator = () => {
-  const [selectedBook, setSelectedBook] = useState('daniel');
-  const [selectedChapter, setSelectedChapter] = useState(1);
-  const [showModels, setShowModels] = useState(false);
+const Activities = () => {
+  const [selectedActivity, setSelectedActivity] = useState(null);
 
-  const books = {
-    daniel: { name: 'Daniel', chapters: 12, color: 'blue' },
-    revelation: { name: 'Revelation', chapters: 22, color: 'purple' }
+  const activityCategories = [
+    {
+      id: 'quiz',
+      name: 'Quiz Games',
+      icon: Trophy,
+      color: 'from-yellow-500 to-orange-500',
+      activities: [
+        {
+          id: 'bible-bees',
+          title: 'Bible Bees',
+          description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
+          difficulty: 'Medium',
+          duration: '10-15 min',
+          players: 'Single/Multi'
+        },
+        {
+          id: 'multiple-choice',
+          title: 'Multiple Choice Masters',
+          description: 'Test knowledge of prophecies, symbols, characters, and places',
+          difficulty: 'Easy',
+          duration: '5-10 min',
+          players: 'Single'
+        },
+        {
+          id: 'true-false',
+          title: 'True or False Challenge',
+          description: 'Quick-fire true/false questions about biblical facts',
+          difficulty: 'Easy',
+          duration: '5 min',
+          players: 'Single/Multi'
+        }
+      ]
+    },
+    {
+      id: 'location',
+      name: 'Location & Discovery',
+      icon: Target,
+      color: 'from-blue-500 to-purple-500',
+      activities: [
+        {
+          id: 'wheres-that-found',
+          title: "Where's That Found",
+          description: 'Identify which chapter contains specific events or prophecies',
+          difficulty: 'Medium',
+          duration: '8-12 min',
+          players: 'Single'
+        },
+        {
+          id: 'where-did-it-happen',
+          title: 'Where Did It Happen',
+          description: 'Match events with their specific locations in Daniel and Revelation',
+          difficulty: 'Hard',
+          duration: '10-15 min',
+          players: 'Single'
+        },
+        {
+          id: 'who-did-what',
+          title: 'Who Did What',
+          description: 'Match characters with their actions and roles in prophecy',
+          difficulty: 'Medium',
+          duration: '8-10 min',
+          players: 'Single'
+        }
+      ]
+    },
+    {
+      id: 'construction',
+      name: 'Text Construction',
+      icon: Users,
+      color: 'from-green-500 to-teal-500',
+      activities: [
+        {
+          id: 'build-chapter',
+          title: 'Build the Chapter',
+          description: 'Arrange verses from a chapter in correct biblical order',
+          difficulty: 'Hard',
+          duration: '15-20 min',
+          players: 'Single'
+        },
+        {
+          id: 'build-book',
+          title: 'Build the Book',
+          description: 'Arrange chapters in correct order with explanations',
+          difficulty: 'Expert',
+          duration: '20-30 min',
+          players: 'Single'
+        },
+        {
+          id: 'build-verse',
+          title: 'Build the Verse',
+          description: 'Reconstruct individual verses in proper KJV order',
+          difficulty: 'Medium',
+          duration: '5-8 min',
+          players: 'Single'
+        }
+      ]
+    },
+    {
+      id: 'memory',
+      name: 'Memory & Matching',
+      icon: Star,
+      color: 'from-red-500 to-pink-500',
+      activities: [
+        {
+          id: 'mix-match',
+          title: 'Mix and Match',
+          description: 'Connect related items: people, places, things, and times',
+          difficulty: 'Medium',
+          duration: '10-12 min',
+          players: 'Single'
+        },
+        {
+          id: 'missing-words',
+          title: 'Missing Words',
+          description: 'Find missing words or phrases in scripture passages',
+          difficulty: 'Medium',
+          duration: '8-10 min',
+          players: 'Single'
+        },
+        {
+          id: 'when-did-happen',
+          title: 'When Did That Happen',
+          description: 'Match events with their chronological timing',
+          difficulty: 'Hard',
+          duration: '12-15 min',
+          players: 'Single'
+        }
+      ]
+    }
+  ];
+
+  const getDifficultyColor = (difficulty) => {
+    switch (difficulty) {
+      case 'Easy': return 'bg-green-100 text-green-800';
+      case 'Medium': return 'bg-yellow-100 text-yellow-800';
+      case 'Hard': return 'bg-orange-100 text-orange-800';
+      case 'Expert': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
   };
-
-  const danielChapterTitles = {
-    1: "Daniel's Faithfulness in Diet",
-    2: "Nebuchadnezzar's Dream - The Great Image",
-    3: "The Fiery Furnace Test",
-    4: "Nebuchadnezzar's Tree Dream",
-    5: "Belshazzar's Feast - The Handwriting",
-    6: "Daniel in the Lion's Den",
-    7: "The Four Beasts Vision",
-    8: "The Ram and Goat Vision",
-    9: "The 70 Week Prophecy",
-    10: "Daniel's Final Vision Begins",
-    11: "Kings of North and South",
-    12: "The Time of the End"
-  };
-
-  const revelationChapterTitles = {
-    1: "Christ Among the Candlesticks",
-    2: "Messages to Ephesus, Smyrna, Pergamos, Thyatira",
-    3: "Messages to Sardis, Philadelphia, Laodicea",
-    4: "The Throne Room of Heaven",
-    5: "The Lamb and the Seven Seals",
-    6: "The First Six Seals",
-    7: "The 144,000 and Great Multitude",
-    8: "The Seventh Seal and First Four Trumpets",
-    9: "The Fifth and Sixth Trumpets",
-    10: "The Mighty Angel and Little Book",
-    11: "The Two Witnesses",
-    12: "The Woman and the Dragon",
-    13: "The Beast from Sea and Earth",
-    14: "The 144,000 and Three Angels",
-    15: "The Seven Last Plagues",
-    16: "The Seven Vials of Wrath",
-    17: "The Great Whore",
-    18: "Babylon's Fall",
-    19: "Christ's Second Coming",
-    20: "The Millennium and Final Judgment",
-    21: "New Heaven and New Earth",
-    22: "The River of Life and Final Words"
-  };
-
-  const getCurrentTitle = () => {
-    const titles = selectedBook === 'daniel' ? danielChapterTitles : revelationChapterTitles;
-    return titles[selectedChapter] || '';
-  };
-
-  const sampleVerse = selectedBook === 'daniel' && selectedChapter === 2 
-    ? "Da:2:31: Thou, O king, sawest, and behold a great image. This great image, whose brightness was excellent, stood before thee; and the form thereof was terrible."
-    : selectedBook === 'revelation' && selectedChapter === 1
-    ? "Re:1:12: And I turned to see the voice that spake with me. And being turned, I saw seven golden candlesticks;"
-    : "Select a chapter to view scripture text with interactive models and commentary.";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
       {/* Support Ministry CTA */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-3">Support This Ministry</h2>
-          <p className="text-lg text-blue-100 mb-4">
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-lg font-bold mb-2">Support This Ministry</h2>
+          <p className="text-sm text-blue-100 mb-3">
             Help us keep this sanctuary study resource free and accessible worldwide
           </p>
           
-          <div className="mb-4">
-            <p className="text-blue-100 mb-2">Your support helps us:</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm text-blue-100">
+          <div className="mb-3">
+            <p className="text-blue-100 mb-2 text-sm">Your support helps us:</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 text-xs text-blue-100">
               <span>• Maintain servers</span>
               <span>• Add new content</span>
               <span>• Keep it free</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-3">
             <a
               href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
+              className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300 text-sm"
             >
               PayPal
             </a>
@@ -94,13 +180,13 @@ const ScriptureNavigator = () => {
               href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300"
+              className="px-4 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300 text-sm"
             >
               Stripe
             </a>
           </div>
           
-          <p className="text-sm text-blue-200">
+          <p className="text-xs text-blue-200">
             "Freely ye have received, freely give" - Matthew 10:8 • God bless you for your generosity! 🙏
           </p>
         </div>
@@ -110,238 +196,131 @@ const ScriptureNavigator = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Scripture Navigator
+            Interactive Learning Activities
           </h1>
-          <p className="text-xl text-gray-600">
-            Explore Daniel and Revelation with linked 3D models and SDA commentary
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Test and strengthen your knowledge of Daniel and Revelation through 
+            engaging activities and challenges designed for all skill levels
           </p>
         </div>
 
-        {/* Book Selection */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-xl p-2 shadow-lg">
-            <button
-              onClick={() => {
-                setSelectedBook('daniel');
-                setSelectedChapter(1);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                selectedBook === 'daniel'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-blue-600 hover:bg-blue-50'
-              }`}
-            >
-              <Book className="w-5 h-5" />
-              Daniel
-            </button>
-            <button
-              onClick={() => {
-                setSelectedBook('revelation');
-                setSelectedChapter(1);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                selectedBook === 'revelation'
-                  ? 'bg-purple-600 text-white shadow-md'
-                  : 'text-purple-600 hover:bg-purple-50'
-              }`}
-            >
-              <Eye className="w-5 h-5" />
-              Revelation
-            </button>
+        {/* Stats Bar */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">15+</div>
+              <div className="text-sm text-gray-600">Different Activities</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-green-600">1000+</div>
+              <div className="text-sm text-gray-600">Questions Available</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-600">5</div>
+              <div className="text-sm text-gray-600">Difficulty Levels</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-orange-600">∞</div>
+              <div className="text-sm text-gray-600">Learning Opportunities</div>
+            </div>
           </div>
         </div>
 
-        {/* Chapter Navigation */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
-              {books[selectedBook].name} - Chapter {selectedChapter}
-            </h2>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setSelectedChapter(Math.max(1, selectedChapter - 1))}
-                disabled={selectedChapter === 1}
-                className="p-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setSelectedChapter(Math.min(books[selectedBook].chapters, selectedChapter + 1))}
-                disabled={selectedChapter === books[selectedBook].chapters}
-                className="p-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          <h3 className="text-lg font-semibold text-gray-700 mb-6">
-            {getCurrentTitle()}
-          </h3>
-
-          {/* Chapter Grid */}
-          <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-2 mb-8">
-            {Array.from({ length: books[selectedBook].chapters }, (_, i) => i + 1).map((chapter) => (
-              <button
-                key={chapter}
-                onClick={() => setSelectedChapter(chapter)}
-                className={`aspect-square rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                  selectedChapter === chapter
-                    ? selectedBook === 'daniel'
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-purple-600 text-white shadow-lg'
-                    : selectedBook === 'daniel'
-                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                    : 'bg-purple-100 text-purple-800 hover:bg-purple-200'
-                }`}
-              >
-                {chapter}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Scripture Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Scripture Text */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl p-8">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold text-gray-900">
-                Scripture Text (KJV)
-              </h3>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowModels(!showModels)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                    showModels
-                      ? 'bg-green-600 text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <Layers className="w-4 h-4" />
-                  3D Models
-                </button>
-              </div>
-            </div>
-
-            <div className="scripture-verse text-gray-800 text-lg leading-relaxed">
-              {sampleVerse}
-            </div>
-
-            {/* Interactive Elements */}
-            {showModels && (
-              <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl">
-                <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-blue-600" />
-                  Related 3D Models
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {selectedBook === 'daniel' && selectedChapter === 2 && (
-                    <>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Nebuchadnezzar's Image
-                        </div>
-                      </div>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          The Stone Kingdom
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  {selectedBook === 'revelation' && selectedChapter === 1 && (
-                    <>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Seven Golden Candlesticks
-                        </div>
-                      </div>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Christ Among Candlesticks
-                        </div>
-                      </div>
-                    </>
-                  )}
+        {/* Activity Categories */}
+        <div className="space-y-12">
+          {activityCategories.map((category) => (
+            <div key={category.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              {/* Category Header */}
+              <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
+                <div className="flex items-center gap-4">
+                  <category.icon className="w-8 h-8" />
+                  <div>
+                    <h2 className="text-2xl font-bold">{category.name}</h2>
+                    <p className="text-white text-opacity-90">
+                      {category.activities.length} activities available
+                    </p>
+                  </div>
                 </div>
               </div>
-            )}
-          </div>
 
-          {/* Commentary Sidebar */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">
-              SDA Commentary
+              {/* Activities Grid */}
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.activities.map((activity) => (
+                    <div 
+                      key={activity.id} 
+                      className="activity-card p-6 rounded-xl cursor-pointer group"
+                      onClick={() => setSelectedActivity(activity)}
+                    >
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {activity.title}
+                        </h3>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(activity.difficulty)}`}>
+                          {activity.difficulty}
+                        </span>
+                      </div>
+
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {activity.description}
+                      </p>
+
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {activity.duration}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {activity.players}
+                        </div>
+                      </div>
+
+                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
+                        <Play className="w-4 h-4" />
+                        Start Activity
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Challenge of the Day */}
+        <div className="mt-16 bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Challenge of the Day</h2>
+          <p className="text-xl text-purple-100 mb-6">
+            Daily challenges to keep your prophetic knowledge sharp
+          </p>
+          
+          <div className="bg-white bg-opacity-10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold mb-3 text-yellow-400">
+              Today's Challenge: Symbolic Numbers
             </h3>
-            
-            <div className="space-y-6">
-              <div className="p-4 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg border-l-4 border-yellow-500">
-                <h4 className="font-semibold text-gray-900 mb-2">Key Insight</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {selectedBook === 'daniel' && selectedChapter === 2
-                    ? "The great image represents the succession of world empires from Babylon to the end times, culminating in Christ's eternal kingdom."
-                    : selectedBook === 'revelation' && selectedChapter === 1
-                    ? "The seven golden candlesticks represent the seven churches, showing Christ's presence among His people throughout history."
-                    : "Select a chapter to view detailed SDA commentary and theological insights."
-                  }
-                </p>
-              </div>
-
-              <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Cross References</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer">
-                    <ExternalLink className="w-3 h-3" />
-                    Daniel 7:13-14
-                  </div>
-                  <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer">
-                    <ExternalLink className="w-3 h-3" />
-                    Revelation 19:11-16
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Prophetic Timeline</h4>
-                <p className="text-gray-700 text-sm">
-                  This chapter connects to the prophetic timeline at 605 BC - 1844 AD period.
-                </p>
-                <button className="mt-2 text-green-600 hover:text-green-800 text-sm font-medium flex items-center gap-1">
-                  View on Timeline <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
+            <p className="text-purple-100 mb-4">
+              "How many times does the number 7 appear in the book of Revelation and what does it symbolize?"
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Difficulty: Medium
+              </span>
+              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Estimated Time: 8 minutes
+              </span>
             </div>
           </div>
+
+          <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
+            Accept Today's Challenge
+          </button>
         </div>
 
-        {/* Quick Navigation */}
-        <div className="mt-8 bg-white rounded-2xl shadow-xl p-6">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Navigation</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-            <button className="p-3 bg-blue-100 hover:bg-blue-200 rounded-lg text-blue-800 font-medium transition-colors">
-              Daniel 2 Image
-            </button>
-            <button className="p-3 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-800 font-medium transition-colors">
-              Four Beasts
-            </button>
-            <button className="p-3 bg-green-100 hover:bg-green-200 rounded-lg text-green-800 font-medium transition-colors">
-              70 Week Prophecy
-            </button>
-            <button className="p-3 bg-orange-100 hover:bg-orange-200 rounded-lg text-orange-800 font-medium transition-colors">
-              Seven Churches
-            </button>
-            <button className="p-3 bg-red-100 hover:bg-red-200 rounded-lg text-red-800 font-medium transition-colors">
-              Seven Seals
-            </button>
-            <button className="p-3 bg-teal-100 hover:bg-teal-200 rounded-lg text-teal-800 font-medium transition-colors">
-              New Jerusalem
-            </button>
-          </div>
-        </div>
+        {/* Support Section */}
       </div>
     </div>
   );
 };
 
-export default ScriptureNavigator;
+export default Activities;

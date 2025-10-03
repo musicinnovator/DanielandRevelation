@@ -330,6 +330,7 @@ const Activities = () => {
         {/* Challenge of the Day */}
         <div className="mt-16 bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Challenge of the Day</h2>
+        </div>
       </div>
     </div>
   );
