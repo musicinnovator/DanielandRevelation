@@ -147,6 +147,16 @@ const Activities = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </div>
+      </section>
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </div>
+      </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
