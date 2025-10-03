@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
-import { useErrorHandler } from '../hooks/useErrorHandler';
-import ErrorMessage from '../components/ErrorMessage';
-import LoadingSpinner from '../components/LoadingSpinner';
 
 const Activities = () => {
   const [selectedActivity, setSelectedActivity] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const { error, isError, clearError, handleError } = useErrorHandler();
 
   const activityCategories = [
     {
@@ -135,132 +130,7 @@ const Activities = () => {
           difficulty: 'Hard',
           duration: '12-15 min',
           players: 'Single'
-        }
-      ]
-    }
-  ];
-
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
-      case 'Easy': return 'bg-green-100 text-green-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
-      case 'Hard': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const handleActivityStart = async (activity: any) => {
-    try {
-      setIsLoading(true);
-      clearError();
-      
-      // Simulate activity loading
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSelectedActivity(activity);
-      
-      // For now, show a coming soon message
-      handleError(new Error(`${activity.title} is coming soon! Stay tuned for this exciting feature.`));
-    } catch (err) {
-      handleError(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleDonationClick = (platform: string) => {
-    try {
-      // Track donation click (analytics would go here)
-      console.log(`Donation clicked: ${platform}`);
-    } catch (err) {
-      handleError(err);
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-medium shadow transition-all duration-300"
-            >
-              Donate via PayPal
-            </a>
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow transition-all duration-300"
-            >
-              Donate via Stripe
-            </a>
-          </div>
-        </div>
-
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-lg font-bold mb-2">Support This Ministry</h2>
-          <p className="text-sm text-blue-100 mb-3">
-            Help us keep this sanctuary study resource free and accessible worldwide
-          </p>
-          
-          <div className="mb-3">
-            <p className="text-blue-100 mb-2 text-sm">Your support helps us:</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 text-xs text-blue-100">
-              <span>• Maintain servers</span>
-              <span>• Add new content</span>
-              <span>• Keep it free</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-3">
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleDonationClick('PayPal')}
-              className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              PayPal
-            </a>
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleDonationClick('Stripe')}
-              className="px-4 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              Stripe
-            </a>
-          </div>
-          
-          <p className="text-xs text-blue-200">
-            "Freely ye have received, freely give" - Matthew 10:8 • God bless you for your generosity! 🙏
-          </p>
-        </div>
-      </section>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Error Message */}
-        {isError && (
-          <ErrorMessage 
-            error={error!} 
-            onDismiss={clearError}
-            className="mb-6"
-          />
-        )}
-
-        {/* Loading Spinner */}
-        {isLoading && (
-          <div className="mb-6">
-            <LoadingSpinner size="lg" className="py-8" />
-          </div>
-        )}
-
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -318,7 +188,7 @@ const Activities = () => {
                     <div 
                       key={activity.id} 
                       className="activity-card p-6 rounded-xl cursor-pointer group"
-                      onClick={() => handleActivityStart(activity)}
+                      onClick={() => setSelectedActivity(activity)}
                     >
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
@@ -346,7 +216,7 @@ const Activities = () => {
 
                       <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
                         <Play className="w-4 h-4" />
-                        {isLoading ? 'Loading...' : 'Start Activity'}
+                        Start Activity
                       </button>
                     </div>
                   ))}
@@ -381,11 +251,38 @@ const Activities = () => {
           </div>
 
           <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
-            {isLoading ? 'Loading...' : "Accept Today's Challenge"}
+            Accept Today's Challenge
           </button>
         </div>
 
         {/* Support Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Support Learning Activities</h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Developing engaging educational activities and games takes time and creativity. Help us create more interactive learning experiences.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* PayPal Donation Button */}
+            <a
+              href="https://https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via PayPal
+            </a>
+
+            {/* Stripe Payment Link Button */}
+            <a
+              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via Stripe
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

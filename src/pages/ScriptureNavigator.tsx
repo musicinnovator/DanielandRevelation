@@ -123,70 +123,8 @@ const Activities = () => {
           duration: '8-10 min',
           players: 'Single'
         },
-        {
-          id: 'when-did-happen',
-          title: 'When Did That Happen',
-          description: 'Match events with their chronological timing',
-          difficulty: 'Hard',
-          duration: '12-15 min',
-          players: 'Single'
-        }
-      ]
-    }
-  ];
-
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
       case 'Easy': return 'bg-green-100 text-green-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
-      case 'Hard': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-medium shadow transition-all duration-300"
-              >
-                Donate via PayPal
-              </a>
-              <a
-                href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow transition-all duration-300"
-              >
-                Donate via Stripe
-              </a>
-            </div>
-          </div>
-
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-medium shadow transition-all duration-300"
-              >
-                Donate via PayPal
-              </a>
-              <a
-                href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow transition-all duration-300"
-              >
-                Donate via Stripe
-              </a>
-            </div>
-          </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
