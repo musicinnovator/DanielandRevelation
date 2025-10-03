@@ -189,48 +189,6 @@ const Activities = () => {
         </div>
       </section>
 
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-lg font-bold mb-2">Support This Ministry</h2>
-          <p className="text-sm text-blue-100 mb-3">
-            Help us keep this sanctuary study resource free and accessible worldwide
-          </p>
-          
-          <div className="mb-3">
-            <p className="text-blue-100 mb-2 text-sm">Your support helps us:</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 text-xs text-blue-100">
-              <span>• Maintain servers</span>
-              <span>• Add new content</span>
-              <span>• Keep it free</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-3">
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              PayPal
-            </a>
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              Stripe
-            </a>
-          </div>
-          
-          <p className="text-xs text-blue-200">
-            "Freely ye have received, freely give" - Matthew 10:8 • God bless you for your generosity! 🙏
-          </p>
-        </div>
-      </section>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -330,7 +288,33 @@ const Activities = () => {
         {/* Challenge of the Day */}
         <div className="mt-16 bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Challenge of the Day</h2>
+          <p className="text-xl text-purple-100 mb-6">
+            Daily challenges to keep your prophetic knowledge sharp
+          </p>
+          
+          <div className="bg-white bg-opacity-10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold mb-3 text-yellow-400">
+              Today's Challenge: Symbolic Numbers
+            </h3>
+            <p className="text-purple-100 mb-4">
+              "How many times does the number 7 appear in the book of Revelation and what does it symbolize?"
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Difficulty: Medium
+              </span>
+              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Estimated Time: 8 minutes
+              </span>
+            </div>
+          </div>
+
+          <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
+            Accept Today's Challenge
+          </button>
         </div>
+
+        {/* Support Section */}
       </div>
     </div>
   );
