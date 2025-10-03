@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Trophy, Target, Clock, Users, Star, Play } from 'lucide-react';
+import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
 import { useErrorHandler } from '../hooks/useErrorHandler';
-import ErrorMessage from './ErrorMessage';
+import ErrorMessage from '../components/ErrorMessage';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const Activities = () => {
+  const [selectedActivity, setSelectedActivity] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { error, isError, clearError, handleError } = useErrorHandler();
 
@@ -149,12 +150,22 @@ const Activities = () => {
     }
   };
 
-  const handleActivityStart = (activity) => {
+  const handleActivityStart = async (activity: any) => {
     try {
+      setIsLoading(true);
       clearError();
-      // Activity start logic would go here
+      
+      // Simulate activity loading
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setSelectedActivity(activity);
+      
+      // For now, show a coming soon message
+      handleError(new Error(`${activity.title} is coming soon! Stay tuned for this exciting feature.`));
     } catch (err) {
       handleError(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -169,6 +180,11 @@ const Activities = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    } finally {
+      setIsLoading(false);
       {/* Support Ministry CTA */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
