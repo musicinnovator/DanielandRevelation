@@ -1,323 +1,307 @@
 import React, { useState } from 'react';
-import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
+import { Layers, Search, Filter, Eye, ArrowRight, Play } from 'lucide-react';
 
-const Activities = () => {
-  const [selectedActivity, setSelectedActivity] = useState(null);
+const ThreeDModels = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const activityCategories = [
+  const categories = [
+    { id: 'all', name: 'All Models', count: 42 },
+    { id: 'daniel', name: 'Daniel', count: 18 },
+    { id: 'revelation', name: 'Revelation', count: 24 },
+    { id: 'beasts', name: 'Prophetic Beasts', count: 8 },
+    { id: 'sanctuary', name: 'Sanctuary', count: 6 },
+    { id: 'timeline', name: 'Timeline Events', count: 10 }
+  ];
+
+  const models = [
     {
-      id: 'quiz',
-      name: 'Quiz Games',
-      icon: Trophy,
-      color: 'from-yellow-500 to-orange-500',
-      activities: [
-        {
-          id: 'bible-bees',
-          title: 'Bible Bees',
-          description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
-          difficulty: 'Medium',
-          duration: '10-15 min',
-          players: 'Single/Multi'
-        },
-        {
-          id: 'multiple-choice',
-          title: 'Multiple Choice Masters',
-          description: 'Test knowledge of prophecies, symbols, characters, and places',
-          difficulty: 'Easy',
-          duration: '5-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'true-false',
-          title: 'True or False Challenge',
-          description: 'Quick-fire true/false questions about biblical facts',
-          difficulty: 'Easy',
-          duration: '5 min',
-          players: 'Single/Multi'
-        }
-      ]
+      id: 1,
+      title: "Nebuchadnezzar's Image",
+      book: "Daniel",
+      chapter: 2,
+      category: "daniel",
+      description: "The great image representing world empires from Babylon to the end times",
+      difficulty: "Beginner",
+      image: "https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg",
+      interactive: true,
+      verses: ["Da:2:31-35"]
     },
     {
-      id: 'location',
-      name: 'Location & Discovery',
-      icon: Target,
-      color: 'from-blue-500 to-purple-500',
-      activities: [
-        {
-          id: 'wheres-that-found',
-          title: "Where's That Found",
-          description: 'Identify which chapter contains specific events or prophecies',
-          difficulty: 'Medium',
-          duration: '8-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'where-did-it-happen',
-          title: 'Where Did It Happen',
-          description: 'Match events with their specific locations in Daniel and Revelation',
-          difficulty: 'Hard',
-          duration: '10-15 min',
-          players: 'Single'
-        },
-        {
-          id: 'who-did-what',
-          title: 'Who Did What',
-          description: 'Match characters with their actions and roles in prophecy',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        }
-      ]
+      id: 2,
+      title: "Four Beasts of Daniel 7",
+      book: "Daniel",
+      chapter: 7,
+      category: "beasts",
+      description: "Lion, Bear, Leopard, and Dreadful Beast representing world kingdoms",
+      difficulty: "Intermediate",
+      image: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg",
+      interactive: true,
+      verses: ["Da:7:3-8"]
     },
     {
-      id: 'construction',
-      name: 'Text Construction',
-      icon: Users,
-      color: 'from-green-500 to-teal-500',
-      activities: [
-        {
-          id: 'build-chapter',
-          title: 'Build the Chapter',
-          description: 'Arrange verses from a chapter in correct biblical order',
-          difficulty: 'Hard',
-          duration: '15-20 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-book',
-          title: 'Build the Book',
-          description: 'Arrange chapters in correct order with explanations',
-          difficulty: 'Expert',
-          duration: '20-30 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-verse',
-          title: 'Build the Verse',
-          description: 'Reconstruct individual verses in proper KJV order',
-          difficulty: 'Medium',
-          duration: '5-8 min',
-          players: 'Single'
-        }
-      ]
+      id: 3,
+      title: "Seven Golden Candlesticks",
+      book: "Revelation",
+      chapter: 1,
+      category: "revelation",
+      description: "The seven churches with Christ walking among them",
+      difficulty: "Beginner",
+      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
+      interactive: true,
+      verses: ["Re:1:12-13"]
     },
     {
-      id: 'memory',
-      name: 'Memory & Matching',
-      icon: Star,
-      color: 'from-red-500 to-pink-500',
-      activities: [
-        {
-          id: 'mix-match',
-          title: 'Mix and Match',
-          description: 'Connect related items: people, places, things, and times',
-          difficulty: 'Medium',
-          duration: '10-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'missing-words',
-          title: 'Missing Words',
-          description: 'Find missing words or phrases in scripture passages',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'when-did-happen',
-          title: 'When Did That Happen',
-          description: 'Match events with their chronological timing',
-          difficulty: 'Hard',
-          duration: '12-15 min',
-          players: 'Single'
-        }
-      ]
+      id: 4,
+      title: "The Heavenly Sanctuary",
+      book: "Revelation",
+      chapter: 4,
+      category: "sanctuary",
+      description: "God's throne room with 24 elders and four living creatures",
+      difficulty: "Advanced",
+      image: "https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg",
+      interactive: true,
+      verses: ["Re:4:2-6"]
+    },
+    {
+      id: 5,
+      title: "The Ram and Goat",
+      book: "Daniel",
+      chapter: 8,
+      category: "beasts",
+      description: "Media-Persia and Greece in prophetic conflict",
+      difficulty: "Intermediate",
+      image: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg",
+      interactive: true,
+      verses: ["Da:8:3-8"]
+    },
+    {
+      id: 6,
+      title: "New Jerusalem",
+      book: "Revelation",
+      chapter: 21,
+      category: "revelation",
+      description: "The holy city descending from heaven with precious foundations",
+      difficulty: "Advanced",
+      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
+      interactive: true,
+      verses: ["Re:21:10-21"]
     }
   ];
 
+  const filteredModels = models.filter(model => {
+    const matchesCategory = selectedCategory === 'all' || model.category === selectedCategory;
+    const matchesSearch = model.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         model.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'Easy': return 'bg-green-100 text-green-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
-      case 'Hard': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
-      {/* Support Ministry CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-lg font-bold mb-2">Support This Ministry</h2>
-          <p className="text-sm text-blue-100 mb-3">
-            Help us keep this sanctuary study resource free and accessible worldwide
-          </p>
-          
-          <div className="mb-3">
-            <p className="text-blue-100 mb-2 text-sm">Your support helps us:</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 text-xs text-blue-100">
-              <span>• Maintain servers</span>
-              <span>• Add new content</span>
-              <span>• Keep it free</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2 justify-center mb-3">
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              PayPal
-            </a>
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-white hover:bg-gray-100 text-blue-600 font-semibold shadow-lg transition-all duration-300 text-sm"
-            >
-              Stripe
-            </a>
-          </div>
-          
-          <p className="text-xs text-blue-200">
-            "Freely ye have received, freely give" - Matthew 10:8 • God bless you for your generosity! 🙏
-          </p>
-        </div>
-      </section>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Interactive Learning Activities
+            Interactive 3D Models
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Test and strengthen your knowledge of Daniel and Revelation through 
-            engaging activities and challenges designed for all skill levels
+            Explore prophetic imagery from Daniel and Revelation through detailed, 
+            scripturally accurate 3D models with SDA theological interpretations
           </p>
         </div>
 
-        {/* Stats Bar */}
+        {/* Search and Filter */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600">15+</div>
-              <div className="text-sm text-gray-600">Different Activities</div>
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search models, descriptions, or scripture references..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-600">1000+</div>
-              <div className="text-sm text-gray-600">Questions Available</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-600">5</div>
-              <div className="text-sm text-gray-600">Difficulty Levels</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-600">∞</div>
-              <div className="text-sm text-gray-600">Learning Opportunities</div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-2">
+              <Filter className="w-5 h-5 text-gray-400" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+              >
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
 
-        {/* Activity Categories */}
-        <div className="space-y-12">
-          {activityCategories.map((category) => (
-            <div key={category.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              {/* Category Header */}
-              <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                <div className="flex items-center gap-4">
-                  <category.icon className="w-8 h-8" />
-                  <div>
-                    <h2 className="text-2xl font-bold">{category.name}</h2>
-                    <p className="text-white text-opacity-90">
-                      {category.activities.length} activities available
-                    </p>
+        {/* Models Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredModels.map((model) => (
+            <div key={model.id} className="group bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+              {/* Model Preview */}
+              <div className="relative h-64 bg-gradient-to-br from-blue-600 to-purple-600 overflow-hidden">
+                <img 
+                  src={model.image} 
+                  alt={model.title}
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <Layers className="w-12 h-12 text-white mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                    <div className="text-white font-semibold">3D Model</div>
                   </div>
                 </div>
+                <div className="absolute top-4 right-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor(model.difficulty)}`}>
+                    {model.difficulty}
+                  </span>
+                </div>
+                {model.interactive && (
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                      <Play className="w-3 h-3" />
+                      Interactive
+                    </span>
+                  </div>
+                )}
               </div>
 
-              {/* Activities Grid */}
+              {/* Model Info */}
               <div className="p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.activities.map((activity) => (
-                    <div 
-                      key={activity.id} 
-                      className="activity-card p-6 rounded-xl cursor-pointer group"
-                      onClick={() => setSelectedActivity(activity)}
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {activity.title}
-                        </h3>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(activity.difficulty)}`}>
-                          {activity.difficulty}
-                        </span>
-                      </div>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {model.title}
+                  </h3>
+                  <span className="text-sm text-gray-500 font-medium">
+                    {model.book} {model.chapter}
+                  </span>
+                </div>
 
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {activity.description}
-                      </p>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {model.description}
+                </p>
 
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {activity.duration}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {activity.players}
-                        </div>
-                      </div>
+                {/* Scripture References */}
+                <div className="mb-4">
+                  <div className="text-sm font-medium text-gray-700 mb-2">Scripture References:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {model.verses.map((verse, index) => (
+                      <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                        {verse}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
-                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
-                        <Play className="w-4 h-4" />
-                        Start Activity
-                      </button>
-                    </div>
-                  ))}
+                {/* Actions */}
+                <div className="flex gap-3">
+                  <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                    <Eye className="w-4 h-4" />
+                    Explore Model
+                  </button>
+                  <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Challenge of the Day */}
-        <div className="mt-16 bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Challenge of the Day</h2>
-          <p className="text-xl text-purple-100 mb-6">
-            Daily challenges to keep your prophetic knowledge sharp
-          </p>
-          
-          <div className="bg-white bg-opacity-10 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-3 text-yellow-400">
-              Today's Challenge: Symbolic Numbers
-            </h3>
-            <p className="text-purple-100 mb-4">
-              "How many times does the number 7 appear in the book of Revelation and what does it symbolize?"
+        {/* Featured Model Spotlight */}
+        <div className="mt-16 bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 text-white">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Featured Model: Daniel's 70 Week Prophecy</h2>
+            <p className="text-xl text-blue-100">
+              Experience the most precise messianic prophecy in interactive 3D timeline format
             </p>
-            <div className="flex items-center justify-center gap-4">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                Difficulty: Medium
-              </span>
-              <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                Estimated Time: 8 minutes
-              </span>
-            </div>
           </div>
 
-          <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
-            Accept Today's Challenge
-          </button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="model-container h-80">
+              <div className="model-placeholder text-xl">
+                Interactive 70 Week Timeline
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Explore Key Features:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-3 h-3 text-black" />
+                  </div>
+                  <span>Interactive timeline from 457 BC to 34 AD</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-3 h-3 text-black" />
+                  </div>
+                  <span>Zoom into specific events and their fulfillment</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-3 h-3 text-black" />
+                  </div>
+                  <span>Connected to Daniel 9:24-27 verse by verse</span>
+                </li>
+              </ul>
+              <button className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                <Play className="w-5 h-5" />
+                Launch Interactive Model
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Support Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Support 3D Model Development</h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Creating detailed 3D models requires significant time and resources. Your support helps us develop more interactive biblical visualizations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* PayPal Donation Button */}
+            <a
+              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via PayPal
+            </a>
+
+            {/* Stripe Payment Link Button */}
+            <a
+              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg transition-all duration-300"
+            >
+              Donate via Stripe
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Activities;
+export default ThreeDModels;
