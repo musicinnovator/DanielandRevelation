@@ -150,6 +150,9 @@ const Activities = () => {
       {/* Support Ministry CTA */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Support Ministry CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-lg font-bold mb-2">Support This Ministry</h2>
           <p className="text-sm text-blue-100 mb-3">
             Help us keep this sanctuary study resource free and accessible worldwide
@@ -304,16 +307,17 @@ const Activities = () => {
                 Difficulty: Medium
               </span>
               <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                Reward: 50 points
+                Estimated Time: 8 minutes
               </span>
             </div>
           </div>
 
-          <button className="bg-yellow-400 text-purple-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors flex items-center gap-2 mx-auto">
-            Accept Challenge
-            <ArrowRight className="w-5 h-5" />
+          <button className="bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-colors transform hover:scale-105">
+            Accept Today's Challenge
           </button>
         </div>
+
+        {/* Support Section */}
       </div>
     </div>
   );
