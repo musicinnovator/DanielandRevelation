@@ -10,6 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "babylonjs": "^7.31.1",
+    "babylonjs-gui": "^7.31.1",
+    "babylonjs-loaders": "^7.31.1",
+    "babylonjs-materials": "^7.31.1",
+    "babylonjs": "^8.33.1",
+    "babylonjs-gui": "^8.33.1",
+    "babylonjs-loaders": "^8.33.1",
+    "babylonjs-materials": "^8.33.1",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
