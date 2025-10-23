@@ -10,10 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "babylonjs": "^7.31.1",
-    "babylonjs-gui": "^7.31.1",
-    "babylonjs-loaders": "^7.31.1",
-    "babylonjs-materials": "^7.31.1",
     "babylonjs": "^8.33.1",
     "babylonjs-gui": "^8.33.1",
     "babylonjs-loaders": "^8.33.1",
