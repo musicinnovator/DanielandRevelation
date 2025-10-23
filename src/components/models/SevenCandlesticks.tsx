@@ -13,7 +13,7 @@ const SevenCandlesticks: React.FC = () => {
       BABYLON.Vector3.Zero(),
       scene
     );
-    camera.attachControls(scene.getEngine().getRenderingCanvas(), true);
+    camera.attachControl(scene.getEngine().getRenderingCanvas(), true);
 
     // Create lights
     const light = new BABYLON.HemisphericLight('light', new BABYLON.Vector3(0, 1, 0), scene);
