@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Trophy, Target, Clock, Users, Star, Play, ArrowRight } from 'lucide-react';
 import { useProgress } from '../components/ui/ProgressTracker';
-import { activitiesDatabase, getActivitiesByCategory, getActivityById } from '../data/activitiesDatabase';
+import { activitiesDatabase, getActivitiesByCategory, getActivityById, Activity } from '../data/activitiesDatabase';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
+import ActivityEngine from '../components/activities/ActivityEngine';
+import ActivitySelector from '../components/activities/ActivitySelector';
 
 const Activities = () => {
-  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [selectedActivity, setSelectedActivity] = useState<Activity | null>(null);
+  const [showActivityEngine, setShowActivityEngine] = useState(false);
 
   const activityCategories = [
     {
@@ -160,7 +163,7 @@ const Activities = () => {
 
   const { progress, updateProgress } = useProgress();
 
-  const getDifficultyColor = (difficulty) => {
+  const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy': return 'bg-green-100 text-green-800';
       case 'Medium': return 'bg-yellow-100 text-yellow-800';
@@ -170,14 +173,44 @@ const Activities = () => {
     }
   };
 
-  const handleActivityStart = (activityId) => {
+  const handleActivityStart = (activity: Activity) => {
+    setSelectedActivity(activity);
+    setShowActivityEngine(true);
+  };
+
+  const handleActivityComplete = (score: number, achievements: any[]) => {
     // Track activity start
-    if (!progress.activitiesCompleted.includes(activityId)) {
+    if (selectedActivity && !progress.activitiesCompleted.includes(selectedActivity.id)) {
       updateProgress({
-        activitiesCompleted: [...progress.activitiesCompleted, activityId]
+        activitiesCompleted: [...progress.activitiesCompleted, selectedActivity.id],
+        totalPoints: progress.totalPoints + score
       });
     }
+    
+    // Show completion message or return to activities
+    setShowActivityEngine(false);
+    setSelectedActivity(null);
   };
+
+  const handleActivityExit = () => {
+    setShowActivityEngine(false);
+    setSelectedActivity(null);
+  };
+
+  // If activity engine is active, show it
+  if (showActivityEngine && selectedActivity) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ActivityEngine 
+            activity={selectedActivity}
+            onComplete={handleActivityComplete}
+            onExit={handleActivityExit}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
@@ -234,47 +267,10 @@ const Activities = () => {
 
               {/* Activities Grid */}
               <div className="p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.activities.map((activity) => (
-                    <div 
-                      key={activity.id} 
-                      className="activity-card p-6 rounded-xl cursor-pointer group"
-                      onClick={() => setSelectedActivity(activity)}
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {activity.title}
-                        </h3>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(activity.difficulty)}`}>
-                          {activity.difficulty}
-                        </span>
-                      </div>
-
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {activity.description}
-                      </p>
-
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {activity.duration}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {activity.players}
-                        </div>
-                      </div>
-
-                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group-hover:bg-blue-700">
-                        onClick={() => handleActivityStart(activity.id)}
-                        <Play className="w-4 h-4" />
-                        Start Activity
-                        Start Activity
-                        Start Activity
-                      </button>
-                    </div>
-                  ))}
-                </div>
+                <ActivitySelector 
+                  activities={getActivitiesByCategory(category.id as any)}
+                  onSelectActivity={handleActivityStart}
+                />
               </div>
             </div>
           ))}
@@ -318,7 +314,7 @@ const Activities = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* PayPal Donation Button */}
             <a
-              href="https://https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
+              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
