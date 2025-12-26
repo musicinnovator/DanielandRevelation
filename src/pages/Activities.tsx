@@ -16,128 +16,28 @@ const Activities = () => {
       name: 'Quiz Games',
       icon: Trophy,
       color: 'from-yellow-500 to-orange-500',
-      activities: [
-        {
-          id: 'bible-bees',
-          title: 'Bible Bees',
-          description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
-          difficulty: 'Medium',
-          duration: '10-15 min',
-          players: 'Single/Multi'
-        },
-        {
-          id: 'multiple-choice',
-          title: 'Multiple Choice Masters',
-          description: 'Test knowledge of prophecies, symbols, characters, and places',
-          difficulty: 'Easy',
-          duration: '5-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'true-false',
-          title: 'True or False Challenge',
-          description: 'Quick-fire true/false questions about biblical facts',
-          difficulty: 'Easy',
-          duration: '5 min',
-          players: 'Single/Multi'
-        }
-      ]
+      activities: getActivitiesByCategory('quiz')
     },
     {
       id: 'location',
       name: 'Location & Discovery',
       icon: Target,
       color: 'from-blue-500 to-purple-500',
-      activities: [
-        {
-          id: 'wheres-that-found',
-          title: "Where's That Found",
-          description: 'Identify which chapter contains specific events or prophecies',
-          difficulty: 'Medium',
-          duration: '8-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'where-did-it-happen',
-          title: 'Where Did It Happen',
-          description: 'Match events with their specific locations in Daniel and Revelation',
-          difficulty: 'Hard',
-          duration: '10-15 min',
-          players: 'Single'
-        },
-        {
-          id: 'who-did-what',
-          title: 'Who Did What',
-          description: 'Match characters with their actions and roles in prophecy',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        }
-      ]
+      activities: getActivitiesByCategory('location')
     },
     {
       id: 'construction',
       name: 'Text Construction',
       icon: Users,
       color: 'from-green-500 to-teal-500',
-      activities: [
-        {
-          id: 'build-chapter',
-          title: 'Build the Chapter',
-          description: 'Arrange verses from a chapter in correct biblical order',
-          difficulty: 'Hard',
-          duration: '15-20 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-book',
-          title: 'Build the Book',
-          description: 'Arrange chapters in correct order with explanations',
-          difficulty: 'Expert',
-          duration: '20-30 min',
-          players: 'Single'
-        },
-        {
-          id: 'build-verse',
-          title: 'Build the Verse',
-          description: 'Reconstruct individual verses in proper KJV order',
-          difficulty: 'Medium',
-          duration: '5-8 min',
-          players: 'Single'
-        }
-      ]
+      activities: getActivitiesByCategory('construction')
     },
     {
       id: 'memory',
       name: 'Memory & Matching',
       icon: Star,
       color: 'from-red-500 to-pink-500',
-      activities: [
-        {
-          id: 'mix-match',
-          title: 'Mix and Match',
-          description: 'Connect related items: people, places, things, and times',
-          difficulty: 'Medium',
-          duration: '10-12 min',
-          players: 'Single'
-        },
-        {
-          id: 'missing-words',
-          title: 'Missing Words',
-          description: 'Find missing words or phrases in scripture passages',
-          difficulty: 'Medium',
-          duration: '8-10 min',
-          players: 'Single'
-        },
-        {
-          id: 'when-did-happen',
-          title: 'When Did That Happen',
-          description: 'Match events with their chronological timing',
-          difficulty: 'Hard',
-          duration: '12-15 min',
-          players: 'Single'
-        }
-      ]
+      activities: getActivitiesByCategory('memory')
     }
   ];
 
@@ -230,11 +130,11 @@ const Activities = () => {
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">15+</div>
+              <div className="text-3xl font-bold text-blue-600">{activitiesDatabase.length}</div>
               <div className="text-sm text-gray-600">Different Activities</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600">1000+</div>
+              <div className="text-3xl font-bold text-green-600">{activitiesDatabase.reduce((total, activity) => total + activity.questions.length, 0)}+</div>
               <div className="text-sm text-gray-600">Questions Available</div>
             </div>
             <div>
