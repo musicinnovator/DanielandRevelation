@@ -1,5 +1,6 @@
 import React from 'react';
 import * as BABYLON from 'babylonjs';
+import 'babylonjs-gui';
 import BabylonScene from '../BabylonScene';
 
 const FourBeasts: React.FC = () => {
