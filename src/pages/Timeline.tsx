@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, Calendar, ArrowRight, Zap, Eye, Book } from 'lucide-react';
+import { Clock, Calendar, ArrowRight, Zap, Eye, Book, Layers } from 'lucide-react';
 import { timelineDatabase, getEventsByCategory, sortEventsByDate } from '../data/timelineDatabase';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 
@@ -28,7 +28,8 @@ const Timeline = () => {
       category: "ancient",
       prophecy: "Head of Gold begins",
       significance: "Start of prophetic timeline",
-      color: "bg-yellow-500"
+      color: "bg-yellow-500",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 2,
@@ -40,7 +41,8 @@ const Timeline = () => {
       category: "ancient",
       prophecy: "Daniel 2 Image progression",
       significance: "Second kingdom rises",
-      color: "bg-gray-400"
+      color: "bg-gray-400",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 3,
@@ -52,7 +54,8 @@ const Timeline = () => {
       category: "ancient",
       prophecy: "Ram and Goat vision",
       significance: "Third kingdom established",
-      color: "bg-amber-600"
+      color: "bg-amber-600",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 4,
@@ -64,7 +67,8 @@ const Timeline = () => {
       category: "ancient",
       prophecy: "Fourth kingdom of iron",
       significance: "Dreadful beast power",
-      color: "bg-gray-700"
+      color: "bg-gray-700",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 5,
@@ -76,7 +80,8 @@ const Timeline = () => {
       category: "ancient",
       prophecy: "70 Week Prophecy fulfilled",
       significance: "Covenant confirmed",
-      color: "bg-red-600"
+      color: "bg-red-600",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 6,
@@ -88,7 +93,8 @@ const Timeline = () => {
       category: "medieval",
       prophecy: "Feet and toes period",
       significance: "Never unite again",
-      color: "bg-orange-500"
+      color: "bg-orange-500",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 7,
@@ -100,7 +106,8 @@ const Timeline = () => {
       category: "medieval",
       prophecy: "Time, times, and dividing of time",
       significance: "Saints given into his hand",
-      color: "bg-purple-600"
+      color: "bg-purple-600",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 8,
@@ -112,7 +119,8 @@ const Timeline = () => {
       category: "modern",
       prophecy: "Beast receives deadly wound",
       significance: "1260 years end",
-      color: "bg-red-700"
+      color: "bg-red-700",
+      sdaInterpretation: "SDA interpretation content"
     },
     {
       id: 9,
@@ -124,13 +132,13 @@ const Timeline = () => {
       category: "modern",
       prophecy: "Cleansing of sanctuary",
       significance: "Judgment hour begins",
-      color: "bg-blue-600"
+      color: "bg-blue-600",
+      sdaInterpretation: "SDA interpretation content"
     }
   ];
 
   const filteredEvents = selectedPeriod === 'all' 
     ? sortEventsByDate(allEvents)
-    ? timelineEvents 
     : timelineEvents.filter(event => event.category === selectedPeriod);
 
   return (
@@ -196,14 +204,12 @@ const Timeline = () => {
                       <div>
                         <div className={`inline-block px-3 py-1 rounded-full text-white text-sm font-medium mb-2 ${event.color}`}>
                           {event.date}
-                          {event.date}
                         </div>
                         <h4 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                           {event.title}
                         </h4>
                       </div>
                       <div className="text-sm text-gray-500 font-medium">
-                        {event.book} {event.chapter || ''}
                         {event.book} {event.chapter}
                       </div>
                     </div>
@@ -214,7 +220,6 @@ const Timeline = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="text-sm">
                         <div className="text-sm">
                           <span className="font-medium text-blue-600">Prophecy:</span>
                           <span className="text-gray-700 ml-1">{event.prophecy}</span>
@@ -228,15 +233,15 @@ const Timeline = () => {
                       <div className="mt-6 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-semibold text-gray-900 mb-2">SDA Interpretation</h5>
                             <h5 className="font-semibold text-gray-900 mb-2">Prophetic Significance</h5>
                             <p className="text-gray-600 text-sm leading-relaxed">
                               {event.significance}
                             </p>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-gray-900 mb-2">Related Studies</h5>
+                            <h5 className="font-semibold text-gray-900 mb-2">SDA Interpretation</h5>
                             <p className="text-gray-600 text-sm leading-relaxed">{event.sdaInterpretation}</p>
+                            <h5 className="font-semibold text-gray-900 mb-2">Related Studies</h5>
                             <div className="space-y-2">
                               <button className="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium">
                                 <Book className="w-4 h-4" />
