@@ -154,7 +154,24 @@ const Activities = () => {
   };
 
   const handleActivityStart = (activityId: string) => {
-    const activity = getActivityById(activityId);
+    // Map display IDs to database IDs
+    const activityMap: { [key: string]: string } = {
+      'bible-bees': 'bible-bees-daniel',
+      'multiple-choice': 'multiple-choice-masters',
+      'true-false': 'true-false-challenge',
+      'wheres-that-found': 'wheres-that-found',
+      'where-did-it-happen': 'where-did-it-happen',
+      'who-did-what': 'who-did-what',
+      'build-chapter': 'build-chapter-daniel2',
+      'build-book': 'build-book',
+      'build-verse': 'build-verse',
+      'mix-match': 'mix-match-symbols',
+      'missing-words': 'missing-words',
+      'when-did-happen': 'when-did-happen'
+    };
+    
+    const dbActivityId = activityMap[activityId] || activityId;
+    const activity = getActivityById(dbActivityId);
     if (activity) {
       setSelectedActivity(activity);
       setShowActivityEngine(true);

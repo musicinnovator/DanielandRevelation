@@ -136,6 +136,124 @@ export const activitiesDatabase: Activity[] = [
     ]
   },
 
+  // Multiple Choice Masters - Quiz Games
+  {
+    id: 'multiple-choice-masters',
+    title: 'Multiple Choice Masters',
+    description: 'Test knowledge of prophecies, symbols, characters, and places',
+    category: 'quiz',
+    difficulty: 'beginner',
+    duration: '5-10 min',
+    players: 'single',
+    instructions: [
+      'Answer multiple choice questions about Daniel and Revelation',
+      'Focus on prophecies, symbols, characters, and places',
+      'Each question has one correct answer',
+      'Build your knowledge systematically'
+    ],
+    scoring: {
+      maxPoints: 500,
+      passingScore: 350,
+      bonusMultiplier: 1.2,
+      timeBonus: false
+    },
+    achievements: [
+      {
+        id: 'prophecy-master',
+        name: 'Prophecy Master',
+        description: 'Score 450+ points in Multiple Choice Masters',
+        icon: '🎯',
+        requirement: 'score >= 450'
+      }
+    ],
+    questions: [
+      {
+        id: 'mc-1',
+        type: 'multiple-choice',
+        question: 'Which kingdom does the head of gold represent in Daniel 2?',
+        options: ['Babylon', 'Medo-Persia', 'Greece', 'Rome'],
+        correctAnswer: 'Babylon',
+        explanation: 'The head of fine gold represents the Babylonian kingdom under Nebuchadnezzar.',
+        scriptureRef: 'Daniel 2:38',
+        points: 10
+      },
+      {
+        id: 'mc-2',
+        type: 'multiple-choice',
+        question: 'What does the woman in Revelation 12 represent?',
+        options: ['The Catholic Church', 'Israel', 'The true church', 'Mary'],
+        correctAnswer: 'The true church',
+        explanation: 'The pure woman represents God\'s faithful church throughout history.',
+        scriptureRef: 'Revelation 12:1',
+        points: 15
+      },
+      {
+        id: 'mc-3',
+        type: 'multiple-choice',
+        question: 'How many heads does the leopard beast have in Daniel 7?',
+        options: ['Two', 'Four', 'Seven', 'Ten'],
+        correctAnswer: 'Four',
+        explanation: 'The leopard has four heads representing the four divisions of Alexander\'s empire.',
+        scriptureRef: 'Daniel 7:6',
+        points: 10
+      }
+    ]
+  },
+
+  // True or False Challenge - Quiz Games
+  {
+    id: 'true-false-challenge',
+    title: 'True or False Challenge',
+    description: 'Quick-fire true/false questions about biblical facts',
+    category: 'quiz',
+    difficulty: 'beginner',
+    duration: '5 min',
+    players: 'both',
+    instructions: [
+      'Answer true or false to biblical statements',
+      'Think carefully about each statement',
+      'Quick responses earn bonus points',
+      'Learn from explanations after each answer'
+    ],
+    scoring: {
+      maxPoints: 300,
+      passingScore: 210,
+      bonusMultiplier: 1.1,
+      timeBonus: true
+    },
+    achievements: [
+      {
+        id: 'truth-seeker',
+        name: 'Truth Seeker',
+        description: 'Answer 20 true/false questions correctly in a row',
+        icon: '✅',
+        requirement: 'consecutive_correct >= 20'
+      }
+    ],
+    questions: [
+      {
+        id: 'tf-1',
+        type: 'true-false',
+        question: 'Daniel was taken captive to Babylon in 605 BC.',
+        options: ['True', 'False'],
+        correctAnswer: 'True',
+        explanation: 'Daniel was indeed taken captive in the third year of Jehoiakim, which was 605 BC.',
+        scriptureRef: 'Daniel 1:1',
+        points: 5
+      },
+      {
+        id: 'tf-2',
+        type: 'true-false',
+        question: 'The little horn in Daniel 7 represents Greece.',
+        options: ['True', 'False'],
+        correctAnswer: 'False',
+        explanation: 'The little horn represents the papal power, not Greece.',
+        scriptureRef: 'Daniel 7:8',
+        points: 10
+      }
+    ]
+  },
+
   // Where's That Found
   {
     id: 'wheres-that-found',
@@ -200,6 +318,114 @@ export const activitiesDatabase: Activity[] = [
     ]
   },
 
+  // Where Did It Happen - Location & Discovery
+  {
+    id: 'where-did-it-happen',
+    title: 'Where Did It Happen',
+    description: 'Match events with their specific locations in Daniel and Revelation',
+    category: 'location',
+    difficulty: 'advanced',
+    duration: '10-15 min',
+    players: 'single',
+    instructions: [
+      'Match biblical events with their locations',
+      'Consider both earthly and heavenly locations',
+      'Think about geographical and symbolic places',
+      'Use context clues from the passages'
+    ],
+    scoring: {
+      maxPoints: 1000,
+      passingScore: 700,
+      bonusMultiplier: 1.5,
+      timeBonus: false
+    },
+    achievements: [
+      {
+        id: 'geography-expert',
+        name: 'Geography Expert',
+        description: 'Correctly identify 15 locations without error',
+        icon: '🗺️',
+        requirement: 'correct_locations >= 15 && errors == 0'
+      }
+    ],
+    questions: [
+      {
+        id: 'location-3',
+        type: 'multiple-choice',
+        question: 'Where did Daniel interpret Nebuchadnezzar\'s dream?',
+        options: ['Jerusalem', 'Babylon', 'Shushan', 'Damascus'],
+        correctAnswer: 'Babylon',
+        explanation: 'Daniel was in Babylon when he interpreted the king\'s dream about the great image.',
+        scriptureRef: 'Daniel 2',
+        points: 15
+      },
+      {
+        id: 'location-4',
+        type: 'multiple-choice',
+        question: 'Where does John receive the Revelation?',
+        options: ['Jerusalem', 'Ephesus', 'Patmos', 'Rome'],
+        correctAnswer: 'Patmos',
+        explanation: 'John was on the isle of Patmos when he received the Revelation.',
+        scriptureRef: 'Revelation 1:9',
+        points: 10
+      }
+    ]
+  },
+
+  // Who Did What - Location & Discovery
+  {
+    id: 'who-did-what',
+    title: 'Who Did What',
+    description: 'Match characters with their actions and roles in prophecy',
+    category: 'location',
+    difficulty: 'intermediate',
+    duration: '8-10 min',
+    players: 'single',
+    instructions: [
+      'Match biblical characters with their actions',
+      'Consider both historical and prophetic roles',
+      'Think about cause and effect relationships',
+      'Remember both positive and negative characters'
+    ],
+    scoring: {
+      maxPoints: 700,
+      passingScore: 490,
+      bonusMultiplier: 1.3,
+      timeBonus: false
+    },
+    achievements: [
+      {
+        id: 'character-analyst',
+        name: 'Character Analyst',
+        description: 'Match 20 characters with their actions perfectly',
+        icon: '👥',
+        requirement: 'character_matches >= 20 && accuracy == 1.0'
+      }
+    ],
+    questions: [
+      {
+        id: 'character-1',
+        type: 'matching',
+        question: 'Match the characters with their actions:',
+        options: [
+          'Daniel - Interpreted dreams',
+          'Nebuchadnezzar - Built golden image',
+          'Belshazzar - Saw handwriting on wall',
+          'Darius - Threw Daniel in lions\' den'
+        ],
+        correctAnswer: [
+          'Daniel - Interpreted dreams',
+          'Nebuchadnezzar - Built golden image',
+          'Belshazzar - Saw handwriting on wall',
+          'Darius - Threw Daniel in lions\' den'
+        ],
+        explanation: 'Each character is correctly matched with their primary action in Daniel.',
+        scriptureRef: 'Daniel 2, 3, 5, 6',
+        points: 25
+      }
+    ]
+  },
+
   // Build the Chapter
   {
     id: 'build-chapter-daniel2',
@@ -246,6 +472,104 @@ export const activitiesDatabase: Activity[] = [
         explanation: 'This is the correct sequence of events in Daniel 2.',
         scriptureRef: 'Daniel 2',
         points: 50
+      }
+    ]
+  },
+
+  // Build the Book - Text Construction
+  {
+    id: 'build-book',
+    title: 'Build the Book',
+    description: 'Arrange chapters in correct order with explanations',
+    category: 'construction',
+    difficulty: 'expert',
+    duration: '20-30 min',
+    players: 'single',
+    instructions: [
+      'Arrange chapters in their correct biblical order',
+      'Consider both chronological and thematic organization',
+      'Provide explanations for your ordering choices',
+      'Think about the overall narrative flow'
+    ],
+    scoring: {
+      maxPoints: 2000,
+      passingScore: 1400,
+      bonusMultiplier: 3.0,
+      timeBonus: true
+    },
+    achievements: [
+      {
+        id: 'book-architect',
+        name: 'Book Architect',
+        description: 'Perfectly arrange an entire book on first try',
+        icon: '📚',
+        requirement: 'perfect_book_order && attempts == 1'
+      }
+    ],
+    questions: [
+      {
+        id: 'book-1',
+        type: 'ordering',
+        question: 'Arrange these Daniel chapters in correct order:',
+        options: [
+          'Daniel\'s diet test',
+          'Nebuchadnezzar\'s dream of image',
+          'Fiery furnace test',
+          'Nebuchadnezzar\'s madness'
+        ],
+        correctAnswer: [0, 1, 2, 3],
+        explanation: 'This follows the chronological order of events in Daniel 1-4.',
+        scriptureRef: 'Daniel 1-4',
+        points: 100
+      }
+    ]
+  },
+
+  // Build the Verse - Text Construction
+  {
+    id: 'build-verse',
+    title: 'Build the Verse',
+    description: 'Reconstruct individual verses in proper KJV order',
+    category: 'construction',
+    difficulty: 'intermediate',
+    duration: '5-8 min',
+    players: 'single',
+    instructions: [
+      'Arrange words to form complete KJV verses',
+      'Pay attention to proper grammar and flow',
+      'Consider the meaning and context',
+      'Remember KJV language patterns'
+    ],
+    scoring: {
+      maxPoints: 600,
+      passingScore: 420,
+      bonusMultiplier: 1.4,
+      timeBonus: true
+    },
+    achievements: [
+      {
+        id: 'verse-builder',
+        name: 'Verse Builder',
+        description: 'Reconstruct 10 verses perfectly',
+        icon: '📝',
+        requirement: 'perfect_verses >= 10'
+      }
+    ],
+    questions: [
+      {
+        id: 'verse-1',
+        type: 'ordering',
+        question: 'Arrange these words to form Daniel 2:44:',
+        options: [
+          'And in the days',
+          'of these kings',
+          'shall the God of heaven',
+          'set up a kingdom'
+        ],
+        correctAnswer: [0, 1, 2, 3],
+        explanation: 'This forms the beginning of Daniel 2:44 about God\'s eternal kingdom.',
+        scriptureRef: 'Daniel 2:44',
+        points: 30
       }
     ]
   },
@@ -299,6 +623,112 @@ export const activitiesDatabase: Activity[] = [
         ],
         explanation: 'These four beasts represent the same kingdoms as the metals in Daniel 2.',
         scriptureRef: 'Daniel 7:3-7',
+        points: 30
+      }
+    ]
+  },
+
+  // Missing Words - Memory & Matching
+  {
+    id: 'missing-words',
+    title: 'Missing Words',
+    description: 'Find missing words or phrases in scripture passages',
+    category: 'memory',
+    difficulty: 'intermediate',
+    duration: '8-10 min',
+    players: 'single',
+    instructions: [
+      'Fill in the missing words from scripture passages',
+      'Use context clues to determine the correct words',
+      'Remember exact KJV wording',
+      'Consider the theological meaning'
+    ],
+    scoring: {
+      maxPoints: 800,
+      passingScore: 560,
+      bonusMultiplier: 1.6,
+      timeBonus: false
+    },
+    achievements: [
+      {
+        id: 'word-master',
+        name: 'Word Master',
+        description: 'Complete 15 missing word challenges perfectly',
+        icon: '📖',
+        requirement: 'missing_words_perfect >= 15'
+      }
+    ],
+    questions: [
+      {
+        id: 'missing-1',
+        type: 'fill-blank',
+        question: 'And in the days of these kings shall the God of heaven set up a _____ which shall never be destroyed.',
+        correctAnswer: 'kingdom',
+        explanation: 'God will establish His eternal kingdom that will never be destroyed.',
+        scriptureRef: 'Daniel 2:44',
+        points: 20
+      },
+      {
+        id: 'missing-2',
+        type: 'fill-blank',
+        question: 'But Daniel purposed in his _____ that he would not defile himself.',
+        correctAnswer: 'heart',
+        explanation: 'Daniel made a heart decision to remain faithful to God\'s laws.',
+        scriptureRef: 'Daniel 1:8',
+        points: 15
+      }
+    ]
+  },
+
+  // When Did That Happen - Memory & Matching
+  {
+    id: 'when-did-happen',
+    title: 'When Did That Happen',
+    description: 'Match events with their chronological timing',
+    category: 'memory',
+    difficulty: 'advanced',
+    duration: '12-15 min',
+    players: 'single',
+    instructions: [
+      'Match events with their correct dates or time periods',
+      'Consider both biblical and historical chronology',
+      'Use prophetic time calculations where applicable',
+      'Remember key dates in prophetic history'
+    ],
+    scoring: {
+      maxPoints: 1200,
+      passingScore: 840,
+      bonusMultiplier: 2.0,
+      timeBonus: true
+    },
+    achievements: [
+      {
+        id: 'chronology-master',
+        name: 'Chronology Master',
+        description: 'Match 25 events with perfect timing',
+        icon: '⏰',
+        requirement: 'chronology_perfect >= 25'
+      }
+    ],
+    questions: [
+      {
+        id: 'timing-1',
+        type: 'multiple-choice',
+        question: 'When did Babylon fall to Medo-Persia?',
+        options: ['605 BC', '586 BC', '539 BC', '331 BC'],
+        correctAnswer: '539 BC',
+        explanation: 'Babylon fell to Cyrus and the Medo-Persian empire in 539 BC.',
+        scriptureRef: 'Daniel 5',
+        points: 25
+      },
+      {
+        id: 'timing-2',
+        type: 'multiple-choice',
+        question: 'When does the investigative judgment begin according to SDA understanding?',
+        options: ['1798 AD', '1844 AD', '1863 AD', '1888 AD'],
+        correctAnswer: '1844 AD',
+        explanation: 'The 2300-day prophecy ended in 1844, beginning the investigative judgment.',
+        scriptureRef: 'Daniel 8:14',
         points: 30
       }
     ]
