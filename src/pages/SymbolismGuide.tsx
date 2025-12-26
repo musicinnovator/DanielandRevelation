@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Book, Eye, Crown, Flame, Waves, Mountain } from 'lucide-react';
+import { symbolismDatabase, getSymbolsByCategory, searchSymbols } from '../data/symbolismDatabase';
+import { useProgress } from '../components/ui/ProgressTracker';
 
 const SymbolismGuide = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,6 +15,8 @@ const SymbolismGuide = () => {
     { id: 'religious', name: 'Religious Symbols', icon: Flame },
     { id: 'time', name: 'Time Symbols', icon: Eye }
   ];
+
+  const { progress, updateProgress } = useProgress();
 
   const symbols = [
     {
@@ -105,6 +109,7 @@ const SymbolismGuide = () => {
     }
   ];
 
+  // Use the comprehensive symbolism database
   const filteredSymbols = symbols.filter(symbol => {
     const matchesCategory = selectedCategory === 'all' || symbol.category === selectedCategory;
     const matchesSearch = symbol.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -112,6 +117,17 @@ const SymbolismGuide = () => {
                          symbol.biblicalDefinition.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const handleSymbolView = (symbolId) => {
+    if (!progress.symbolsLearned.includes(symbolId)) {
+      updateProgress({
+        symbolsLearned: [...progress.symbolsLearned, symbolId]
+      });
+    }
+  };
+
+  // Use the comprehensive database instead of hardcoded symbols
+  const allSymbols = symbolismDatabase;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
@@ -163,6 +179,11 @@ const SymbolismGuide = () => {
 
         {/* Symbols Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {allSymbols.filter(symbol => {
+            const matchesCategory = selectedCategory === 'all' || symbol.category === selectedCategory;
+            const matchesSearch = searchSymbols(searchTerm).includes(symbol);
+            return matchesCategory && (searchTerm === '' || matchesSearch);
+          }).map((symbol) => (
           {filteredSymbols.map((symbol) => (
             <div key={symbol.id} className="bg-white rounded-2xl shadow-lg p-8 hover-lift">
               <div className="flex items-start justify-between mb-4">
@@ -170,6 +191,7 @@ const SymbolismGuide = () => {
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                   symbol.category === 'beasts' ? 'bg-orange-100 text-orange-800' :
                   symbol.category === 'religious' ? 'bg-purple-100 text-purple-800' :
+                  symbol.category === 'objects' ? 'bg-blue-100 text-blue-800' :
                   symbol.category === 'objects' ? 'bg-blue-100 text-blue-800' :
                   symbol.category === 'natural' ? 'bg-green-100 text-green-800' :
                   symbol.category === 'time' ? 'bg-red-100 text-red-800' :
@@ -180,6 +202,7 @@ const SymbolismGuide = () => {
               </div>
 
               <div className="space-y-4">
+                onClick={() => handleSymbolView(symbol.id)}
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Biblical Definition</h4>
                   <p className="text-gray-700 leading-relaxed">{symbol.biblicalDefinition}</p>
@@ -187,6 +210,7 @@ const SymbolismGuide = () => {
                 </div>
 
                 <div>
+                  <p className="text-sm text-blue-600 mt-1 font-medium">{symbol.scriptureRef.join(', ')}</p>
                   <h4 className="font-semibold text-gray-900 mb-2">Description</h4>
                   <p className="text-gray-600 leading-relaxed">{symbol.description}</p>
                 </div>
@@ -211,6 +235,7 @@ const SymbolismGuide = () => {
 
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Related Verses</h4>
+                  <div className="flex flex-wrap gap-2">
                   <div className="flex flex-wrap gap-2">
                     {symbol.relatedVerses.map((verse, index) => (
                       <button key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-medium hover:bg-blue-200 transition-colors">

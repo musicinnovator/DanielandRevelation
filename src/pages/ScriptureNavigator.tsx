@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Book, Eye, ArrowLeft, ArrowRight, ExternalLink, Layers } from 'lucide-react';
+import { useProgress } from '../components/ui/ProgressTracker';
 import { getScriptureChapter, formatScriptureContent } from '../data/scriptureData';
 
 const ScriptureNavigator = () => {
@@ -7,6 +8,7 @@ const ScriptureNavigator = () => {
   const [selectedChapter, setSelectedChapter] = useState(1);
   const [showModels, setShowModels] = useState(false);
 
+  const { progress, updateProgress, incrementStreak } = useProgress();
   // Get current chapter data
   const currentChapterData = getScriptureChapter(selectedBook, selectedChapter);
 
@@ -67,6 +69,19 @@ const ScriptureNavigator = () => {
       ? "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
       : "Select a chapter to view scripture text with interactive models and commentary.";
   };
+
+  // Track chapter reading progress
+  useEffect(() => {
+    if (currentChapterData) {
+      const chapterId = `${selectedBook}-${selectedChapter}`;
+      if (!progress.chaptersRead.includes(chapterId)) {
+        updateProgress({
+          chaptersRead: [...progress.chaptersRead, chapterId]
+        });
+        incrementStreak();
+      }
+    }
+  }, [selectedBook, selectedChapter, currentChapterData, progress.chaptersRead, updateProgress, incrementStreak]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">

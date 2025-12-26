@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Clock, Calendar, ArrowRight, Zap, Eye, Book } from 'lucide-react';
+import { timelineDatabase, getEventsByCategory, sortEventsByDate } from '../data/timelineDatabase';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 
 const Timeline = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('all');
@@ -13,6 +15,8 @@ const Timeline = () => {
     { id: 'future', name: 'Future Events', range: 'Present - Eternity' }
   ];
 
+  // Use the comprehensive timeline database
+  const allEvents = timelineDatabase;
   const timelineEvents = [
     {
       id: 1,
@@ -125,6 +129,7 @@ const Timeline = () => {
   ];
 
   const filteredEvents = selectedPeriod === 'all' 
+    ? sortEventsByDate(allEvents)
     ? timelineEvents 
     : timelineEvents.filter(event => event.category === selectedPeriod);
 
@@ -191,12 +196,14 @@ const Timeline = () => {
                       <div>
                         <div className={`inline-block px-3 py-1 rounded-full text-white text-sm font-medium mb-2 ${event.color}`}>
                           {event.date}
+                          {event.date}
                         </div>
                         <h4 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                           {event.title}
                         </h4>
                       </div>
                       <div className="text-sm text-gray-500 font-medium">
+                        {event.book} {event.chapter || ''}
                         {event.book} {event.chapter}
                       </div>
                     </div>
@@ -207,6 +214,7 @@ const Timeline = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
+                        <div className="text-sm">
                         <div className="text-sm">
                           <span className="font-medium text-blue-600">Prophecy:</span>
                           <span className="text-gray-700 ml-1">{event.prophecy}</span>
@@ -220,6 +228,7 @@ const Timeline = () => {
                       <div className="mt-6 pt-6 border-t border-gray-200">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
+                            <h5 className="font-semibold text-gray-900 mb-2">SDA Interpretation</h5>
                             <h5 className="font-semibold text-gray-900 mb-2">Prophetic Significance</h5>
                             <p className="text-gray-600 text-sm leading-relaxed">
                               {event.significance}
@@ -227,6 +236,7 @@ const Timeline = () => {
                           </div>
                           <div>
                             <h5 className="font-semibold text-gray-900 mb-2">Related Studies</h5>
+                            <p className="text-gray-600 text-sm leading-relaxed">{event.sdaInterpretation}</p>
                             <div className="space-y-2">
                               <button className="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium">
                                 <Book className="w-4 h-4" />

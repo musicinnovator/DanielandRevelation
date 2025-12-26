@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ProgressDashboard } from './ui/ProgressTracker';
 import { Menu, X, Book, Search, User } from 'lucide-react';
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
+    { path: '/', label: 'Home', icon: Book },
     { path: '/', label: 'Home', icon: Book },
     { path: '/scripture', label: 'Scripture Navigator' },
     { path: '/models', label: '3D Models' },
@@ -16,6 +18,7 @@ const Header = () => {
     { path: '/studies', label: 'Special Studies' },
     { path: '/community', label: 'Community' },
   ];
+
 
   return (
     <header className="bg-white shadow-lg border-b border-blue-100 sticky top-0 z-50">
