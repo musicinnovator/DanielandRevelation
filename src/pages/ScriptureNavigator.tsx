@@ -63,7 +63,7 @@ const ScriptureNavigator = () => {
 
   const getScriptureContent = () => {
     if (currentChapterData) {
-      return formatScriptureContent(currentChapterData.content);
+      return formatScriptureContent(currentChapterData.verses);
     }
     return selectedBook === 'revelation' 
       ? "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
