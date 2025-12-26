@@ -15,14 +15,11 @@ const Activities = () => {
       id: 'quiz',
       name: 'Quiz Games',
       icon: Trophy,
-      name: 'Quiz Games',
-      icon: Trophy,
       color: 'from-yellow-500 to-orange-500',
       activities: [
         {
           id: 'bible-bees',
           title: 'Bible Bees',
-          description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
           description: 'Fast-paced quiz game testing your knowledge of Daniel and Revelation',
           difficulty: 'Medium',
           duration: '10-15 min',
@@ -31,7 +28,6 @@ const Activities = () => {
         {
           id: 'multiple-choice',
           title: 'Multiple Choice Masters',
-          title: 'Multiple Choice Masters',
           description: 'Test knowledge of prophecies, symbols, characters, and places',
           difficulty: 'Easy',
           duration: '5-10 min',
@@ -39,7 +35,6 @@ const Activities = () => {
         },
         {
           id: 'true-false',
-          title: 'True or False Challenge',
           title: 'True or False Challenge',
           description: 'Quick-fire true/false questions about biblical facts',
           difficulty: 'Easy',
@@ -52,14 +47,11 @@ const Activities = () => {
       id: 'location',
       name: 'Location & Discovery',
       icon: Target,
-      name: 'Location & Discovery',
-      icon: Target,
       color: 'from-blue-500 to-purple-500',
       activities: [
         {
           id: 'wheres-that-found',
           title: "Where's That Found",
-          description: 'Identify which chapter contains specific events or prophecies',
           description: 'Identify which chapter contains specific events or prophecies',
           difficulty: 'Medium',
           duration: '8-12 min',
@@ -68,7 +60,6 @@ const Activities = () => {
         {
           id: 'where-did-it-happen',
           title: 'Where Did It Happen',
-          title: 'Where Did It Happen',
           description: 'Match events with their specific locations in Daniel and Revelation',
           difficulty: 'Hard',
           duration: '10-15 min',
@@ -76,7 +67,6 @@ const Activities = () => {
         },
         {
           id: 'who-did-what',
-          title: 'Who Did What',
           title: 'Who Did What',
           description: 'Match characters with their actions and roles in prophecy',
           difficulty: 'Medium',
@@ -89,14 +79,11 @@ const Activities = () => {
       id: 'construction',
       name: 'Text Construction',
       icon: Users,
-      name: 'Text Construction',
-      icon: Users,
       color: 'from-green-500 to-teal-500',
       activities: [
         {
           id: 'build-chapter',
           title: 'Build the Chapter',
-          description: 'Arrange verses from a chapter in correct biblical order',
           description: 'Arrange verses from a chapter in correct biblical order',
           difficulty: 'Hard',
           duration: '15-20 min',
@@ -105,7 +92,6 @@ const Activities = () => {
         {
           id: 'build-book',
           title: 'Build the Book',
-          title: 'Build the Book',
           description: 'Arrange chapters in correct order with explanations',
           difficulty: 'Expert',
           duration: '20-30 min',
@@ -113,7 +99,6 @@ const Activities = () => {
         },
         {
           id: 'build-verse',
-          title: 'Build the Verse',
           title: 'Build the Verse',
           description: 'Reconstruct individual verses in proper KJV order',
           difficulty: 'Medium',
@@ -126,14 +111,11 @@ const Activities = () => {
       id: 'memory',
       name: 'Memory & Matching',
       icon: Star,
-      name: 'Memory & Matching',
-      icon: Star,
       color: 'from-red-500 to-pink-500',
       activities: [
         {
           id: 'mix-match',
           title: 'Mix and Match',
-          description: 'Connect related items: people, places, things, and times',
           description: 'Connect related items: people, places, things, and times',
           difficulty: 'Medium',
           duration: '10-12 min',
@@ -142,7 +124,6 @@ const Activities = () => {
         {
           id: 'missing-words',
           title: 'Missing Words',
-          title: 'Missing Words',
           description: 'Find missing words or phrases in scripture passages',
           difficulty: 'Medium',
           duration: '8-10 min',
@@ -150,7 +131,6 @@ const Activities = () => {
         },
         {
           id: 'when-did-happen',
-          title: 'When Did That Happen',
           title: 'When Did That Happen',
           description: 'Match events with their chronological timing',
           difficulty: 'Hard',
@@ -173,13 +153,16 @@ const Activities = () => {
     }
   };
 
-  const handleActivityStart = (activity: Activity) => {
-    setSelectedActivity(activity);
-    setShowActivityEngine(true);
+  const handleActivityStart = (activityId: string) => {
+    const activity = getActivityById(activityId);
+    if (activity) {
+      setSelectedActivity(activity);
+      setShowActivityEngine(true);
+    }
   };
 
   const handleActivityComplete = (score: number, achievements: any[]) => {
-    // Track activity start
+    // Track activity completion
     if (selectedActivity && !progress.activitiesCompleted.includes(selectedActivity.id)) {
       updateProgress({
         activitiesCompleted: [...progress.activitiesCompleted, selectedActivity.id],
@@ -267,10 +250,39 @@ const Activities = () => {
 
               {/* Activities Grid */}
               <div className="p-6">
-                <ActivitySelector 
-                  activities={getActivitiesByCategory(category.id as any)}
-                  onSelectActivity={handleActivityStart}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.activities.map((activity) => (
+                    <div key={activity.id} className="bg-white rounded-xl shadow-lg p-6 hover-lift">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">{activity.title}</h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{activity.description}</p>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {activity.duration}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {activity.players}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between mb-6">
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor(activity.difficulty)}`}>
+                          {activity.difficulty}
+                        </span>
+                      </div>
+
+                      <button 
+                        onClick={() => handleActivityStart(activity.id)}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                      >
+                        <Play className="w-4 h-4" />
+                        Start Activity
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
