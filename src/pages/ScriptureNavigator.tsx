@@ -459,8 +459,9 @@ export const scriptureDatabase: ScriptureChapter[] = [
     relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
     timelinePeriod: '603 BC',
     chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+  },
   // Add complete Daniel chapters 3-12
-  ,{
+  {
     book: 'daniel',
     chapter: 3,
     title: "The Golden Image of Nebuchadnezzar - The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
@@ -499,17 +500,22 @@ export const scriptureDatabase: ScriptureChapter[] = [
         chapter: 3,
         verse: 4,
         text: "Then an herald cried aloud, To you it is commanded, O people, nations, and languages,",
-                <option value="daniel">Daniel</option>
-                <option value="revelation">Revelation</option>
-              </select>
-              
-              <select
-                value={selectedChapter}
-                onChange={(e) => setSelectedChapter(parseInt(e.target.value))}
-                className="px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-              >
-                {selectedBook === 'daniel' ? 
-                  Array.from({length: 12}, (_, i) => (
+        keywords: ['herald', 'commanded', 'people', 'nations', 'languages'],
+        crossReferences: ['Revelation 14:6'],
+        sdaCommentary: "The universal command parallels the final test of loyalty in the last days."
+      }
+    ],
+    summary: "Nebuchadnezzar erects a golden image and commands universal worship. The three Hebrew youth refuse to bow and are thrown into the fiery furnace, where God delivers them.",
+    keyThemes: ['Religious liberty', 'Faithfulness unto death', 'God\'s deliverance', 'Universal worship'],
+    sdaInsights: [
+      "The fiery furnace test prefigures the final test of worship",
+      "God delivers those who remain faithful",
+      "Religious liberty is a fundamental principle",
+      "The fourth man in the fire represents Christ's presence with His people"
+    ],
+    relatedModels: ['golden-image', 'fiery-furnace'],
+    timelinePeriod: '594 BC',
+    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
   },
   {
     book: 'revelation',
