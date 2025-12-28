@@ -1,6 +1,6 @@
 import React from 'react';
 import * as BABYLON from 'babylonjs';
-import 'babylonjs-gui';
+import * as GUI from 'babylonjs-gui';
 import BabylonScene from '../BabylonScene';
 
 const FourBeasts: React.FC = () => {
@@ -182,10 +182,10 @@ const FourBeasts: React.FC = () => {
     }
 
     // Add labels
-    const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
+    const advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
     
     const addLabel = (text: string, position: BABYLON.Vector3, color: string) => {
-      const label = new BABYLON.GUI.Rectangle();
+      const label = new GUI.Rectangle();
       label.background = color;
       label.height = '40px';
       label.alpha = 0.9;
@@ -204,7 +204,7 @@ const FourBeasts: React.FC = () => {
       label.leftInPixels = worldPos.x - 90;
       label.topInPixels = worldPos.y - 60;
 
-      const text1 = new BABYLON.GUI.TextBlock();
+      const text1 = new GUI.TextBlock();
       text1.text = text;
       text1.color = 'white';
       text1.fontSize = 11;

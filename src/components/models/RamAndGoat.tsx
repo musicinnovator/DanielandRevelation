@@ -1,6 +1,6 @@
 import React from 'react';
 import * as BABYLON from 'babylonjs';
-import 'babylonjs-gui';
+import * as GUI from 'babylonjs-gui';
 import BabylonScene from '../BabylonScene';
 
 const RamAndGoat: React.FC = () => {
@@ -245,10 +245,10 @@ const RamAndGoat: React.FC = () => {
     });
 
     // Add labels
-    const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
+    const advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
     
     const addLabel = (text: string, position: BABYLON.Vector3, color: string) => {
-      const label = new BABYLON.GUI.Rectangle();
+      const label = new GUI.Rectangle();
       label.background = color;
       label.height = '50px';
       label.alpha = 0.9;
@@ -262,7 +262,7 @@ const RamAndGoat: React.FC = () => {
       label.linkWithMesh(dummyMesh);
       label.linkOffsetY = -70;
 
-      const text1 = new BABYLON.GUI.TextBlock();
+      const text1 = new GUI.TextBlock();
       text1.text = text;
       text1.color = 'white';
       text1.fontSize = 11;

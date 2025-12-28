@@ -1,6 +1,6 @@
 import React from 'react';
 import * as BABYLON from 'babylonjs';
-import 'babylonjs-gui';
+import * as GUI from 'babylonjs-gui';
 import BabylonScene from '../BabylonScene';
 
 const NebuchadnezzarsImage: React.FC = () => {
@@ -156,10 +156,10 @@ const NebuchadnezzarsImage: React.FC = () => {
     });
 
     // Add labels
-    const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
+    const advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
     
     const addLabel = (text: string, mesh: BABYLON.AbstractMesh, color: string) => {
-      const label = new BABYLON.GUI.Rectangle();
+      const label = new GUI.Rectangle();
       label.background = color;
       label.height = '30px';
       label.alpha = 0.8;
@@ -170,7 +170,7 @@ const NebuchadnezzarsImage: React.FC = () => {
       advancedTexture.addControl(label);
       label.linkWithMesh(mesh);
 
-      const text1 = new BABYLON.GUI.TextBlock();
+      const text1 = new GUI.TextBlock();
       text1.text = text;
       text1.color = 'white';
       text1.fontSize = 12;
