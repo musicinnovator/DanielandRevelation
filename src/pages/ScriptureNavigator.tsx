@@ -459,8 +459,9 @@ export const scriptureDatabase: ScriptureChapter[] = [
     relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
     timelinePeriod: '603 BC',
     chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+  },
   // Add complete Daniel chapters 3-12
-  ,{
+  {
     book: 'daniel',
     chapter: 3,
     title: "The Golden Image of Nebuchadnezzar - The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
@@ -499,6 +500,22 @@ export const scriptureDatabase: ScriptureChapter[] = [
         chapter: 3,
         verse: 4,
         text: "Then an herald cried aloud, To you it is commanded, O people, nations, and languages,",
+        keywords: ['herald', 'commanded', 'people', 'nations', 'languages'],
+        crossReferences: ['Revelation 14:6'],
+        sdaCommentary: "The universal command parallels the final test of loyalty in the last days."
+      }
+    ],
+    summary: "Nebuchadnezzar erects a golden image and commands universal worship. The three Hebrew youth refuse to bow and are thrown into the fiery furnace, where God delivers them.",
+    keyThemes: ['Religious liberty', 'Worship test', 'Divine deliverance', 'End-time parallels'],
+    sdaInsights: [
+      "The image represents enforced worship in the last days",
+      "God's people will face a universal worship test",
+      "Faithfulness may require suffering but brings divine protection",
+      "The fourth man in the fire represents Christ's presence with His people"
+    ],
+    relatedModels: ['golden-image', 'fiery-furnace'],
+    timelinePeriod: '594 BC',
+    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
   },
   {
     book: 'revelation',
