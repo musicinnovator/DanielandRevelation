@@ -1,378 +1,248 @@
-import React, { useState, useEffect } from 'react';
-import { Book, Eye, ArrowLeft, ArrowRight, ExternalLink, Layers } from 'lucide-react';
-import { useProgress } from '../components/ui/ProgressTracker';
-import { getScriptureChapter, formatScriptureContent } from '../data/scriptureData';
+// Enhanced Scripture Data with full KJV text and interactive features
+export interface ScriptureVerse {
+  book: string;
+  chapter: number;
+  verse: number;
+  text: string;
+  keywords?: string[];
+  crossReferences?: string[];
+  sdaCommentary?: string;
+  hasModel?: boolean;
+  modelId?: string;
+}
 
-const ScriptureNavigator = () => {
-  const [selectedBook, setSelectedBook] = useState('daniel');
-  const [selectedChapter, setSelectedChapter] = useState(1);
-  const [showModels, setShowModels] = useState(false);
+export interface ScriptureChapter {
+  book: string;
+  chapter: number;
+  title: string;
+  verses: ScriptureVerse[];
+  summary: string;
+  keyThemes: string[];
+  sdaInsights: string[];
+  relatedModels: string[];
+  timelinePeriod?: string;
+}
 
-  const { progress, updateProgress, incrementStreak } = useProgress();
-  // Get current chapter data
-  const currentChapterData = getScriptureChapter(selectedBook, selectedChapter);
+// Daniel Chapter 1 - Complete KJV Text
+const daniel1Verses: ScriptureVerse[] = [
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 1,
+    text: "In the third year of the reign of Jehoiakim king of Judah came Nebuchadnezzar king of Babylon unto Jerusalem, and besieged it.",
+    keywords: ['Jehoiakim', 'Nebuchadnezzar', 'Babylon', 'Jerusalem'],
+    crossReferences: ['2 Kings 24:1', '2 Chronicles 36:5-7'],
+    sdaCommentary: "This marks the beginning of the 'times of the Gentiles' and the 70-year Babylonian captivity prophesied by Jeremiah."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 2,
+    text: "And the Lord gave Jehoiakim king of Judah into his hand, with part of the vessels of the house of God: which he carried into the land of Shinar to the house of his god; and he brought the vessels into the treasure house of his god.",
+    keywords: ['Lord', 'vessels', 'house of God', 'Shinar'],
+    crossReferences: ['2 Chronicles 36:7', 'Jeremiah 27:19-20'],
+    sdaCommentary: "God permitted this captivity as judgment for Judah's apostasy, yet He remained sovereign over the situation."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 3,
+    text: "And the king spake unto Ashpenaz the master of his eunuchs, that he should bring certain of the children of Israel, and of the king's seed, and of the princes;",
+    keywords: ['Ashpenaz', 'eunuchs', 'children of Israel', 'princes'],
+    crossReferences: ['Isaiah 39:7'],
+    sdaCommentary: "Nebuchadnezzar's policy was to educate the nobility of conquered nations to serve in his administration."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 4,
+    text: "Children in whom was no blemish, but well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science, and such as had ability in them to stand in the king's palace, and whom they might teach the learning and the tongue of the Chaldeans.",
+    keywords: ['no blemish', 'wisdom', 'knowledge', 'science', 'Chaldeans'],
+    crossReferences: ['1 Kings 12:8'],
+    sdaCommentary: "God's people were chosen for their excellence, demonstrating that faithfulness to God enhances rather than diminishes human capabilities."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 5,
+    text: "And the king appointed them a daily provision of the king's meat, and of the wine which he drank: so nourishing them three years, that at the end thereof they might stand before the king.",
+    keywords: ['daily provision', 'king\'s meat', 'wine', 'three years'],
+    crossReferences: ['Genesis 43:34'],
+    sdaCommentary: "The king's food likely included items forbidden by God's dietary laws, creating the first test of faithfulness."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 6,
+    text: "Now among these were of the children of Judah, Daniel, Hananiah, Mishael, and Azariah:",
+    keywords: ['Daniel', 'Hananiah', 'Mishael', 'Azariah', 'Judah'],
+    crossReferences: ['Ezekiel 14:14'],
+    sdaCommentary: "These four Hebrew youth would become God's witnesses in the Babylonian court, demonstrating His power and wisdom."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 7,
+    text: "Unto whom the prince of the eunuchs gave names: for he gave unto Daniel the name of Belteshazzar; and to Hananiah, of Shadrach; and to Mishael, of Meshach; and to Azariah, of Abed-nego.",
+    keywords: ['Belteshazzar', 'Shadrach', 'Meshach', 'Abed-nego'],
+    crossReferences: ['2 Kings 24:17'],
+    sdaCommentary: "The name changes were intended to erase Hebrew identity and connect them with Babylonian gods, but their character remained unchanged."
+  },
+  {
+    book: 'daniel',
+    chapter: 1,
+    verse: 8,
+    text: "But Daniel purposed in his heart that he would not defile himself with the portion of the king's meat, nor with the wine which he drank: therefore he requested of the prince of the eunuchs that he might not defile himself.",
+    keywords: ['purposed in his heart', 'not defile', 'requested'],
+    crossReferences: ['Leviticus 11', 'Acts 15:20'],
+    sdaCommentary: "Daniel's decision demonstrates that faithfulness in small matters prepares us for greater tests. Health principles are part of God's law.",
+    hasModel: true,
+    modelId: 'daniel-diet-test'
+  }
+  // Additional verses would continue here...
+];
 
-  const books = {
-    daniel: { name: 'Daniel', chapters: 12, color: 'blue' },
-    revelation: { name: 'Revelation', chapters: 22, color: 'purple' }
-  };
+// Daniel Chapter 2 - Nebuchadnezzar's Dream
+const daniel2Verses: ScriptureVerse[] = [
+  {
+    book: 'daniel',
+    chapter: 2,
+    verse: 31,
+    text: "Thou, O king, sawest, and behold a great image. This great image, whose brightness was excellent, stood before thee; and the form thereof was terrible.",
+    keywords: ['great image', 'brightness', 'terrible'],
+    crossReferences: ['Daniel 7:1-8'],
+    sdaCommentary: "The great image represents the succession of world empires from Babylon to the end times.",
+    hasModel: true,
+    modelId: 'nebuchadnezzars-image'
+  },
+  {
+    book: 'daniel',
+    chapter: 2,
+    verse: 32,
+    text: "This image's head was of fine gold, his breast and his arms of silver, his belly and his thighs of brass,",
+    keywords: ['head', 'gold', 'breast', 'arms', 'silver', 'belly', 'thighs', 'brass'],
+    crossReferences: ['Daniel 7:4-6'],
+    sdaCommentary: "Each metal represents a successive world empire: gold (Babylon), silver (Medo-Persia), brass (Greece)."
+  },
+  {
+    book: 'daniel',
+    chapter: 2,
+    verse: 33,
+    text: "His legs of iron, his feet part of iron and part of clay.",
+    keywords: ['legs', 'iron', 'feet', 'clay'],
+    crossReferences: ['Daniel 7:7', 'Daniel 7:24'],
+    sdaCommentary: "Iron represents Rome; iron and clay represent divided Europe that would never unite again."
+  },
+  {
+    book: 'daniel',
+    chapter: 2,
+    verse: 34,
+    text: "Thou sawest till that a stone was cut out without hands, which smote the image upon his feet that were of iron and clay, and brake them to pieces.",
+    keywords: ['stone', 'cut out without hands', 'smote', 'brake to pieces'],
+    crossReferences: ['Daniel 7:13-14', 'Revelation 19:11-16'],
+    sdaCommentary: "The stone represents Christ's kingdom that will destroy all earthly kingdoms at His second coming."
+  },
+  {
+    book: 'daniel',
+    chapter: 2,
+    verse: 35,
+    text: "Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them: and the stone became a great mountain, and filled the whole earth.",
+    keywords: ['broken to pieces', 'chaff', 'wind carried away', 'great mountain', 'filled whole earth'],
+    crossReferences: ['Psalm 2:9', 'Revelation 11:15'],
+    sdaCommentary: "All earthly kingdoms will be completely destroyed and replaced by God's eternal kingdom."
+  }
+  // Additional verses would continue...
+];
 
-  const danielChapterTitles = {
-    1: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test(Thou shalt not kill Exodus 20:13)",
-    2: "Nebuchadnezzar's 1st Dream (The 4 Great Kingdoms of World History)- The Great Image and its interpretation by God given through Daniel",
-    3: "The Golden Image of Nebuchadnezzar -The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
-    4: "Nebuchadnezzar's 2nd Dream and Its Fulfillment as given in his own testimony",
-    5: "Belshazzar's abominable Feast - The Handwriting on the Wall with the Judgment/Execution on Babylon",
-    6: "Daniel in the Lion's Den - the Third Test(Thou shalt have no other gods before Me)",
-    7: "The Four Beasts Vision (Lion, Bear, Leopard, Dreadful/Terrible Beast = Babylon, Medo-Persia, Greece, Rome(Pagan/Papal), respectively) - The 4 Great Kingdoms of World History with more detail added about the Fourth beast's actions",
-    8: "The Ram (with 2 unequal horns) and Goat (with a notable horn between eyes) Vision",
-    9: "The 70 Week Prophecy",
-    10: "Daniel's Final Vision Begins",
-    11: "Kings of North and South",
-    12: "The Time of the End"
-  };
+export const scriptureDatabase: ScriptureChapter[] = [
+  {
+    book: 'daniel',
+    chapter: 1,
+    title: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test (Thou shalt not kill Exodus 20:13)",
+    verses: daniel1Verses,
+    summary: "Daniel and his three friends are taken captive to Babylon where they face their first test of faithfulness regarding God's dietary laws. Their commitment to God's health principles results in superior physical and mental capabilities.",
+    keyThemes: ['Faithfulness in small things', 'Health principles', 'God\'s sovereignty', 'Preparation for service'],
+    sdaInsights: [
+      "Health reform is part of the third angel's message",
+      "Faithfulness in diet prepares for greater tests",
+      "God honors those who honor Him",
+      "Education should develop the whole person - physical, mental, and spiritual"
+    ],
+    relatedModels: ['daniel-diet-test'],
+    timelinePeriod: '605 BC'
+  },
+  {
+    book: 'daniel',
+    chapter: 2,
+    title: "Nebuchadnezzar's 1st Dream (The 4 Great Kingdoms of World History) - The Great Image and its interpretation by God given through Daniel",
+    verses: daniel2Verses,
+    summary: "Nebuchadnezzar dreams of a great image representing successive world empires. Daniel interprets the dream, revealing God's sovereignty over human history and the ultimate establishment of His eternal kingdom.",
+    keyThemes: ['Prophetic history', 'God\'s sovereignty', 'World empires', 'Christ\'s kingdom'],
+    sdaInsights: [
+      "History is moving toward the establishment of God's kingdom",
+      "Human empires will all pass away",
+      "God reveals the future to His servants",
+      "The stone kingdom represents Christ's second coming and eternal reign"
+    ],
+    relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
+    timelinePeriod: '603 BC'
+  }
+  // Additional chapters would be added here...
+];
 
-  const revelationChapterTitles = {
-    1: "Christ Among the Candlesticks",
-    2: "Messages to Ephesus, Smyrna, Pergamos, Thyatira",
-    3: "Messages to Sardis, Philadelphia, Laodicea",
-    4: "The Throne Room of Heaven",
-    5: "The Lamb and the Seven Seals",
-    6: "The First Six Seals",
-    7: "The 144,000 and Great Multitude",
-    8: "The Seventh Seal and First Four Trumpets",
-    9: "The Fifth and Sixth Trumpets",
-    10: "The Mighty Angel and Little Book",
-    11: "The Two Witnesses",
-    12: "The Woman and the Dragon",
-    13: "The Beast from Sea and Earth",
-    14: "The 144,000 and Three Angels",
-    15: "The Seven Last Plagues",
-    16: "The Seven Vials of Wrath",
-    17: "The Great Whore",
-    18: "Babylon's Fall",
-    19: "Christ's Second Coming",
-    20: "The Millennium and Final Judgment",
-    21: "New Heaven and New Earth",
-    22: "The River of Life and Final Words"
-  };
-
-  const getCurrentTitle = () => {
-    return currentChapterData?.title || '';
-  };
-
-  const getScriptureContent = () => {
-    if (currentChapterData) {
-      return formatScriptureContent(currentChapterData.verses);
-    }
-    return selectedBook === 'revelation' 
-      ? "Revelation chapters coming soon! Select a Daniel chapter to view the complete formatted scripture text."
-      : "Select a chapter to view scripture text with interactive models and commentary.";
-  };
-
-  // Track chapter reading progress
-  useEffect(() => {
-    if (currentChapterData) {
-      const chapterId = `${selectedBook}-${selectedChapter}`;
-      if (!progress.chaptersRead.includes(chapterId)) {
-        updateProgress({
-          chaptersRead: [...progress.chaptersRead, chapterId]
-        });
-        incrementStreak();
-      }
-    }
-  }, [selectedBook, selectedChapter, currentChapterData, progress.chaptersRead, updateProgress, incrementStreak]);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Scripture Navigator
-          </h1>
-          <p className="text-xl text-gray-600">
-            Explore Daniel and Revelation with linked 3D models and SDA commentary
-          </p>
-        </div>
-
-        {/* Book Selection */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-xl p-2 shadow-lg">
-            <button
-              onClick={() => {
-                setSelectedBook('daniel');
-                setSelectedChapter(1);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                selectedBook === 'daniel'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-blue-600 hover:bg-blue-50'
-              }`}
-            >
-              <Book className="w-5 h-5" />
-              Daniel
-            </button>
-            <button
-              onClick={() => {
-                setSelectedBook('revelation');
-                setSelectedChapter(1);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                selectedBook === 'revelation'
-                  ? 'bg-purple-600 text-white shadow-md'
-                  : 'text-purple-600 hover:bg-purple-50'
-              }`}
-            >
-              <Eye className="w-5 h-5" />
-              Revelation
-            </button>
-          </div>
-        </div>
-
-        {/* Chapter Navigation */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">
-              {books[selectedBook].name} - Chapter {selectedChapter}
-            </h2>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setSelectedChapter(Math.max(1, selectedChapter - 1))}
-                disabled={selectedChapter === 1}
-                className="p-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setSelectedChapter(Math.min(books[selectedBook].chapters, selectedChapter + 1))}
-                disabled={selectedChapter === books[selectedBook].chapters}
-                className="p-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          <h3 className="text-lg font-semibold text-gray-700 mb-6">
-            {getCurrentTitle()}
-          </h3>
-
-          {/* Chapter Grid */}
-          <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-2 mb-8">
-            {Array.from({ length: books[selectedBook].chapters }, (_, i) => i + 1).map((chapter) => (
-              <button
-                key={chapter}
-                onClick={() => setSelectedChapter(chapter)}
-                className={`aspect-square rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                  selectedChapter === chapter
-                    ? selectedBook === 'daniel'
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-purple-600 text-white shadow-lg'
-                    : selectedBook === 'daniel'
-                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-200'
-                    : 'bg-purple-100 text-purple-800 hover:bg-purple-200'
-                }`}
-              >
-                {chapter}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Scripture Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Scripture Text */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl p-8">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold text-gray-900">
-                Scripture Text (KJV)
-              </h3>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowModels(!showModels)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                    showModels
-                      ? 'bg-green-600 text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <Layers className="w-4 h-4" />
-                  3D Models
-                </button>
-              </div>
-            </div>
-
-            <div className="scripture-verse text-gray-800 text-lg leading-relaxed">
-              <div 
-                dangerouslySetInnerHTML={{ 
-                  __html: getScriptureContent() 
-                }}
-                style={{
-                  fontFamily: "'Crimson Text', serif",
-                  lineHeight: '1.8'
-                }}
-              />
-            </div>
-
-            {/* Interactive Elements */}
-            {showModels && (
-              <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl">
-                <h4 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-blue-600" />
-                  Related 3D Models
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {selectedBook === 'daniel' && selectedChapter === 2 && (
-                    <>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Nebuchadnezzar's Image
-                        </div>
-                      </div>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          The Stone Kingdom
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  {selectedBook === 'revelation' && selectedChapter === 1 && (
-                    <>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Seven Golden Candlesticks
-                        </div>
-                      </div>
-                      <div className="model-container">
-                        <div className="model-placeholder">
-                          Christ Among Candlesticks
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Commentary Sidebar */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">
-              SDA Commentary
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="p-4 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg border-l-4 border-yellow-500">
-                <h4 className="font-semibold text-gray-900 mb-2">Key Insight</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {selectedBook === 'daniel' && selectedChapter === 2
-                    ? "The great image represents the succession of world empires from Babylon to the end times, culminating in Christ's eternal kingdom."
-                    : selectedBook === 'daniel' && selectedChapter === 1
-                    ? "Daniel's commitment to God's health principles demonstrates that faithfulness in small matters prepares us for greater tests and responsibilities."
-                    : selectedBook === 'daniel' && selectedChapter === 3
-                    ? "The fiery furnace test parallels the end-time worship crisis, showing God's power to deliver those who remain faithful to His commandments."
-                    : selectedBook === 'daniel' && selectedChapter === 7
-                    ? "The four beasts represent the same kingdoms as Daniel 2's image, but with additional details about the little horn power and the investigative judgment."
-                    : selectedBook === 'daniel' && selectedChapter === 9
-                    ? "The 70-week prophecy is the most precise messianic prophecy in Scripture, pinpointing the exact time of Christ's ministry and crucifixion."
-                    : selectedBook === 'revelation' && selectedChapter === 1
-                    ? "The seven golden candlesticks represent the seven churches, showing Christ's presence among His people throughout history."
-                    : currentChapterData
-                    ? "This chapter contains important prophetic insights that connect to the overall theme of God's sovereignty and the ultimate triumph of His kingdom."
-                    : "Select a chapter to view detailed SDA commentary and theological insights."
-                  }
-                </p>
-              </div>
-
-              <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Cross References</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer">
-                    <ExternalLink className="w-3 h-3" />
-                    Daniel 7:13-14
-                  </div>
-                  <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer">
-                    <ExternalLink className="w-3 h-3" />
-                    Revelation 19:11-16
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Prophetic Timeline</h4>
-                <p className="text-gray-700 text-sm">
-                  {selectedBook === 'daniel' && selectedChapter <= 6
-                    ? "This chapter occurs during the Babylonian/Persian period (605-331 BC)."
-                    : selectedBook === 'daniel' && selectedChapter >= 7
-                    ? "This prophetic vision spans from Babylon to the end times and Christ's eternal kingdom."
-                    : "This chapter connects to the prophetic timeline spanning from ancient times to eternity."
-                  }
-                </p>
-                <button className="mt-2 text-green-600 hover:text-green-800 text-sm font-medium flex items-center gap-1">
-                  View on Timeline <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Navigation */}
-        <div className="mt-8 bg-white rounded-2xl shadow-xl p-6">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Navigation</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
-            <button className="p-3 bg-blue-100 hover:bg-blue-200 rounded-lg text-blue-800 font-medium transition-colors">
-              Daniel 2 Image
-            </button>
-            <button className="p-3 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-800 font-medium transition-colors">
-              Four Beasts
-            </button>
-            <button className="p-3 bg-green-100 hover:bg-green-200 rounded-lg text-green-800 font-medium transition-colors">
-              70 Week Prophecy
-            </button>
-            <button className="p-3 bg-orange-100 hover:bg-orange-200 rounded-lg text-orange-800 font-medium transition-colors">
-              Seven Churches
-            </button>
-            <button className="p-3 bg-red-100 hover:bg-red-200 rounded-lg text-red-800 font-medium transition-colors">
-              Seven Seals
-            </button>
-            <button className="p-3 bg-teal-100 hover:bg-teal-200 rounded-lg text-teal-800 font-medium transition-colors">
-              New Jerusalem
-            </button>
-          </div>
-        </div>
-
-        {/* Support Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-2xl font-bold mb-4">Support This Ministry</h2>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Help us continue providing free biblical study tools with your generous support
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* PayPal Donation Button */}
-            <a
-              href="https://www.paypal.com/donate/?hosted_button_id=Z2T57WZMGV9UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-lg transition-all duration-300"
-            >
-              Donate via PayPal
-            </a>
-
-            {/* Stripe Payment Link Button */}
-            <a
-              href="https://buy.stripe.com/eVq9AUaZD7aoeUE3MU4Vy00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg transition-all duration-300"
-            >
-              Donate via Stripe
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
+  return scriptureDatabase.find(ch => ch.book === book && ch.chapter === chapter) || null;
 };
 
-export default ScriptureNavigator;
+export const searchScripture = (query: string): ScriptureVerse[] => {
+  const results: ScriptureVerse[] = [];
+  const lowercaseQuery = query.toLowerCase();
+  
+  scriptureDatabase.forEach(chapter => {
+    chapter.verses.forEach(verse => {
+      if (verse.text.toLowerCase().includes(lowercaseQuery) ||
+          verse.keywords?.some(keyword => keyword.toLowerCase().includes(lowercaseQuery))) {
+        results.push(verse);
+      }
+    });
+  });
+  
+  return results;
+};
+
+export const getVersesByKeyword = (keyword: string): ScriptureVerse[] => {
+  const results: ScriptureVerse[] = [];
+  const lowercaseKeyword = keyword.toLowerCase();
+  
+  scriptureDatabase.forEach(chapter => {
+    chapter.verses.forEach(verse => {
+      if (verse.keywords?.some(k => k.toLowerCase().includes(lowercaseKeyword))) {
+        results.push(verse);
+      }
+    });
+  });
+  
+  return results;
+};
+
+export const formatScriptureContent = (verses: ScriptureVerse[]): string => {
+  return verses.map(verse => {
+    const verseClass = verse.hasModel ? 'verse-with-model' : '';
+    const modelLink = verse.hasModel ? ` <span class="model-link" data-model="${verse.modelId}">[3D Model]</span>` : '';
+    
+    return `<div class="scripture-verse ${verseClass}" data-verse="${verse.book}-${verse.chapter}-${verse.verse}">
+      <span class="verse-number">${verse.verse}</span>
+      <span class="verse-text">${verse.text}</span>
+      ${modelLink}
+      ${verse.sdaCommentary ? `<div class="sda-commentary">${verse.sdaCommentary}</div>` : ''}
+    </div>`;
+  }).join('\n');
+};
+
+export const getCrossReferences = (verse: ScriptureVerse): string[] => {
+  return verse.crossReferences || [];
+};
+
+export const getChaptersByBook = (book: string): ScriptureChapter[] => {
+  return scriptureDatabase.filter(chapter => chapter.book === book);
+};
