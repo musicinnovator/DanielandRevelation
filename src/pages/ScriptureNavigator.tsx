@@ -459,8 +459,9 @@ export const scriptureDatabase: ScriptureChapter[] = [
     relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
     timelinePeriod: '603 BC',
     chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+  },
   // Add complete Daniel chapters 3-12
-  ,{
+  {
     book: 'daniel',
     chapter: 3,
     title: "The Golden Image of Nebuchadnezzar - The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
@@ -499,205 +500,22 @@ export const scriptureDatabase: ScriptureChapter[] = [
         chapter: 3,
         verse: 4,
         text: "Then an herald cried aloud, To you it is commanded, O people, nations, and languages,",
-                <option value="daniel">Daniel</option>
-                <option value="revelation">Revelation</option>
-              </select>
-              
-              <select
-                value={selectedChapter}
-                onChange={(e) => setSelectedChapter(parseInt(e.target.value))}
-                className="px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-              >
-                {selectedBook === 'daniel' ? 
-                  Array.from({length: 12}, (_, i) => (
-    imageUrl: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
-    theme: 'worship'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 5,
-    text: "And the king appointed them a daily provision of the king's meat, and of the wine which he drank: so nourishing them three years, that at the end thereof they might stand before the king.",
-    keywords: ['daily provision', 'king\'s meat', 'wine', 'three years'],
-    crossReferences: ['Genesis 43:34', 'Proverbs 23:1-3'],
-    sdaCommentary: "The king's food likely included items forbidden by God's dietary laws, creating the first test of faithfulness. This parallels end-time tests of conscience.",
-    historicalContext: "Royal food was often offered to idols before consumption, making it ceremonially unclean for faithful Jews.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'worship'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 6,
-    text: "Now among these were of the children of Judah, Daniel, Hananiah, Mishael, and Azariah:",
-    keywords: ['Daniel', 'Hananiah', 'Mishael', 'Azariah', 'Judah'],
-    crossReferences: ['Ezekiel 14:14', 'Ezekiel 28:3'],
-    sdaCommentary: "These four Hebrew youth would become God's witnesses in the Babylonian court, demonstrating His power and wisdom to the greatest empire of their time.",
-    historicalContext: "These young men were likely teenagers from noble families, representing the future leadership of Judah.",
-    symbolExplanation: "Their Hebrew names honored God: Daniel (God is my judge), Hananiah (Yahweh is gracious), Mishael (Who is like God?), Azariah (Yahweh has helped).",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'salvation'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 7,
-    text: "Unto whom the prince of the eunuchs gave names: for he gave unto Daniel the name of Belteshazzar; and to Hananiah, of Shadrach; and to Mishael, of Meshach; and to Azariah, of Abed-nego.",
-    keywords: ['Belteshazzar', 'Shadrach', 'Meshach', 'Abed-nego'],
-    crossReferences: ['2 Kings 24:17', 'Daniel 4:8'],
-    sdaCommentary: "The name changes were intended to erase Hebrew identity and connect them with Babylonian gods, but their character remained unchanged. Names don't determine destiny.",
-    historicalContext: "Changing names was a common practice to assimilate captives into the dominant culture and religion.",
-    symbolExplanation: "Belteshazzar honored Bel (Marduk), Shadrach honored Aku (moon god), Meshach honored Aku, Abed-nego honored Nebo (Mercury).",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'persecution'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 8,
-    text: "But Daniel purposed in his heart that he would not defile himself with the portion of the king's meat, nor with the wine which he drank: therefore he requested of the prince of the eunuchs that he might not defile himself.",
-    keywords: ['purposed in his heart', 'not defile', 'requested'],
-    crossReferences: ['Leviticus 11', 'Acts 15:20', 'Romans 14:23'],
-    sdaCommentary: "Daniel's decision demonstrates that faithfulness in small matters prepares us for greater tests. Health principles are part of God's law and connected to spiritual discernment.",
-    historicalContext: "This decision required great courage as it could have resulted in death for refusing the king's provision.",
-    hasModel: true,
-    modelId: 'daniel-diet-test',
-    symbolExplanation: "The heart represents the center of decision-making and moral choice. True religion begins with heart commitment.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'worship'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 9,
-    text: "Now God had brought Daniel into favour and tender love with the prince of the eunuchs.",
-    keywords: ['God', 'favour', 'tender love'],
-    crossReferences: ['Genesis 39:21', 'Proverbs 16:7', 'Acts 7:10'],
-    sdaCommentary: "When we honor God, He opens doors and changes hearts. Divine favor accompanies faithful obedience.",
-    historicalContext: "Ashpenaz's favorable response was miraculous, as refusing royal food could be seen as insulting the king.",
-    theme: 'salvation'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 10,
-    text: "And the prince of the eunuchs said unto Daniel, I fear my lord the king, who hath appointed your meat and your drink: for why should he see your faces worse liking than the children which are of your sort? then shall ye make me endanger my head to the king.",
-    keywords: ['fear', 'appointed', 'worse liking', 'endanger'],
-    crossReferences: ['Proverbs 29:25', 'Matthew 10:28'],
-    sdaCommentary: "Ashpenaz's fear was reasonable from a human perspective, but God had a plan to demonstrate the superiority of His ways.",
-    historicalContext: "Court officials served at the pleasure of absolute monarchs and could be executed for any perceived failure.",
-    theme: 'persecution'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 11,
-    text: "Then said Daniel to Melzar, whom the prince of the eunuchs had set over Daniel, Hananiah, Mishael, and Azariah,",
-    keywords: ['Melzar', 'set over'],
-    crossReferences: ['Daniel 1:16'],
-    sdaCommentary: "Daniel approached the immediate supervisor, showing wisdom in working within the system while maintaining principles.",
-    historicalContext: "Melzar was likely a title meaning 'steward' or 'guard' rather than a personal name.",
-    theme: 'salvation'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 12,
-    text: "Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink.",
-    keywords: ['prove', 'ten days', 'pulse', 'water'],
-    crossReferences: ['Malachi 3:10', '1 Kings 18:21'],
-    sdaCommentary: "Daniel proposed a test that would demonstrate God's blessing on obedience to His health laws. Ten days was sufficient to show results.",
-    historicalContext: "Pulse refers to vegetables, grains, and legumes - foods that were clean according to Levitical law.",
-    symbolExplanation: "Ten represents completeness of testing. Water symbolizes purity and life.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'worship'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 13,
-    text: "Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants.",
-    keywords: ['countenances', 'looked upon', 'deal with'],
-    crossReferences: ['1 Samuel 16:7', 'Matthew 6:16-18'],
-    sdaCommentary: "Daniel was confident that God would honor their faithfulness with visible blessing. True religion improves both physical and spiritual health.",
-    historicalContext: "Physical appearance was considered a reflection of divine favor in ancient cultures.",
-    theme: 'salvation'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 14,
-    text: "So he consented to them in this matter, and proved them ten days.",
-    keywords: ['consented', 'proved', 'ten days'],
-    crossReferences: ['Psalm 34:8', 'Hebrews 11:6'],
-    sdaCommentary: "God moved upon Melzar's heart to allow the test. When we step out in faith, God provides the way.",
-    theme: 'salvation'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 15,
-    text: "And at the end of ten days their countenances appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.",
-    keywords: ['fairer', 'fatter in flesh', 'appeared'],
-    crossReferences: ['Psalm 34:5', 'Isaiah 58:8'],
-    sdaCommentary: "God honored their faithfulness with superior health and appearance. Obedience to God's laws brings blessing, not deprivation.",
-    historicalContext: "This miraculous improvement in just ten days demonstrated divine intervention.",
-    symbolExplanation: "Physical health reflects spiritual health when we follow God's design for our bodies.",
-    theme: 'victory'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 16,
-    text: "Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave them pulse.",
-    keywords: ['took away', 'gave them pulse'],
-    crossReferences: ['Daniel 1:12'],
-    sdaCommentary: "The steward was convinced by the evidence and continued to provide the simple diet that brought such remarkable results.",
-    theme: 'victory'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 17,
-    text: "As for these four children, God gave them knowledge and skill in all learning and wisdom: and Daniel had understanding in all visions and dreams.",
-    keywords: ['God gave', 'knowledge', 'skill', 'learning', 'wisdom', 'visions', 'dreams'],
-    crossReferences: ['1 Kings 3:12', 'James 1:5', 'Genesis 41:15-16'],
-    sdaCommentary: "God blessed their faithfulness with superior intellectual abilities. Daniel's special gift of interpreting dreams would make him invaluable to the kingdom.",
-    historicalContext: "Dream interpretation was highly valued in ancient Mesopotamia, where dreams were considered messages from the gods.",
-    symbolExplanation: "Visions and dreams represent divine revelation and prophetic insight.",
-    hasModel: true,
-    modelId: 'daniel-wisdom',
-    theme: 'victory'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 18,
-    text: "Now at the end of the days that the king had said he should bring them in, then the prince of the eunuchs brought them in before Nebuchadnezzar.",
-    keywords: ['end of the days', 'brought them in', 'Nebuchadnezzar'],
-    crossReferences: ['Daniel 1:5'],
-    sdaCommentary: "The three-year training period was complete. God had prepared His servants for their mission in the Babylonian court.",
-    theme: 'victory'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 19,
-    text: "And the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah: therefore stood they before the king.",
-    keywords: ['communed', 'none like', 'stood before'],
-    crossReferences: ['1 Kings 10:8', 'Proverbs 22:29'],
-    sdaCommentary: "Their excellence was evident to the king himself. Faithfulness to God produces the highest quality of character and ability.",
-    historicalContext: "Standing before the king was a position of highest honor and responsibility in the ancient world.",
-    theme: 'victory'
-  },
-  {
-    book: 'daniel',
-    chapter: 1,
-    verse: 20,
-    text: "And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm.",
-    keywords: ['ten times better', 'magicians', 'astrologers', 'wisdom', 'understanding'],
-    crossReferences: ['Exodus 7:11', '1 Kings 4:30', 'Isaiah 47:13'],
-    sdaCommentary: "God's wisdom far exceeds human wisdom and occult practices. The Hebrew youth surpassed the renowned Babylonian wise men by divine enablement.",
+        keywords: ['herald', 'commanded', 'people', 'nations', 'languages'],
+        crossReferences: ['Revelation 14:6'],
+        sdaCommentary: "The universal decree parallels the final test of worship in the last days."
+      }
+    ],
+    summary: "Nebuchadnezzar erects a golden image and commands universal worship. The three Hebrew youth refuse to bow and are thrown into the fiery furnace, where God delivers them.",
+    keyThemes: ['Religious liberty', 'Worship test', 'God\'s deliverance', 'End-time parallels'],
+    sdaInsights: [
+      "The image represents enforced worship in the last days",
+      "God's people will face a universal worship test",
+      "Faithfulness to God brings divine protection",
+      "The fourth man in the fire represents Christ's presence with His people"
+    ],
+    relatedModels: ['golden-image', 'fiery-furnace'],
+    timelinePeriod: '594 BC',
+    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
   },
   {
     book: 'revelation',
