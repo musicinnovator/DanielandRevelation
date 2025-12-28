@@ -459,8 +459,9 @@ export const scriptureDatabase: ScriptureChapter[] = [
     relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
     timelinePeriod: '603 BC',
     chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+  },
   // Add complete Daniel chapters 3-12
-  ,{
+  {
     book: 'daniel',
     chapter: 3,
     title: "The Golden Image of Nebuchadnezzar - The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
@@ -499,237 +500,22 @@ export const scriptureDatabase: ScriptureChapter[] = [
         chapter: 3,
         verse: 4,
         text: "Then an herald cried aloud, To you it is commanded, O people, nations, and languages,",
-                  <span key={idx} className="px-2 py-1 bg-purple-100 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded cursor-pointer hover:bg-purple-200 dark:hover:bg-purple-700">
-                    {ref}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-          {verse.hasModel && (
-            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
-              <Eye className="w-4 h-4" />
-              <span className="text-sm font-medium">3D Model Available</span>
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  };
-
-  return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-3">
-              <Book className="w-8 h-8 text-blue-600" />
-              <h1 className="text-3xl font-bold text-gray-800 dark:text-white">Scripture Navigator</h1>
-            </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              >
-                {isDarkMode ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-gray-600" />}
-              </button>
-              <button
-                onClick={() => setShowSettings(!showSettings)}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              >
-                <Settings className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-              </button>
-            </div>
-          </div>
-
-          {/* Settings Panel */}
-          {showSettings && (
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-3">Reading Settings</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Font Size</label>
-                  <select
-                    value={fontSize}
-                    onChange={(e) => setFontSize(e.target.value)}
-                    className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white"
-                  >
-                    {fontSizes.map((size) => (
-                      <option key={size.value} value={size.value}>{size.label}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Volume2 className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    Audio Narration
-                  </button>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Bookmark className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
-                    {bookmarkedVerses.size} verses bookmarked
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Search */}
-          <div className="relative mb-6">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search scripture..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-
-          {/* Book and Chapter Selection */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Book</label>
-              <select
-                value={selectedBook}
-                onChange={(e) => setSelectedBook(e.target.value)}
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white"
-              >
-                <option value="daniel">Daniel</option>
-                <option value="revelation">Revelation</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Chapter</label>
-              <select
-                value={selectedChapter}
-                onChange={(e) => setSelectedChapter(Number(e.target.value))}
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white"
-              >
-                {selectedBook === 'daniel' ? (
-                  Array.from({ length: 12 }, (_, i) => (
-                    <option key={i + 1} value={i + 1}>Chapter {i + 1}</option>
-                  ))
-                ) : (
-                  Array.from({ length: 22 }, (_, i) => (
-                    <option key={i + 1} value={i + 1}>Chapter {i + 1}</option>
-                  ))
-                )}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Search Results */}
-        {searchQuery && searchResults.length > 0 && (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
-              Search Results ({searchResults.length} verses found)
-            </h2>
-            <div className="space-y-3">
-              {searchResults.map((verse, index) => (
-                <VerseTooltip key={index} verse={verse}>
-                  <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors cursor-pointer">
-                    <div className="flex items-start gap-3">
-                      <span className="text-blue-600 dark:text-blue-400 font-semibold">
-                        {verse.book.charAt(0).toUpperCase() + verse.book.slice(1)} {verse.chapter}:{verse.verse}
-                      </span>
-                      <p className={`${fontSize} text-gray-800 dark:text-white leading-relaxed`}>
-                        {verse.text}
-                      </p>
-                    </div>
-                  </div>
-                </VerseTooltip>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Scripture Text */}
-        {currentChapter && (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-                {currentChapter.book.charAt(0).toUpperCase() + currentChapter.book.slice(1)} Chapter {currentChapter.chapter}
-              </h2>
-              <h3 className="text-lg text-blue-600 dark:text-blue-400 mb-4">{currentChapter.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{currentChapter.summary}</p>
-              
-              {/* Key Themes */}
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Key Themes:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {currentChapter.keyThemes.map((theme, index) => (
-                    <span key={index} className="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                      {theme}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Verses */}
-            <div className="space-y-4">
-              {currentChapter.verses.map((verse) => {
-                const verseKey = `${verse.book}-${verse.chapter}-${verse.verse}`;
-                const isBookmarked = bookmarkedVerses.has(verseKey);
-                
-                return (
-                  <VerseTooltip key={verseKey} verse={verse}>
-                    <div className="group relative p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 cursor-pointer">
-                      <div className="flex items-start gap-4">
-                        <div className="flex items-center gap-2">
-                          <span className="text-blue-600 dark:text-blue-400 font-bold text-lg min-w-[2rem]">
-                            {verse.verse}
-                          </span>
-                          <button
-                            onClick={() => toggleBookmark(verseKey)}
-                            className={`opacity-0 group-hover:opacity-100 transition-opacity ${
-                              isBookmarked ? 'text-yellow-500' : 'text-gray-400 hover:text-yellow-500'
-                            }`}
-                          >
-                            <Bookmark className="w-4 h-4" fill={isBookmarked ? 'currentColor' : 'none'} />
-                          </button>
-                        </div>
-                        <p className={`${fontSize} text-gray-800 dark:text-white leading-relaxed font-serif flex-1`}>
-                          {verse.text}
-                        </p>
-                        {verse.hasModel && (
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                            <Eye className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </VerseTooltip>
-                );
-              })}
-            </div>
-
-            {/* SDA Insights */}
-            {currentChapter.sdaInsights && currentChapter.sdaInsights.length > 0 && (
-              <div className="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <h4 className="font-bold text-blue-800 dark:text-blue-300 mb-3">SDA Theological Insights:</h4>
-                <ul className="space-y-2">
-                  {currentChapter.sdaInsights.map((insight, index) => (
-                    <li key={index} className="text-blue-700 dark:text-blue-300 flex items-start gap-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span>{insight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default ScriptureNavigator;
+        keywords: ['herald', 'commanded', 'people', 'nations', 'languages'],
+        crossReferences: ['Revelation 14:6'],
+        sdaCommentary: "The universal decree parallels the final test of loyalty in the last days."
+      }
+    ],
+    summary: "Nebuchadnezzar erects a golden image and commands universal worship. The three Hebrew youth refuse to bow down and are thrown into the fiery furnace, where God delivers them.",
+    keyThemes: ['Religious liberty', 'Faithfulness unto death', 'God\'s deliverance', 'Universal worship'],
+    sdaInsights: [
+      "The image represents the union of church and state",
+      "The fiery furnace prefigures end-time persecution",
+      "God delivers those who remain faithful",
+      "The fourth man in the fire represents Christ's presence with His people"
+    ],
+    relatedModels: ['golden-image', 'fiery-furnace'],
+    timelinePeriod: '594 BC',
+    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
   },
   {
     book: 'revelation',
