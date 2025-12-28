@@ -1,6 +1,6 @@
 import React from 'react';
 import * as BABYLON from 'babylonjs';
-import 'babylonjs-gui';
+import * as GUI from 'babylonjs-gui';
 import BabylonScene from '../BabylonScene';
 
 const SevenCandlesticks: React.FC = () => {
@@ -168,12 +168,12 @@ const SevenCandlesticks: React.FC = () => {
     rightFoot.material = brassMaterial;
 
     // Add labels for each church
-    const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
+    const advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI');
     
     churches.forEach((church, index) => {
       const x = (index - 3) * 3;
       
-      const label = new BABYLON.GUI.Rectangle();
+      const label = new GUI.Rectangle();
       label.background = 'rgba(0, 0, 0, 0.8)';
       label.height = '60px';
       label.widthInPixels = 160;
@@ -187,7 +187,7 @@ const SevenCandlesticks: React.FC = () => {
       dummyMesh.position = new BABYLON.Vector3(x, 2.5, 0);
       label.linkWithMesh(dummyMesh);
 
-      const churchName = new BABYLON.GUI.TextBlock();
+      const churchName = new GUI.TextBlock();
       churchName.text = church.name;
       churchName.color = 'white';
       churchName.fontSize = 14;
@@ -195,14 +195,14 @@ const SevenCandlesticks: React.FC = () => {
       churchName.top = '-15px';
       label.addControl(churchName);
       
-      const period = new BABYLON.GUI.TextBlock();
+      const period = new GUI.TextBlock();
       period.text = church.period;
       period.color = '#FFD700';
       period.fontSize = 10;
       period.top = '0px';
       label.addControl(period);
       
-      const message = new BABYLON.GUI.TextBlock();
+      const message = new GUI.TextBlock();
       message.text = church.message;
       message.color = '#CCCCCC';
       message.fontSize = 9;
@@ -211,7 +211,7 @@ const SevenCandlesticks: React.FC = () => {
     });
 
     // Christ label
-    const christLabel = new BABYLON.GUI.Rectangle();
+    const christLabel = new GUI.Rectangle();
     christLabel.background = 'rgba(255, 255, 255, 0.9)';
     christLabel.height = '80px';
     christLabel.widthInPixels = 200;
@@ -222,7 +222,7 @@ const SevenCandlesticks: React.FC = () => {
     advancedTexture.addControl(christLabel);
     christLabel.linkWithMesh(christHead);
 
-    const christText = new BABYLON.GUI.TextBlock();
+    const christText = new GUI.TextBlock();
     christText.text = 'Son of Man\nClothed with garment\nGirded with golden girdle\nHair white as wool\nEyes as flame of fire\nFeet like fine brass';
     christText.color = '#000080';
     christText.fontSize = 11;
