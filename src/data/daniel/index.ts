@@ -1,0 +1,11 @@
+export { daniel2Verses, daniel2Chapter } from './chapter2';
+export { daniel3Verses, daniel3Chapter } from './chapter3';
+export { daniel4Verses, daniel4Chapter } from './chapter4';
+export { daniel5Verses, daniel5Chapter } from './chapter5';
+export { daniel6Verses, daniel6Chapter } from './chapter6';
+export { daniel7Verses, daniel7Chapter } from './chapter7';
+export { daniel8Verses, daniel8Chapter } from './chapter8';
+export { daniel9Verses, daniel9Chapter } from './chapter9';
+export { daniel10Verses, daniel10Chapter } from './chapter10';
+export { daniel11Verses, daniel11Chapter } from './chapter11';
+export { daniel12Verses, daniel12Chapter } from './chapter12';

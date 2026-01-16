@@ -30,7 +30,20 @@ export interface ScriptureChapter {
   audioUrl?: string;
 }
 
-// Daniel Chapter 1 - Complete KJV Text with Enhanced Features
+import {
+  daniel2Chapter,
+  daniel3Chapter,
+  daniel4Chapter,
+  daniel5Chapter,
+  daniel6Chapter,
+  daniel7Chapter,
+  daniel8Chapter,
+  daniel9Chapter,
+  daniel10Chapter,
+  daniel11Chapter,
+  daniel12Chapter
+} from './daniel';
+
 const daniel1Verses: ScriptureVerse[] = [
   {
     book: 'daniel',
@@ -285,100 +298,24 @@ const daniel1Verses: ScriptureVerse[] = [
   }
 ];
 
-// Daniel Chapter 2 - Nebuchadnezzar's Dream - Complete KJV Text
-const daniel2Verses: ScriptureVerse[] = [
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 1,
-    text: "And in the second year of the reign of Nebuchadnezzar Nebuchadnezzar dreamed dreams, wherewith his spirit was troubled, and his sleep brake from him.",
-    keywords: ['second year', 'dreamed dreams', 'spirit troubled', 'sleep brake'],
-    crossReferences: ['Genesis 41:8', 'Daniel 4:5'],
-    sdaCommentary: "God gave Nebuchadnezzar this dream to reveal the course of world history and establish His sovereignty over human kingdoms.",
-    historicalContext: "This was early in Nebuchadnezzar's reign when he was establishing his empire and concerned about its future.",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 2,
-    text: "Then the king commanded to call the magicians, and the astrologers, and the sorcerers, and the Chaldeans, for to shew the king his dreams. So they came and stood before the king.",
-    keywords: ['magicians', 'astrologers', 'sorcerers', 'Chaldeans'],
-    crossReferences: ['Exodus 7:11', 'Isaiah 47:13', 'Daniel 1:20'],
-    sdaCommentary: "The king turned to his usual counselors, but human wisdom and occult practices cannot reveal divine mysteries.",
-    historicalContext: "These were the educated priestly class who claimed to interpret divine messages through various occult means.",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 31,
-    text: "Thou, O king, sawest, and behold a great image. This great image, whose brightness was excellent, stood before thee; and the form thereof was terrible.",
-    keywords: ['great image', 'brightness', 'excellent', 'terrible'],
-    crossReferences: ['Daniel 7:1-8', 'Revelation 13:1'],
-    sdaCommentary: "The great image represents the succession of world empires from Babylon to the end times, showing God's foreknowledge of history.",
-    hasModel: true,
-    modelId: 'nebuchadnezzars-image',
-    historicalContext: "Ancient kings often erected great statues to commemorate their power and achievements.",
-    symbolExplanation: "The image's brightness represents the glory of earthly kingdoms, while its terrible form shows their ultimate destructive nature.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 32,
-    text: "This image's head was of fine gold, his breast and his arms of silver, his belly and his thighs of brass,",
-    keywords: ['head', 'fine gold', 'breast', 'arms', 'silver', 'belly', 'thighs', 'brass'],
-    crossReferences: ['Daniel 7:4-6', 'Daniel 8:3-8'],
-    sdaCommentary: "Each metal represents a successive world empire: gold (Babylon), silver (Medo-Persia), brass (Greece). The decreasing value shows moral deterioration.",
-    hasModel: true,
-    modelId: 'image-metals',
-    symbolExplanation: "Gold represents Babylon's absolute monarchy; silver shows Medo-Persia's dual nature; brass indicates Greece's military strength.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 33,
-    text: "His legs of iron, his feet part of iron and part of clay.",
-    keywords: ['legs', 'iron', 'feet', 'iron and clay'],
-    crossReferences: ['Daniel 7:7', 'Daniel 7:24'],
-    sdaCommentary: "Iron represents Rome's crushing strength; iron and clay represent divided Europe that would never unite again permanently.",
-    symbolExplanation: "Iron shows Rome's military might; clay represents the weakness of divided kingdoms that cannot cleave together.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 34,
-    text: "Thou sawest till that a stone was cut out without hands, which smote the image upon his feet that were of iron and clay, and brake them to pieces.",
-    keywords: ['stone', 'cut out without hands', 'smote', 'brake to pieces'],
-    crossReferences: ['Daniel 7:13-14', 'Revelation 19:11-16', 'Matthew 21:44'],
-    sdaCommentary: "The stone represents Christ's kingdom that will destroy all earthly kingdoms at His second coming. 'Without hands' indicates divine origin.",
-    hasModel: true,
-    modelId: 'stone-kingdom',
-    symbolExplanation: "The stone represents God's eternal kingdom established without human effort, striking the feet shows the timing at the end of earth's history.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'prophecy'
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    verse: 35,
-    text: "Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them: and the stone became a great mountain, and filled the whole earth.",
-    keywords: ['broken to pieces', 'chaff', 'wind carried away', 'great mountain', 'filled whole earth'],
-    crossReferences: ['Psalm 2:9', 'Revelation 11:15', 'Isaiah 2:2'],
-    sdaCommentary: "All earthly kingdoms will be completely destroyed and replaced by God's eternal kingdom that will fill the whole earth.",
-    symbolExplanation: "Chaff represents the worthlessness of earthly kingdoms; the mountain filling the earth shows God's kingdom's eternal, universal nature.",
-    imageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg",
-    theme: 'victory'
-  }
-];
+const daniel1Chapter: ScriptureChapter = {
+  book: 'daniel',
+  chapter: 1,
+  title: "Daniel's Faith in God's Health Protocol - The First Test (Exodus 20:13)",
+  verses: daniel1Verses,
+  summary: "Daniel and his three friends are taken captive to Babylon where they face their first test of faithfulness regarding God's dietary laws. Their commitment to God's health principles results in superior physical and mental capabilities.",
+  keyThemes: ['Faithfulness in small things', 'Health principles', 'God\'s sovereignty', 'Preparation for service'],
+  sdaInsights: [
+    "Health reform is part of the third angel's message",
+    "Faithfulness in diet prepares for greater tests",
+    "God honors those who honor Him",
+    "Education should develop the whole person - physical, mental, and spiritual"
+  ],
+  relatedModels: ['daniel-diet-test'],
+  timelinePeriod: '605 BC',
+  chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+};
 
-// Add complete Revelation chapters as well
 const revelation1Verses: ScriptureVerse[] = [
   {
     book: 'revelation',
@@ -421,87 +358,38 @@ const revelation1Verses: ScriptureVerse[] = [
   }
 ];
 
+const revelation1Chapter: ScriptureChapter = {
+  book: 'revelation',
+  chapter: 1,
+  title: "Christ Among the Candlesticks",
+  verses: revelation1Verses,
+  summary: "John receives the revelation of Jesus Christ and sees Him walking among the seven golden candlesticks, representing His presence with the seven churches throughout history.",
+  keyThemes: ['Christ\'s divinity', 'Church periods', 'Prophetic revelation', 'Christ\'s priesthood'],
+  sdaInsights: [
+    "The seven churches represent seven periods of church history",
+    "Christ is actively involved in His church's experience",
+    "Revelation unveils Christ's character and work",
+    "The messages apply to all Christians in every age"
+  ],
+  relatedModels: ['seven-candlesticks', 'christ-among-churches'],
+  timelinePeriod: '31-100 AD',
+  chapterImageUrl: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg"
+};
+
 export const scriptureDatabase: ScriptureChapter[] = [
-  {
-    book: 'daniel',
-    chapter: 1,
-    title: "Daniel's Faith in God's Health Protocol leads to God Blessing him with the visions of the Book of Daniel - the First Test (Thou shalt not kill Exodus 20:13)",
-    verses: daniel1Verses,
-    summary: "Daniel and his three friends are taken captive to Babylon where they face their first test of faithfulness regarding God's dietary laws. Their commitment to God's health principles results in superior physical and mental capabilities.",
-    keyThemes: ['Faithfulness in small things', 'Health principles', 'God\'s sovereignty', 'Preparation for service'],
-    sdaInsights: [
-      "Health reform is part of the third angel's message",
-      "Faithfulness in diet prepares for greater tests",
-      "God honors those who honor Him",
-      "Education should develop the whole person - physical, mental, and spiritual"
-    ],
-    relatedModels: ['daniel-diet-test'],
-    timelinePeriod: '605 BC',
-    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
-  },
-  {
-    book: 'daniel',
-    chapter: 2,
-    title: "Nebuchadnezzar's 1st Dream (The 4 Great Kingdoms of World History) - The Great Image and its interpretation by God given through Daniel",
-    verses: daniel2Verses,
-    summary: "Nebuchadnezzar dreams of a great image representing successive world empires. Daniel interprets the dream, revealing God's sovereignty over human history and the ultimate establishment of His eternal kingdom.",
-    keyThemes: ['Prophetic history', 'God\'s sovereignty', 'World empires', 'Christ\'s kingdom'],
-    sdaInsights: [
-      "History is moving toward the establishment of God's kingdom",
-      "Human empires will all pass away",
-      "God reveals the future to His servants",
-      "The stone kingdom represents Christ's second coming and eternal reign"
-    ],
-    relatedModels: ['nebuchadnezzars-image', 'stone-kingdom'],
-    timelinePeriod: '603 BC',
-    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
-  },
-  {
-    book: 'daniel',
-    chapter: 3,
-    title: "The Golden Image of Nebuchadnezzar - The Fiery Furnace Test - the Second Test (Thou shalt not bow down to them(gods)... Exodus 20:5)",
-    verses: [
-      {
-        book: 'daniel',
-        chapter: 3,
-        verse: 1,
-        text: "Nebuchadnezzar the king made an image of gold, whose height was threescore cubits, and the breadth thereof six cubits: he set it up in the plain of Dura, in the province of Babylon.",
-        keywords: ['Nebuchadnezzar', 'image of gold', 'threescore cubits', 'plain of Dura'],
-        crossReferences: ['Daniel 2:31-35', 'Revelation 13:14-15'],
-        sdaCommentary: "The golden image represents human pride and the attempt to establish a universal religion through force.",
-        hasModel: true,
-        modelId: 'golden-image'
-      }
-    ],
-    summary: "Nebuchadnezzar erects a golden image and commands universal worship. The three Hebrew youth refuse to bow and are thrown into the fiery furnace, where God delivers them.",
-    keyThemes: ['Religious liberty', 'Worship test', 'God\'s deliverance', 'End-time parallels'],
-    sdaInsights: [
-      "The image represents enforced worship in the last days",
-      "God's people will face a universal worship test",
-      "Faithfulness to God brings divine protection",
-      "The fourth man in the fire represents Christ's presence with His people"
-    ],
-    relatedModels: ['golden-image', 'fiery-furnace'],
-    timelinePeriod: '594 BC',
-    chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
-  },
-  {
-    book: 'revelation',
-    chapter: 1,
-    title: "Christ Among the Candlesticks",
-    verses: revelation1Verses,
-    summary: "John receives the revelation of Jesus Christ and sees Him walking among the seven golden candlesticks, representing His presence with the seven churches throughout history.",
-    keyThemes: ['Christ\'s divinity', 'Church periods', 'Prophetic revelation', 'Christ\'s priesthood'],
-    sdaInsights: [
-      "The seven churches represent seven periods of church history",
-      "Christ is actively involved in His church's experience",
-      "Revelation unveils Christ's character and work",
-      "The messages apply to all Christians in every age"
-    ],
-    relatedModels: ['seven-candlesticks', 'christ-among-churches'],
-    timelinePeriod: '31-100 AD',
-    chapterImageUrl: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg"
-  }
+  daniel1Chapter,
+  daniel2Chapter,
+  daniel3Chapter,
+  daniel4Chapter,
+  daniel5Chapter,
+  daniel6Chapter,
+  daniel7Chapter,
+  daniel8Chapter,
+  daniel9Chapter,
+  daniel10Chapter,
+  daniel11Chapter,
+  daniel12Chapter,
+  revelation1Chapter
 ];
 
 export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {
@@ -511,7 +399,7 @@ export const getScriptureChapter = (book: string, chapter: number): ScriptureCha
 export const searchScripture = (query: string): ScriptureVerse[] => {
   const results: ScriptureVerse[] = [];
   const lowercaseQuery = query.toLowerCase();
-  
+
   scriptureDatabase.forEach(chapter => {
     chapter.verses.forEach(verse => {
       if (verse.text.toLowerCase().includes(lowercaseQuery) ||
@@ -520,14 +408,14 @@ export const searchScripture = (query: string): ScriptureVerse[] => {
       }
     });
   });
-  
+
   return results;
 };
 
 export const getVersesByKeyword = (keyword: string): ScriptureVerse[] => {
   const results: ScriptureVerse[] = [];
   const lowercaseKeyword = keyword.toLowerCase();
-  
+
   scriptureDatabase.forEach(chapter => {
     chapter.verses.forEach(verse => {
       if (verse.keywords?.some(k => k.toLowerCase().includes(lowercaseKeyword))) {
@@ -535,7 +423,7 @@ export const getVersesByKeyword = (keyword: string): ScriptureVerse[] => {
       }
     });
   });
-  
+
   return results;
 };
 
@@ -543,8 +431,8 @@ export const formatScriptureContent = (verses: ScriptureVerse[]): string => {
   return verses.map(verse => {
     const themeClass = verse.theme ? `verse-theme-${verse.theme}` : '';
     const modelLink = verse.hasModel ? ` <span class="model-link" data-model="${verse.modelId}">[3D Model]</span>` : '';
-    
-    return `<div class="scripture-verse ${themeClass}" 
+
+    return `<div class="scripture-verse ${themeClass}"
                  data-verse="${verse.book}-${verse.chapter}-${verse.verse}"
                  data-commentary="${encodeURIComponent(verse.sdaCommentary || '')}"
                  data-historical="${encodeURIComponent(verse.historicalContext || '')}"
@@ -565,4 +453,12 @@ export const getCrossReferences = (verse: ScriptureVerse): string[] => {
 
 export const getChaptersByBook = (book: string): ScriptureChapter[] => {
   return scriptureDatabase.filter(chapter => chapter.book === book);
+};
+
+export const getDanielChaptersCount = (): number => {
+  return scriptureDatabase.filter(chapter => chapter.book === 'daniel').length;
+};
+
+export const getTotalVersesCount = (): number => {
+  return scriptureDatabase.reduce((total, chapter) => total + chapter.verses.length, 0);
 };
