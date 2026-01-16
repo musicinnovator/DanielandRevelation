@@ -44,6 +44,31 @@ import {
   daniel12Chapter
 } from './daniel';
 
+import {
+  revelation1Chapter,
+  revelation2Chapter,
+  revelation3Chapter,
+  revelation4Chapter,
+  revelation5Chapter,
+  revelation6Chapter,
+  revelation7Chapter,
+  revelation8Chapter,
+  revelation9Chapter,
+  revelation10Chapter,
+  revelation11Chapter,
+  revelation12Chapter,
+  revelation13Chapter,
+  revelation14Chapter,
+  revelation15Chapter,
+  revelation16Chapter,
+  revelation17Chapter,
+  revelation18Chapter,
+  revelation19Chapter,
+  revelation20Chapter,
+  revelation21Chapter,
+  revelation22Chapter
+} from './revelation';
+
 const daniel1Verses: ScriptureVerse[] = [
   {
     book: 'daniel',
@@ -389,7 +414,28 @@ export const scriptureDatabase: ScriptureChapter[] = [
   daniel10Chapter,
   daniel11Chapter,
   daniel12Chapter,
-  revelation1Chapter
+  revelation1Chapter,
+  revelation2Chapter,
+  revelation3Chapter,
+  revelation4Chapter,
+  revelation5Chapter,
+  revelation6Chapter,
+  revelation7Chapter,
+  revelation8Chapter,
+  revelation9Chapter,
+  revelation10Chapter,
+  revelation11Chapter,
+  revelation12Chapter,
+  revelation13Chapter,
+  revelation14Chapter,
+  revelation15Chapter,
+  revelation16Chapter,
+  revelation17Chapter,
+  revelation18Chapter,
+  revelation19Chapter,
+  revelation20Chapter,
+  revelation21Chapter,
+  revelation22Chapter
 ];
 
 export const getScriptureChapter = (book: string, chapter: number): ScriptureChapter | null => {

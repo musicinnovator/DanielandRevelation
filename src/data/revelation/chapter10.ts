@@ -1,0 +1,28 @@
+import { ScriptureVerse, ScriptureChapter } from '../scriptureData';
+
+export const revelation10Verses: ScriptureVerse[] = [
+  { book: 'revelation', chapter: 10, verse: 1, text: "And I saw another mighty angel come down from heaven, clothed with a cloud: and a rainbow was upon his head, and his face was as it were the sun, and his feet as pillars of fire:", keywords: ['mighty angel', 'rainbow', 'face as sun'], crossReferences: ['Revelation 1:7', 'Revelation 1:15-16'], sdaCommentary: "This mighty angel is Christ Himself. Divine attributes identify Him.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 2, text: "And he had in his hand a little book open: and he set his right foot upon the sea, and his left foot on the earth,", keywords: ['little book open'], crossReferences: ['Daniel 12:4'], sdaCommentary: "Little book is Daniel's prophecies, sealed until time of end, now opened.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 3, text: "And cried with a loud voice, as when a lion roareth: and when he had cried, seven thunders uttered their voices.", keywords: ['seven thunders'], crossReferences: ['Hosea 11:10'], sdaCommentary: "Seven thunders content is sealed. Some things God reveals; others remain mysterious.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 4, text: "And when the seven thunders had uttered their voices, I was about to write: and I heard a voice from heaven saying unto me, Seal up those things which the seven thunders uttered, and write them not.", keywords: ['Seal up'], crossReferences: ['Daniel 12:4'], sdaCommentary: "Some prophetic details are withheld. This teaches humility.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 5, text: "And the angel which I saw stand upon the sea and upon the earth lifted up his hand to heaven,", keywords: ['lifted hand to heaven'], crossReferences: ['Daniel 12:7'], sdaCommentary: "Christ lifts hand to swear oath concerning prophetic time.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 6, text: "And sware by him that liveth for ever and ever, who created heaven, and the things that therein are, and the earth, and the things that therein are, and the sea, and the things which are therein, that there should be time no longer:", keywords: ['time no longer'], crossReferences: ['Daniel 12:7', 'Revelation 4:11'], sdaCommentary: "No more prophetic time periods after 2300 days end in 1844.", historicalContext: "Answered Millerites' disappointment - no more time prophecies.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 7, text: "But in the days of the voice of the seventh angel, when he shall begin to sound, the mystery of God should be finished, as he hath declared to his servants the prophets.", keywords: ['mystery of God finished'], crossReferences: ['Revelation 11:15'], sdaCommentary: "Seventh trumpet announces the end. Mystery of God (salvation plan) completed.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 8, text: "And the voice which I heard from heaven spake unto me again, and said, Go and take the little book which is open in the hand of the angel which standeth upon the sea and upon the earth.", keywords: ['take little book'], crossReferences: ['Ezekiel 3:1'], sdaCommentary: "John commanded to take opened book of Daniel.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 9, text: "And I went unto the angel, and said unto him, Give me the little book. And he said unto me, Take it, and eat it up; and it shall make thy belly bitter, but it shall be in thy mouth sweet as honey.", keywords: ['sweet as honey', 'belly bitter'], crossReferences: ['Ezekiel 3:1-3'], sdaCommentary: "Sweet = joy in expecting Christ's return. Bitter = Great Disappointment of 1844.", historicalContext: "Millerite movement experienced sweet anticipation, then bitter disappointment.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 10, text: "And I took the little book out of the angel's hand, and ate it up; and it was in my mouth sweet as honey: and as soon as I had eaten it, my belly was bitter.", keywords: ['mouth sweet', 'belly bitter'], crossReferences: ['Ezekiel 3:3'], sdaCommentary: "Prophecy fulfilled. Sweet expectation turned to bitter disappointment.", historicalContext: "After October 22, 1844, faithful believers studied further and discovered sanctuary truth.", theme: 'prophecy' },
+  { book: 'revelation', chapter: 10, verse: 11, text: "And he said unto me, Thou must prophesy again before many peoples, and nations, and tongues, and kings.", keywords: ['prophesy again'], crossReferences: ['Jeremiah 1:10', 'Revelation 14:6'], sdaCommentary: "After disappointment, Advent movement must continue worldwide. SDA Church arose from this commission.", theme: 'prophecy' }
+];
+
+export const revelation10Chapter: ScriptureChapter = {
+  book: 'revelation',
+  chapter: 10,
+  title: "The Angel with the Little Book",
+  verses: revelation10Verses,
+  summary: "Mighty angel (Christ) with open little book (Daniel). Eating it is sweet then bitter, depicting 1844 disappointment. Must prophesy again to all the world.",
+  keyThemes: ['Christ as mighty angel', 'Little book opened', 'Sweet and bitter', 'Great Disappointment', 'Renewed commission'],
+  sdaInsights: ["Little book is Daniel's prophecies now understood", "Time no longer = no more prophetic time after 1844", "Sweet/bitter = Millerite experience", "Must prophesy again = birth of SDA Church"],
+  relatedModels: ['little-book-daniel'],
+  timelinePeriod: '1840s - Advent Movement',
+  chapterImageUrl: "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg"
+};
